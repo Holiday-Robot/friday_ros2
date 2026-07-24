@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.16)
+project(friday_description)
+
+find_package(ament_cmake REQUIRED)
+
+install(
+  DIRECTORY launch urdf meshes rviz
+  DESTINATION share/${PROJECT_NAME}
+)
+
+ament_package()
