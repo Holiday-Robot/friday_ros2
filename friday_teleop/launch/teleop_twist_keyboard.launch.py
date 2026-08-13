@@ -17,7 +17,7 @@ def generate_launch_description():
         [
             DeclareLaunchArgument(
                 "cmd_vel_topic",
-                default_value="/hday/controller/navigation_api",
+                default_value="holiday/cmd_vel",
                 description="Output velocity topic",
             ),
             DeclareLaunchArgument("stamped", default_value="true", description="Publish TwistStamped messages"),

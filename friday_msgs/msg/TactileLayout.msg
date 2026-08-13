@@ -1,2 +1,2 @@
 std_msgs/Header header
-TactileMagnet[] magnets
+friday_msgs/TactileSensorPose[<=256] sensors

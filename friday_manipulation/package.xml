@@ -9,7 +9,7 @@
 
   <buildtool_depend>ament_python</buildtool_depend>
 
-  <exec_depend>ros2_interfaces_public</exec_depend>
+  <exec_depend>friday_msgs</exec_depend>
   <exec_depend>rclpy</exec_depend>
   <exec_depend>tf2_ros</exec_depend>
 

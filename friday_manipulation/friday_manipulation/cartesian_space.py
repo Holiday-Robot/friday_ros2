@@ -18,13 +18,13 @@ import time
 from collections.abc import Sequence
 
 import rclpy
+from friday_msgs.msg import LinkReaching, Manipulation
 from rclpy.node import Node
 from rclpy.time import Time
 from rclpy.utilities import remove_ros_args
-from ros2_interfaces_public.msg import LinkReaching, ManipulationAPI
 from tf2_ros import Buffer, TransformException, TransformListener
 
-MANIPULATION_API_TOPIC = "/hday/controller/manipulation_api"
+MANIPULATION_TOPIC = "holiday/manipulation"
 SUBSCRIBER_WAIT_SECONDS = 5.0
 POST_PUBLISH_SPIN_SECONDS = 0.5
 
@@ -34,6 +34,9 @@ DEFAULT_TARGET_POS = (0.10, 0.0, 0.0)
 DEFAULT_TARGET_QUAT = (0.0, 0.0, 0.0, 1.0)
 TF_TIMEOUT_SECONDS = 5.0
 RIGHT_ARM_JOINTS = [f"right_arm_{index}" for index in range(1, 8)]
+POSITION_AND_ORIENTATION_MODE = 3
+POSITION_WEIGHT = 5.0
+ORIENTATION_WEIGHT = 1.0
 
 
 def _normalize_quaternion(quaternion: Sequence[float]) -> tuple[float, float, float, float]:
@@ -99,15 +102,15 @@ def _parse_args(args: list[str] | None) -> argparse.Namespace:
     return parsed
 
 
-def _publish_once(node: Node, message: ManipulationAPI) -> None:
-    publisher = node.create_publisher(ManipulationAPI, MANIPULATION_API_TOPIC, 10)
+def _publish_once(node: Node, message: Manipulation) -> None:
+    publisher = node.create_publisher(Manipulation, MANIPULATION_TOPIC, 1)
 
     deadline = time.monotonic() + SUBSCRIBER_WAIT_SECONDS
     while publisher.get_subscription_count() == 0 and time.monotonic() < deadline:
         rclpy.spin_once(node, timeout_sec=0.1)
 
     if publisher.get_subscription_count() == 0:
-        node.get_logger().warning(f"No subscriber discovered on {MANIPULATION_API_TOPIC}; publishing anyway")
+        node.get_logger().warning(f"No subscriber discovered on {MANIPULATION_TOPIC}; publishing anyway")
 
     publisher.publish(message)
 
@@ -149,6 +152,10 @@ def main(args: list[str] | None = None) -> int:
         target.target_frame = cli_args.target_frame
         target.reference_frame = cli_args.reference_frame
         target.active_joints = RIGHT_ARM_JOINTS
+        target.mode = POSITION_AND_ORIENTATION_MODE
+        target.position_weight = POSITION_WEIGHT
+        target.orientation_weight = ORIENTATION_WEIGHT
+        target.tracking = False
         target.target_pos.x = translation.x + cli_args.target_pos[0]
         target.target_pos.y = translation.y + cli_args.target_pos[1]
         target.target_pos.z = translation.z + cli_args.target_pos[2]
@@ -157,7 +164,7 @@ def main(args: list[str] | None = None) -> int:
         target.target_quat.z = target_quat[2]
         target.target_quat.w = target_quat[3]
 
-        message = ManipulationAPI()
+        message = Manipulation()
         message.header.stamp = node.get_clock().now().to_msg()
         message.link_reaching = [target]
 

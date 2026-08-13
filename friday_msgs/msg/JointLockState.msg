@@ -1,0 +1,14 @@
+std_msgs/Header header
+
+uint8 REASON_NONE=0
+uint8 REASON_COMMAND_JUMP=1
+uint8 REASON_AVERAGE_VELOCITY=2
+uint8 REASON_AVERAGE_EFFORT=3
+uint8 REASON_STATE_COMMAND_DIFFERENCE=4
+uint8 REASON_SENSOR_NOT_READY=5
+uint8 REASON_MOTOR_NOT_READY=6
+uint8 REASON_UNKNOWN=255
+
+bool locked
+uint8 reason
+string<=64[<=128] affected_joint_names
