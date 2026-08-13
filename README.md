@@ -5,7 +5,8 @@ Public ROS 2 packages for the Friday.
 ## Packages
 
 - `friday_ros2`: meta-package for the public Friday ROS 2 packages.
-- `friday_description`: robot URDF, meshes, and visualization launch files.
+- `friday_description`: robot URDF, MJCF, meshes, and visualization launch
+  files.
 - `friday_manipulation`: one-shot joint-space and Cartesian-space manipulation
   examples.
 - `friday_msgs`: public ROS 2 interfaces for Friday.
@@ -65,6 +66,27 @@ Enable the joint state publisher GUI:
 ```bash
 ros2 launch friday_description friday_state_publisher.launch.py use_joint_state_publisher_gui:=true
 ```
+
+## MuJoCo Model
+
+`friday_description/mjcf/FM26A.mjcf` is a MuJoCo model of the same robot,
+generated from the source the URDF comes from. It loads directly:
+
+```bash
+python -m mujoco.viewer --mjcf friday_description/mjcf/FM26A.mjcf
+```
+
+It shares the package's `meshes/` tree with the URDF rather than carrying its
+own copy, via `<compiler meshdir="../meshes">`. Keep the `mjcf/` directory next
+to `meshes/` when copying the model elsewhere, or point `meshdir` at wherever
+the meshes ended up.
+
+The model carries the kinematic tree with a free-floating base, position
+actuators for the hand, arm, waist, and head joints, velocity actuators for the
+two drive wheels, and the named poses (`ready`, `rest`, `grab`, `release`) as
+keyframes. Collision geometry uses `contype`/`conaffinity` bitmasks encoding the
+self-collision allowlist; the legend is a comment in the `<default>` block.
+There is no ground plane — add one in your own scene.
 
 ## Launch Keyboard Teleop
 

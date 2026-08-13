@@ -1,0 +1,957 @@
+<mujoco model="FM26A">
+  <compiler angle="radian" autolimits="true" meshdir="../meshes"/>
+  <option integrator="implicitfast"/>
+  <default>
+    <default class="visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+    </default>
+    <!-- self-collision groups (contype/conaffinity bits):
+   bit 0: environment / ground
+   bit 1: waist
+   bit 2: left_arm
+   bit 3: right_arm
+   bit 4: head
+   bit 5: left_hand
+   bit 6: right_hand
+   bit 7: mobile_base
+-->
+    <default class="head">
+      <geom group="3" contype="17" conaffinity="108"/>
+    </default>
+    <default class="left_arm">
+      <geom group="3" contype="5" conaffinity="222"/>
+    </default>
+    <default class="left_hand">
+      <geom group="3" contype="33" conaffinity="218"/>
+    </default>
+    <default class="mobile_base">
+      <geom group="3" contype="129" conaffinity="108"/>
+    </default>
+    <default class="no_self_collision">
+      <geom group="3" contype="1" conaffinity="0"/>
+    </default>
+    <default class="right_arm">
+      <geom group="3" contype="9" conaffinity="190"/>
+    </default>
+    <default class="right_hand">
+      <geom group="3" contype="65" conaffinity="182"/>
+    </default>
+    <default class="waist">
+      <geom group="3" contype="3" conaffinity="108"/>
+    </default>
+  </default>
+  <asset>
+    <mesh name="base" file="FM26A/visual/base.stl"/>
+    <mesh name="right_wheel_carrier" file="FM26A/visual/right_wheel_carrier.stl"/>
+    <mesh name="right_wheel" file="FM26A/visual/right_wheel.stl"/>
+    <mesh name="left_wheel_carrier" file="FM26A/visual/left_wheel_carrier.stl"/>
+    <mesh name="left_wheel" file="FM26A/visual/left_wheel.stl"/>
+    <mesh name="waist_1" file="FM26A/visual/waist_1.stl"/>
+    <mesh name="compact_waist_1" file="FM26A/collision/compact_waist_1.stl"/>
+    <mesh name="waist_2" file="FM26A/visual/waist_2.stl"/>
+    <mesh name="compact_waist_2" file="FM26A/collision/compact_waist_2.stl"/>
+    <mesh name="waist_3" file="FM26A/visual/waist_3.stl"/>
+    <mesh name="compact_waist_3" file="FM26A/collision/compact_waist_3.stl"/>
+    <mesh name="waist_4" file="FM26A/visual/waist_4.stl"/>
+    <mesh name="compact_waist_4" file="FM26A/collision/compact_waist_4.stl"/>
+    <mesh name="waist_5" file="FM26A/visual/waist_5.stl"/>
+    <mesh name="compact_waist_5" file="FM26A/collision/compact_waist_5.stl"/>
+    <mesh name="compact_waist_5_left" file="FM26A/collision/compact_waist_5_left.stl"/>
+    <mesh name="compact_waist_5_right" file="FM26A/collision/compact_waist_5_right.stl"/>
+    <mesh name="right_arm_1" file="FM26A/visual/right_arm_1.stl"/>
+    <mesh name="compact_right_arm_1" file="FM26A/collision/compact_right_arm_1.stl"/>
+    <mesh name="right_arm_2" file="FM26A/visual/right_arm_2.stl"/>
+    <mesh name="compact_right_arm_2" file="FM26A/collision/compact_right_arm_2.stl"/>
+    <mesh name="right_arm_3" file="FM26A/visual/right_arm_3.stl"/>
+    <mesh name="compact_right_arm_3" file="FM26A/collision/compact_right_arm_3.stl"/>
+    <mesh name="right_arm_4" file="FM26A/visual/right_arm_4.stl"/>
+    <mesh name="compact_right_arm_4" file="FM26A/collision/compact_right_arm_4.stl"/>
+    <mesh name="right_wrist_base_lowpoly" file="FM26A/visual/right_wrist_base_lowpoly.stl"/>
+    <mesh name="compact_right_wrist_base" file="FM26A/collision/compact_right_wrist_base.stl"/>
+    <mesh name="right_wrist_pitch_lowpoly" file="FM26A/visual/right_wrist_pitch_lowpoly.stl"/>
+    <mesh name="compact_right_wrist_pitch" file="FM26A/collision/compact_right_wrist_pitch.stl"/>
+    <mesh name="right_wrist_roll_lowpoly" file="FM26A/visual/right_wrist_roll_lowpoly.stl"/>
+    <mesh name="right_wrist_tactile" file="FM26A/visual/right_wrist_tactile.stl"/>
+    <mesh name="compact_right_wrist_roll" file="FM26A/collision/compact_right_wrist_roll.stl"/>
+    <mesh name="hand_1_1" file="FM26A/visual/hand_1_1.stl"/>
+    <mesh name="right_hand_1_2" file="FM26A/visual/right_hand_1_2.stl"/>
+    <mesh name="tactile_thumb_mcp" file="FM26A/visual/tactile_thumb_mcp.stl"/>
+    <mesh name="compact_right_hand_1_2" file="FM26A/collision/compact_right_hand_1_2.stl"/>
+    <mesh name="right_hand_1_3" file="FM26A/visual/right_hand_1_3.stl"/>
+    <mesh name="tactile_thumb_pip" file="FM26A/visual/tactile_thumb_pip.stl"/>
+    <mesh name="compact_right_hand_1_3" file="FM26A/collision/compact_right_hand_1_3.stl"/>
+    <mesh name="right_hand_1_4" file="FM26A/visual/right_hand_1_4.stl"/>
+    <mesh name="tactile_thumb_dip" file="FM26A/visual/tactile_thumb_dip.stl"/>
+    <mesh name="compact_right_hand_1_4" file="FM26A/collision/compact_right_hand_1_4.stl"/>
+    <mesh name="hand_2_1" file="FM26A/visual/hand_2_1.stl"/>
+    <mesh name="hand_2_2" file="FM26A/visual/hand_2_2.stl"/>
+    <mesh name="tactile_mcp" file="FM26A/visual/tactile_mcp.stl"/>
+    <mesh name="compact_hand_2_2" file="FM26A/collision/compact_hand_2_2.stl"/>
+    <mesh name="hand_2_3" file="FM26A/visual/hand_2_3.stl"/>
+    <mesh name="tactile_pip" file="FM26A/visual/tactile_pip.stl"/>
+    <mesh name="compact_hand_2_3" file="FM26A/collision/compact_hand_2_3.stl"/>
+    <mesh name="hand_2_4" file="FM26A/visual/hand_2_4.stl"/>
+    <mesh name="tactile_dip" file="FM26A/visual/tactile_dip.stl"/>
+    <mesh name="compact_hand_2_4" file="FM26A/collision/compact_hand_2_4.stl"/>
+    <mesh name="hand_3_1" file="FM26A/visual/hand_3_1.stl"/>
+    <mesh name="hand_3_2" file="FM26A/visual/hand_3_2.stl"/>
+    <mesh name="compact_hand_3_2" file="FM26A/collision/compact_hand_3_2.stl"/>
+    <mesh name="hand_3_3" file="FM26A/visual/hand_3_3.stl"/>
+    <mesh name="compact_hand_3_3" file="FM26A/collision/compact_hand_3_3.stl"/>
+    <mesh name="hand_3_4" file="FM26A/visual/hand_3_4.stl"/>
+    <mesh name="compact_hand_3_4" file="FM26A/collision/compact_hand_3_4.stl"/>
+    <mesh name="hand_4_1" file="FM26A/visual/hand_4_1.stl"/>
+    <mesh name="hand_4_2" file="FM26A/visual/hand_4_2.stl"/>
+    <mesh name="compact_hand_4_2" file="FM26A/collision/compact_hand_4_2.stl"/>
+    <mesh name="hand_4_3" file="FM26A/visual/hand_4_3.stl"/>
+    <mesh name="compact_hand_4_3" file="FM26A/collision/compact_hand_4_3.stl"/>
+    <mesh name="hand_4_4" file="FM26A/visual/hand_4_4.stl"/>
+    <mesh name="compact_hand_4_4" file="FM26A/collision/compact_hand_4_4.stl"/>
+    <mesh name="hand_5_1" file="FM26A/visual/hand_5_1.stl"/>
+    <mesh name="hand_5_2" file="FM26A/visual/hand_5_2.stl"/>
+    <mesh name="compact_hand_5_2" file="FM26A/collision/compact_hand_5_2.stl"/>
+    <mesh name="hand_5_3" file="FM26A/visual/hand_5_3.stl"/>
+    <mesh name="compact_hand_5_3" file="FM26A/collision/compact_hand_5_3.stl"/>
+    <mesh name="hand_5_4" file="FM26A/visual/hand_5_4.stl"/>
+    <mesh name="compact_hand_5_4" file="FM26A/collision/compact_hand_5_4.stl"/>
+    <mesh name="left_arm_1" file="FM26A/visual/left_arm_1.stl"/>
+    <mesh name="compact_left_arm_1" file="FM26A/collision/compact_left_arm_1.stl"/>
+    <mesh name="left_arm_2" file="FM26A/visual/left_arm_2.stl"/>
+    <mesh name="compact_left_arm_2" file="FM26A/collision/compact_left_arm_2.stl"/>
+    <mesh name="left_arm_3" file="FM26A/visual/left_arm_3.stl"/>
+    <mesh name="compact_left_arm_3" file="FM26A/collision/compact_left_arm_3.stl"/>
+    <mesh name="left_arm_4" file="FM26A/visual/left_arm_4.stl"/>
+    <mesh name="compact_left_arm_4" file="FM26A/collision/compact_left_arm_4.stl"/>
+    <mesh name="left_wrist_base_lowpoly" file="FM26A/visual/left_wrist_base_lowpoly.stl"/>
+    <mesh name="compact_left_wrist_base" file="FM26A/collision/compact_left_wrist_base.stl"/>
+    <mesh name="left_wrist_pitch_lowpoly" file="FM26A/visual/left_wrist_pitch_lowpoly.stl"/>
+    <mesh name="compact_left_wrist_pitch" file="FM26A/collision/compact_left_wrist_pitch.stl"/>
+    <mesh name="left_wrist_roll_lowpoly" file="FM26A/visual/left_wrist_roll_lowpoly.stl"/>
+    <mesh name="left_wrist_tactile" file="FM26A/visual/left_wrist_tactile.stl"/>
+    <mesh name="compact_left_wrist_roll" file="FM26A/collision/compact_left_wrist_roll.stl"/>
+    <mesh name="left_hand_1_2" file="FM26A/visual/left_hand_1_2.stl"/>
+    <mesh name="compact_left_hand_1_2" file="FM26A/collision/compact_left_hand_1_2.stl"/>
+    <mesh name="left_hand_1_3" file="FM26A/visual/left_hand_1_3.stl"/>
+    <mesh name="compact_left_hand_1_3" file="FM26A/collision/compact_left_hand_1_3.stl"/>
+    <mesh name="left_hand_1_4" file="FM26A/visual/left_hand_1_4.stl"/>
+    <mesh name="compact_left_hand_1_4" file="FM26A/collision/compact_left_hand_1_4.stl"/>
+    <mesh name="head_1" file="FM26A/visual/head_1.stl"/>
+    <mesh name="compact_head_1" file="FM26A/collision/compact_head_1.stl"/>
+    <mesh name="head_2" file="FM26A/visual/head_2.stl"/>
+    <mesh name="compact_head_2" file="FM26A/collision/compact_head_2.stl"/>
+    <mesh name="head_3" file="FM26A/visual/head_3.stl"/>
+    <mesh name="compact_head_3" file="FM26A/collision/compact_head_3.stl"/>
+    <mesh name="front_right_caster_yoke" file="FM26A/visual/front_right_caster_yoke.stl"/>
+    <mesh name="front_right_caster_wheel_link" file="FM26A/visual/front_right_caster_wheel_link.stl"/>
+    <mesh name="front_left_caster_yoke" file="FM26A/visual/front_left_caster_yoke.stl"/>
+    <mesh name="front_left_caster_wheel_link" file="FM26A/visual/front_left_caster_wheel_link.stl"/>
+    <mesh name="rear_caster_pivot" file="FM26A/visual/rear_caster_pivot.stl"/>
+    <mesh name="rear_right_caster_yoke" file="FM26A/visual/rear_right_caster_yoke.stl"/>
+    <mesh name="rear_right_caster_wheel_link" file="FM26A/visual/rear_right_caster_wheel_link.stl"/>
+    <mesh name="rear_left_caster_yoke" file="FM26A/visual/rear_left_caster_yoke.stl"/>
+    <mesh name="rear_left_caster_wheel_link" file="FM26A/visual/rear_left_caster_wheel_link.stl"/>
+    <material name="friday_body_material" rgba="0.792157 0.819608 0.933333 1.0"/>
+    <material name="friday_hand_link_material" rgba="0.301961 0.301961 0.301961 1.0"/>
+    <material name="friday_hand_shell_material" rgba="0.647059 0.647059 0.647059 1.0"/>
+    <material name="magnet_material" rgba="1.0 0.0 0.0 1.0"/>
+    <material name="polyurethane_green" rgba="0.0 1.0 0.0 1.0"/>
+    <material name="sensor_material" rgba="1.0 0.0 0.0 1.0"/>
+    <material name="tactile_material" rgba="0.917647 0.917647 0.917647 1.0"/>
+  </asset>
+  <worldbody>
+    <body name="base_footprint">
+      <freejoint/>
+      <body name="base_link" pos="0.0 0.0 0.07">
+        <inertial pos="-0.00907054663 0.00020508694 0.049357185" mass="50.80817668892" fullinertia="0.959913452 1.51776039 2.13609887 0.00317242304 0.0592827073 0.00105088654"/>
+        <geom class="visual" name="base_link_visual_0" pos="0.0 0.0 -0.07" type="mesh" mesh="base" material="friday_body_material"/>
+        <geom class="no_self_collision" name="base_link_collision_0" pos="-0.025 0.0 0.13" type="box" size="0.3 0.25 0.025"/>
+        <body name="right_wheel_carrier" pos="0.0 -0.152 -0.0025">
+          <joint type="slide" name="right_wheel_suspension" axis="0.0 0.0 1.0" range="-0.025 0.025" damping="2000.0" stiffness="200000.0" springref="0.0" actuatorfrcrange="-10000.0 10000.0"/>
+          <inertial pos="0.0262916946 -0.0251235631 1.23019759e-13" mass="0.481384721" fullinertia="0.000611222475 0.000423414158 0.000558179667 -5.88661185e-05 2.88226404e-16 6.59896711e-16"/>
+          <geom class="visual" name="right_wheel_carrier_visual_0" type="mesh" mesh="right_wheel_carrier" material="friday_body_material"/>
+          <body name="right_wheel" pos="0.0 -0.1102 0.0">
+            <joint type="hinge" name="right_wheel_joint" axis="0.0 1.0 0.0"/>
+            <inertial pos="7.67559969e-17 -0.044 4.31053445e-13" mass="1.15876442" fullinertia="0.00188066944 0.00258496837 0.00188066944 -5.54542081e-20 5.43263491e-31 -6.89976473e-15"/>
+            <geom class="visual" name="right_wheel_visual_0" pos="0.0 0.044 0.0" quat="0.7071067811848175 -0.7071067811882776 0.0 0.0" type="mesh" mesh="right_wheel" material="friday_body_material"/>
+            <geom class="mobile_base" name="right_wheel_collision_0" quat="0.7071067811848175 -0.7071067811882776 0.0 0.0" type="cylinder" size="0.0699685 0.044"/>
+          </body>
+        </body>
+        <body name="left_wheel_carrier" pos="0.0 0.152 -0.0025">
+          <joint type="slide" name="left_wheel_suspension" axis="0.0 0.0 1.0" range="-0.025 0.025" damping="2000.0" stiffness="200000.0" springref="0.0" actuatorfrcrange="-10000.0 10000.0"/>
+          <inertial pos="0.0262916946 0.0251235631 1.23033637e-13" mass="0.481384721" fullinertia="0.000611222475 0.000423414158 0.000558179667 5.88661185e-05 2.88251456e-16 -6.59903418e-16"/>
+          <geom class="visual" name="left_wheel_carrier_visual_0" type="mesh" mesh="left_wheel_carrier" material="friday_body_material"/>
+          <body name="left_wheel" pos="0.0 0.1102 0.0">
+            <joint type="hinge" name="left_wheel_joint" axis="0.0 1.0 0.0"/>
+            <inertial pos="8.03022344e-17 0.044 4.3077395e-13" mass="1.15876442" fullinertia="0.00188066944 0.00258496837 0.00188066944 -2.48864914e-20 -2.43623497e-31 6.89494964e-15"/>
+            <geom class="visual" name="left_wheel_visual_0" pos="0.0 -0.044 0.0" quat="0.7071067811848175 -0.7071067811882776 0.0 0.0" type="mesh" mesh="left_wheel" material="friday_body_material"/>
+            <geom class="mobile_base" name="left_wheel_collision_0" quat="0.7071067811848175 -0.7071067811882776 0.0 0.0" type="cylinder" size="0.0699685 0.044"/>
+          </body>
+        </body>
+        <body name="waist_1" pos="0.0 0.0 0.14">
+          <joint type="hinge" name="waist_1" axis="0.0 0.0 1.0" range="-5.4978 5.4978"/>
+          <inertial pos="5.21029786e-18 -2.52396826e-13 0.0515428082" mass="3.41394914" fullinertia="0.0331351425 0.0235079249 0.0218600918 -2.33697661e-18 -1.15286115e-18 8.06828111e-15"/>
+          <geom class="visual" name="waist_1_visual_0" type="mesh" mesh="waist_1" material="friday_body_material"/>
+          <geom class="waist" name="waist_1_collision_0" type="mesh" mesh="compact_waist_1"/>
+          <body name="waist_2" pos="0.0 0.0 0.14" quat="0.999999999984821 7.448294843662193e-12 4.103867194858433e-17 5.509807655222122e-06">
+            <joint type="hinge" name="waist_2" axis="0.0 1.0 0.0" range="-1.5708 0.174533"/>
+            <inertial pos="-0.00786718612 -5.85073475e-13 0.167531324" mass="7.53298958" fullinertia="0.158475191 0.15553938 0.0210544427 -5.90248242e-15 0.00168941487 4.69682812e-13"/>
+            <geom class="visual" name="waist_2_visual_0" quat="0.5000009183016051 -0.5000009182991567 -0.49999908169915674 -0.4999990816967084" type="mesh" mesh="waist_2" material="friday_body_material"/>
+            <geom class="waist" name="waist_2_collision_0" quat="0.5000009183016051 -0.5000009182991567 -0.49999908169915674 -0.4999990816967084" type="mesh" mesh="compact_waist_2"/>
+            <body name="waist_3" pos="1.28562178628889e-06 0.0 0.349999999998">
+              <joint type="hinge" name="waist_3" axis="0.0 1.0 0.0" range="-0.174533 2.618"/>
+              <inertial pos="-0.0201153198 1.25716516e-07 0.177274658" mass="5.55808645" fullinertia="0.0949979305 0.0746143795 0.0369379309 4.58064854e-08 -0.00216697356 -1.33823907e-07"/>
+              <geom class="visual" name="waist_3_visual_0" quat="-0.49999908169665763 0.49999908169920754 -0.500000918299106 -0.5000009183016558" type="mesh" mesh="waist_3" material="friday_body_material"/>
+              <geom class="waist" name="waist_3_collision_0" quat="-0.49999908169665763 0.49999908169920754 -0.500000918299106 -0.5000009183016558" type="mesh" mesh="compact_waist_3"/>
+              <body name="waist_4" pos="1.28562178742889e-06 0.0 0.349999999998">
+                <joint type="hinge" name="waist_4" axis="0.0 1.0 0.0" range="-1.8326 1.0472"/>
+                <inertial pos="1.00122489e-07 -9.52205582e-14 0.0272575274" mass="3.12931768" fullinertia="0.0134146411 0.0130192839 0.0103673005 -2.10189265e-19 -1.11935071e-08 9.26221706e-15"/>
+                <geom class="visual" name="waist_4_visual_0" quat="1.2986741928250147e-06 -1.2986740492383273e-06 -0.7071067811836237 -0.7071067811870861" type="mesh" mesh="waist_4" material="friday_body_material"/>
+                <geom class="waist" name="waist_4_collision_0" quat="1.2986741928250147e-06 -1.2986740492383273e-06 -0.7071067811836237 -0.7071067811870861" type="mesh" mesh="compact_waist_4"/>
+                <body name="waist_5" pos="4.66497049022853e-07 0.0 0.126999999999" quat="0.999999999984821 -7.448294843959493e-12 4.10386719502224e-17 -5.509807655222122e-06">
+                  <joint type="hinge" name="waist_5" axis="0.0 0.0 1.0" range="-5.4978 5.4978"/>
+                  <inertial pos="-0.0120824752 -8.87634999e-08 0.138996175" mass="15.2973045" fullinertia="0.213607007 0.158109114 0.137899324 4.07710288e-07 -0.000192785055 -1.41617916e-09"/>
+                  <geom class="visual" name="waist_5_visual_0" quat="0.7071041838318829 -1.6580764924883726e-12 -1.658088673450955e-12 0.7071093785316716" type="mesh" mesh="waist_5" material="friday_body_material"/>
+                  <geom class="waist" name="waist_5_collision_0" quat="0.7071041838318829 -1.6580764924883726e-12 -1.658088673450955e-12 0.7071093785316716" type="mesh" mesh="compact_waist_5"/>
+                  <geom class="waist" name="waist_5_collision_1" quat="0.7071041838318829 -1.6580764924883726e-12 -1.658088673450955e-12 0.7071093785316716" type="mesh" mesh="compact_waist_5_left"/>
+                  <geom class="waist" name="waist_5_collision_2" quat="0.7071041838318829 -1.6580764924883726e-12 -1.658088673450955e-12 0.7071093785316716" type="mesh" mesh="compact_waist_5_right"/>
+                  <body name="right_arm_1" pos="1.2023667534291e-06 -0.163667249651 0.244688600437" quat="0.996194698085183 -0.08715574274526361 -3.201409189024793e-07 3.659227447385846e-06">
+                    <joint type="hinge" name="right_arm_1" axis="-0.0 1.0 -0.0" range="-2.1817 0.7854"/>
+                    <inertial pos="1.75910709e-08 -0.0495645414 1.18110751e-08" mass="0.589982705" fullinertia="0.000732967148 0.000569751463 0.00075617386 -4.40392861e-10 6.6533242e-10 -3.8921914e-10"/>
+                    <geom class="visual" name="right_arm_1_visual_0" quat="0.7071067811848175 0.7071067811882776 0.0 0.0" type="mesh" mesh="right_arm_1" material="friday_body_material"/>
+                    <geom class="right_arm" name="right_arm_1_collision_0" quat="0.7071067811848175 0.7071067811882776 0.0 0.0" type="mesh" mesh="compact_right_arm_1"/>
+                    <body name="right_arm_2" pos="0.0 -0.0649999999999999 0.0" quat="0.9961946980916901 0.08715574274829077 -1.6567858563026882e-13 -1.893714899187646e-12">
+                      <joint type="hinge" name="right_arm_2" axis="1.0 -0.0 -0.0" range="-3.3161 0.2967"/>
+                      <inertial pos="-3.64043056e-09 -0.00912432503 -0.0884367713" mass="0.825116825" fullinertia="0.00192070908 0.0022945932 0.00119871281 -4.86940903e-09 -1.29364244e-09 -6.89393875e-05"/>
+                      <geom class="visual" name="right_arm_2_visual_0" quat="0.5000000000025572 -0.49999999999754596 -0.49999999999990064 0.49999999999999606" type="mesh" mesh="right_arm_2" material="friday_body_material"/>
+                      <geom class="right_arm" name="right_arm_2_collision_0" quat="0.5000000000025572 -0.49999999999754596 -0.49999999999990064 0.49999999999999606" type="mesh" mesh="compact_right_arm_2"/>
+                      <body name="right_arm_3" pos="0.0 -0.0100000000000317 -0.155000000000004" quat="0.9999999999932538 -2.228075505740909e-12 -2.4483650343591976e-12 -3.6732032302929446e-06">
+                        <joint type="hinge" name="right_arm_3" axis="-0.0 -0.0 1.0" range="-1.5708 1.5708"/>
+                        <inertial pos="0.00127996245 5.94934837e-10 -0.0683334448" mass="0.836764547" fullinertia="0.00250150061 0.00211468509 0.00123286035 -1.62942212e-09 0.000105969358 2.32321106e-10"/>
+                        <geom class="visual" name="right_arm_3_visual_0" quat="1.6593109131117379e-12 0.7071041838313279 0.7071093785322266 1.6593231031455245e-12" type="mesh" mesh="right_arm_3" material="friday_body_material"/>
+                        <geom class="right_arm" name="right_arm_3_collision_0" quat="1.6593109131117379e-12 0.7071041838313279 0.7071093785322266 1.6593231031455245e-12" type="mesh" mesh="compact_right_arm_3"/>
+                        <body name="right_arm_4" pos="0.0134999999996 9.91765141122869e-08 -0.163" quat="0.9999999999932538 2.448313356969822e-12 2.781827503741101e-12 3.6732042196946246e-06">
+                          <joint type="hinge" name="right_arm_4" axis="-0.0 1.0 -0.0" range="-2.2689 -0.0"/>
+                          <inertial pos="-0.0083060547 -8.93683405e-09 -0.0367004747" mass="0.860649367" fullinertia="0.00183943891 0.00184629648 0.000867553842 -1.65102516e-10 -0.000184857732 -1.91151003e-10"/>
+                          <geom class="visual" name="right_arm_4_visual_0" quat="0.7071067811848175 0.7071067811882776 -1.967042732764396e-12 1.967042732774021e-12" type="mesh" mesh="right_arm_4" material="friday_body_material"/>
+                          <geom class="right_arm" name="right_arm_4_collision_0" quat="0.7071067811848175 0.7071067811882776 -1.967042732764396e-12 1.967042732774021e-12" type="mesh" mesh="compact_right_arm_4"/>
+                          <body name="right_arm_5" pos="-0.0134999999993918 0.0 -0.110500000000001" quat="0.9999999999932538 -2.448313357377628e-12 -2.7819205398790617e-12 -3.6732042196946246e-06">
+                            <joint type="hinge" name="right_arm_5" axis="-0.0 -0.0 1.0" range="-1.5708 1.5708"/>
+                            <inertial pos="7.29469e-05 -0.000300832 -0.0390986" mass="0.195155" fullinertia="0.000299126 0.000293745 0.000107749 -1.08531e-05 -2.24336e-06 3.21417e-06"/>
+                            <geom class="visual" name="right_arm_5_visual_0" pos="0.0 0.0 -0.0685" quat="1.3022810387138362e-12 -0.7071084403493062 0.7071051220198958 -1.3022749273492637e-12" type="mesh" mesh="right_wrist_base_lowpoly" material="friday_hand_shell_material"/>
+                            <geom class="right_arm" name="right_arm_5_collision_0" pos="0.0 0.0 -0.0685" quat="1.3022810387138362e-12 -0.7071084403493062 0.7071051220198958 -1.3022749273492637e-12" type="mesh" mesh="compact_right_wrist_base"/>
+                            <body name="right_arm_6" pos="0.0 0.0 -0.1195" quat="0.9999999999915673 -4.5181380732518245e-12 1.8366047697863618e-06 3.6732032302280474e-06">
+                              <joint type="hinge" name="right_arm_6" axis="1.0 -0.0 -0.0" range="-0.6981 0.6981"/>
+                              <inertial pos="-0.000227227 -0.000127412000064335 -0.0144595999999995" mass="0.118788" fullinertia="9.115670000000008e-05 0.0001142199999999948 7.587610000000512e-05 1.1777100000002471e-05 5.650989999480909e-07 -6.048920001706121e-07"/>
+                              <geom class="visual" name="right_arm_6_visual_0" pos="0.0 -3.13896291624288e-13 -0.074" quat="1.836604676625479e-06 0.9999999999966269 -1.8366024482662315e-06 -9.247300188067395e-13" type="mesh" mesh="right_wrist_pitch_lowpoly" material="friday_hand_shell_material"/>
+                              <geom class="right_arm" name="right_arm_6_collision_0" pos="0.0 -3.13896291624288e-13 -0.074" quat="1.836604676625479e-06 0.9999999999966269 -1.8366024482662315e-06 -9.247300188067395e-13" type="mesh" mesh="compact_right_wrist_pitch"/>
+                              <body name="right_arm_7" pos="0.0 -2.12219131157e-13 -0.05" quat="0.9999999999949404 -1.8366030485920502e-06 -1.8365828415129973e-06 1.836604179199127e-06">
+                                <joint type="hinge" name="right_arm_7" axis="-0.0 1.0 -0.0" range="-0.6981 0.6981"/>
+                                <inertial pos="0.00248205211197 0.00603202999998 -0.0484290091173" mass="0.140721" fullinertia="0.000183871153 0.000212242 7.28443468e-05 -2.35175613e-06 2.08542922e-05 2.82772086e-05"/>
+                                <geom class="visual" name="right_arm_7_visual_0" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="mesh" mesh="right_wrist_roll_lowpoly" material="friday_hand_shell_material"/>
+                                <geom class="visual" name="right_arm_7_visual_1" pos="0.0181995452611 0.00419999999988 -0.123800066851" quat="2.5973357521353963e-06 -0.7071067811905796 -0.7071067811777453 -1.24828537450102e-11" type="mesh" mesh="right_wrist_tactile" material="tactile_material"/>
+                                <geom class="visual" name="right_arm_7_visual_2" pos="-0.0179940503226 0.0182300000001 -0.040924433905" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_3" pos="-0.0051915586144 0.01823 -0.0431818809308" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_4" pos="-0.020598804583 0.0182300000001 -0.0556965243374" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_5" pos="-0.00779625287484 0.01823 -0.0579539713634" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_6" pos="-0.0232035588438 0.0182300000001 -0.0704687147698" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_7" pos="-0.0104010671357 0.0182300000001 -0.0727261617956" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_8" pos="0.00240144457244 0.01823 -0.0749836088214" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_9" pos="0.0152040162809 0.0182299999999 -0.0772409558475" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_10" pos="0.028006507989 0.0182299999998 -0.0794984028732" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_11" pos="0.0408088996971 0.0182299999997 -0.0817558498987" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_12" pos="-0.0258082131042 0.0182300000002 -0.0852408052026" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_13" pos="-0.0130057213962 0.0182300000001 -0.0874982522284" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_14" pos="-0.000203254688018 0.01823 -0.089755699254" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_15" pos="0.0125992620204 0.0182299999999 -0.0920130462799" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_16" pos="0.0254017537282 0.0182299999998 -0.0942705933056" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_17" pos="0.0382042454366 0.0182299999998 -0.0965279403314" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_18" pos="-0.0284129673647 0.0182300000002 -0.100012895635" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_19" pos="-0.0156104756551 0.0182300000001 -0.102269942661" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_20" pos="-0.0028079539492 0.01823 -0.104527989687" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_21" pos="0.00999454776037 0.0182299999999 -0.106785036712" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_22" pos="0.0227969994663 0.0182299999999 -0.109043083738" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="right_arm_7_visual_23" pos="0.0355995911758 0.0182299999998 -0.111300130764" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="right_arm" name="right_arm_7_collision_0" quat="0.4999990817066576 0.4999990817092076 0.5000009182891042 -0.5000009182916575" type="mesh" mesh="compact_right_wrist_roll"/>
+                                <body name="right_hand_1_1" pos="0.0263006970891 0.0136999999998 -0.0552413966073" quat="0.18301168547762725 0.6830129742406702 0.6830129742371968 0.1830116854772126">
+                                  <joint type="hinge" name="right_hand_1_1" axis="3e-06 3e-06 1.0" range="-1.5708 -0.0"/>
+                                  <inertial pos="0.000130292331805 5.71099308158e-10 0.000104305585528" mass="0.00574066" fullinertia="2.27878e-07 3.50936e-07 1.38986e-07 -2.25759855e-13 7.77172278e-11 -6.74088211e-13"/>
+                                  <geom class="visual" name="right_hand_1_1_visual_0" pos="-0.00949974816969 -0.0412947414598 0.0553232615824" quat="0.9659257361019127 0.25881938167881646 1.7740224096056855e-06 4.753463814198301e-07" type="mesh" mesh="hand_1_1" material="friday_hand_shell_material"/>
+                                  <body name="right_hand_1_2" quat="0.9934050375504055 -0.11465788824039211 -1.8090629201107313e-06 5.518910788963747e-06">
+                                    <joint type="hinge" name="right_hand_1_2" axis="1.0 -5e-06 -3e-06" range="-0.8028 0.0"/>
+                                    <inertial pos="0.00436714117953 0.0160210407545 0.0180164825175" mass="0.0263023" fullinertia="6.60972402e-06 7.40614772e-06 3.03683826e-06 -4.46293811e-07 -1.79977032e-06 -6.2713581e-07"/>
+                                    <geom class="visual" name="right_hand_1_2_visual_0" pos="-0.00950014079565 -0.0528117400145 0.0444615744337" quat="0.9298809721026788 0.36786054109915794 2.1003255932494063e-07 -4.854640004430784e-06" type="mesh" mesh="right_hand_1_2" material="friday_hand_link_material"/>
+                                    <geom class="visual" name="right_hand_1_2_visual_1" pos="-0.00950014079565 -0.0528117400145 0.0444615744337" quat="0.9298809721026788 0.36786054109915794 2.1003255932494063e-07 -4.854640004430784e-06" type="mesh" mesh="tactile_thumb_mcp" material="tactile_material"/>
+                                    <geom class="visual" name="right_hand_1_2_visual_2" pos="0.00768296958386 0.0120761692312 0.0209924786135" quat="0.4393752366654072 0.5540327936333101 0.4393736750688698 0.5540287344899745" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_1_2_visual_3" pos="0.0127219500057 0.0167384763476 0.0196243741613" quat="0.4393752366654072 0.5540327936333101 0.4393736750688698 0.5540287344899745" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_1_2_visual_4" pos="0.00964800220602 0.0120761625972 0.0282303732172" quat="0.4393752366654072 0.5540327936333101 0.4393736750688698 0.5540287344899745" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_1_2_visual_5" pos="0.0146869726286 0.0167385443044 0.0268623889158" quat="0.4393752366654072 0.5540327936333101 0.4393736750688698 0.5540287344899745" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_1_2_visual_6" pos="0.011613074829 0.0120762305538 0.0354683879717" quat="0.4393752366654072 0.5540327936333101 0.4393736750688698 0.5540287344899745" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_1_2_visual_7" pos="0.0167239955427 0.0168051172358 0.0340808389975" quat="0.4393752366654072 0.5540327936333101 0.4393736750688698 0.5540287344899745" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="right_hand" name="right_hand_1_2_collision_0" pos="-0.00950014079565 -0.0528117400145 0.0444615744337" quat="0.9298809721026788 0.36786054109915794 2.1003255932494063e-07 -4.854640004430784e-06" type="mesh" mesh="compact_right_hand_1_2"/>
+                                    <body name="right_hand_1_3" pos="0.0164565296399 0.0155261529422 0.047157812569" quat="0.9046961669448683 -0.05400478307827835 0.12062470288964727 -0.4050407510025568">
+                                      <joint type="hinge" name="right_hand_1_3" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                      <inertial pos="-0.00355424999997 -0.000788994000059 0.01748" mass="0.0176727" fullinertia="3.12381e-06 2.84328e-06 8.69495e-07 -6.5986e-08 -7.2979e-08 1.2669e-08"/>
+                                      <geom class="visual" name="right_hand_1_3_visual_0" pos="0.0347597000003 -0.0636743999998 -0.00940297000014" quat="0.8213935864930947 0.38302265280793607 0.036833896393272 0.4210100801411671" type="mesh" mesh="right_hand_1_3" material="friday_hand_link_material"/>
+                                      <geom class="visual" name="right_hand_1_3_visual_1" pos="0.0347597000003 -0.0636743999998 -0.00940297000014" quat="0.8213935864930947 0.38302265280793607 0.036833896393272 0.4210100801411671" type="mesh" mesh="tactile_thumb_pip" material="tactile_material"/>
+                                      <geom class="visual" name="right_hand_1_3_visual_2" pos="0.00149999000001 -0.00349999000002 0.0125" quat="0.7071067811847432 -0.7071067811883519 -1.5548625618397679e-12 1.6556624976791657e-12" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_1_3_visual_3" pos="0.00149995999996 0.00350000999998 0.0125" quat="0.7071067811847432 -0.7071067811883519 -1.5548625618397679e-12 1.6556624976791657e-12" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_1_3_visual_4" pos="0.00149998999998 -0.00349999000004 0.0199999999999" quat="0.7071067811847432 -0.7071067811883519 -1.5548625618397679e-12 1.6556624976791657e-12" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_1_3_visual_5" pos="0.00149995999995 0.00350000999996 0.02" quat="0.7071067811847432 -0.7071067811883519 -1.5548625618397679e-12 1.6556624976791657e-12" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_1_3_visual_6" pos="0.00149999000002 -0.00349999000006 0.0275" quat="0.7071067811847432 -0.7071067811883519 -1.5548625618397679e-12 1.6556624976791657e-12" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_1_3_visual_7" pos="0.00149995999996 0.00350000999994 0.0275" quat="0.7071067811847432 -0.7071067811883519 -1.5548625618397679e-12 1.6556624976791657e-12" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="right_hand" name="right_hand_1_3_collision_0" pos="0.0347597000003 -0.0636743999998 -0.00940297000014" quat="0.8213935864930947 0.38302265280793607 0.036833896393272 0.4210100801411671" type="mesh" mesh="compact_right_hand_1_3"/>
+                                      <body name="right_hand_1_4" pos="2.14486858011e-18 -2.06613597976e-18 0.04">
+                                        <joint type="hinge" name="right_hand_1_4" axis="0.0 1.0 0.0" range="-0.0 1.5708"/>
+                                        <inertial pos="-0.0036273282135 -0.000934590000051 0.0138114004692" mass="0.0140376" fullinertia="1.62630999e-06 1.47074e-06 5.44493011e-07 -4.13040039e-08 -4.39701399e-08 -3.00659947e-08"/>
+                                        <geom class="visual" name="right_hand_1_4_visual_0" pos="0.0347596936101 -0.0636743999997 -0.0494030044963" quat="0.8213935841113784 0.38302268003508216 0.03683394951505464 0.42101005536985636" type="mesh" mesh="right_hand_1_4" material="friday_hand_link_material"/>
+                                        <geom class="visual" name="right_hand_1_4_visual_1" pos="0.0347596936101 -0.0636743999997 -0.0494030044963" quat="0.8213935841113784 0.38302268003508216 0.03683394951505464 0.42101005536985636" type="mesh" mesh="tactile_thumb_dip" material="tactile_material"/>
+                                        <geom class="visual" name="right_hand_1_4_visual_2" pos="0.00149999146166 -0.00349999000002 0.011299999806" quat="0.7071067811847418 -0.7071067811883505 4.5729869135021487e-08 4.5733079660314386e-08" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_1_4_visual_3" pos="0.00149997146163 0.00350000999998 0.011299999806" quat="0.7071067811847418 -0.7071067811883505 4.5729869135021487e-08 4.5733079660314386e-08" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_1_4_visual_4" pos="0.00149999223772 -0.00349999000004 0.017299999806" quat="0.7071067811847418 -0.7071067811883505 4.5729869135021487e-08 4.5733079660314386e-08" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_1_4_visual_5" pos="0.0014999722377 0.00350000999996 0.017299999806" quat="0.7071067811847418 -0.7071067811883505 4.5729869135021487e-08 4.5733079660314386e-08" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_1_4_visual_6" pos="0.00149999301383 -0.00349999000005 0.023299999806" quat="0.7071067811847418 -0.7071067811883505 4.5729869135021487e-08 4.5733079660314386e-08" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_1_4_visual_7" pos="0.00149997301375 0.00350000999995 0.023299999806" quat="0.7071067811847418 -0.7071067811883505 4.5729869135021487e-08 4.5733079660314386e-08" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="right_hand" name="right_hand_1_4_collision_0" pos="0.0347596936101 -0.0636743999997 -0.0494030044963" quat="0.8213935841113784 0.38302268003508216 0.03683394951505464 0.42101005536985636" type="mesh" mesh="compact_right_hand_1_4"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                                <body name="right_hand_2_1" pos="0.0391995893392 0.00969999999975 -0.111800143988" quat="1.3819683100680683e-11 0.7071067811882787 0.7071067811848163 1.431834446548983e-11">
+                                  <joint type="hinge" name="right_hand_2_1" axis="1.0 -6.55452029142e-12 4.98636620086e-13" range="-0.2618 0.2618"/>
+                                  <inertial pos="-0.00566497 0.000734251444088 -0.00400346805831" mass="0.00738742" fullinertia="6.32072e-07 6.11881555e-07 3.32255445e-07 1.94472785e-08 -4.80488313e-08 -3.41952955e-08"/>
+                                  <geom class="visual" name="right_hand_2_1_visual_0" pos="-0.0055 0.00033148269882 0.00949421503972" quat="0.9998477846571538 -0.017447278091689684 -3.205073923150674e-08 -1.8363213134095752e-06" type="mesh" mesh="hand_2_1" material="friday_hand_shell_material"/>
+                                  <body name="right_hand_2_2" pos="-2.56148747357e-15 0.000331482698819 0.00949421503972" quat="0.9998477526099631 -0.017449114413509232 1.8695032125658403e-06 -1.8695092812238153e-06">
+                                    <joint type="hinge" name="right_hand_2_2" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                    <inertial pos="-0.00331828128816322 -0.000178959000021358 0.0187418873784991" mass="0.0153719" fullinertia="2.74279096092e-06 2.65598e-06 6.88238039075e-07 -2.06798518808e-08 -1.26311185142e-07 -3.89410786599e-08"/>
+                                    <geom class="visual" name="right_hand_2_2_visual_0" pos="-0.00549999999995997 0.0 -2.09202416676551e-08" quat="0.999999999996505 1.836598970818675e-06 -1.9018392524399623e-06 6.7155853887913164e-12" type="mesh" mesh="hand_2_2" material="friday_hand_link_material"/>
+                                    <geom class="visual" name="right_hand_2_2_visual_1" pos="-0.00549999999995997 0.0 -2.09202416676551e-08" quat="0.999999999996505 1.836598970818675e-06 -1.9018392524399623e-06 6.7155853887913164e-12" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
+                                    <geom class="visual" name="right_hand_2_2_visual_2" pos="0.00149994055216632 -0.00299998999999029 0.0130000057054002" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_2_2_visual_3" pos="0.00149992055212762 0.00300001000000971 0.0130000057053002" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_2_2_visual_4" pos="0.0014999063190442 -0.00299998999999027 0.0220000057053002" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_2_2_visual_5" pos="0.00149988631900553 0.00300001000000974 0.0220000057052002" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_2_2_visual_6" pos="0.00149987208592211 -0.00299998999999025 0.0310000057053002" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_2_2_visual_7" pos="0.0014998520858834 0.00300001000000975 0.0310000057052003" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="right_hand" name="right_hand_2_2_collision_0" pos="-0.00549999999995997 0.0 -2.09202416676551e-08" quat="0.999999999996505 1.836598970818675e-06 -1.9018392524399623e-06 6.7155853887913164e-12" type="mesh" mesh="compact_hand_2_2"/>
+                                    <body name="right_hand_2_3" pos="-1.67361932368326e-07 0.0 0.0439999999996999">
+                                      <joint type="hinge" name="right_hand_2_3" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                      <inertial pos="-0.00304223538663203 -0.000113559000019625 0.0119322884283995" mass="0.00960055" fullinertia="1.08863058161e-06 9.9172e-07 4.00899418389e-07 -1.6444003252e-08 -7.64523840929e-08 8.5493745228e-10"/>
+                                      <geom class="visual" name="right_hand_2_3_visual_0" pos="-0.00549983263802964 0.0 -0.0440000209199011" quat="0.999999999996505 1.836598970818675e-06 -1.9018392524399623e-06 6.7155853887913164e-12" type="mesh" mesh="hand_2_3" material="friday_hand_link_material"/>
+                                      <geom class="visual" name="right_hand_2_3_visual_1" pos="-0.00549983263802964 0.0 -0.0440000209199011" quat="0.999999999996505 1.836598970818675e-06 -1.9018392524399623e-06 6.7155853887913164e-12" type="mesh" mesh="tactile_pip" material="tactile_material"/>
+                                      <geom class="visual" name="right_hand_2_3_visual_2" pos="0.00149994435584657 -0.00299998999999034 0.0120000057054004" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_2_3_visual_3" pos="0.00149992435580786 0.00300001000000967 0.0120000057053005" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_2_3_visual_4" pos="0.00149992153376515 -0.00299998999999032 0.0180000057053004" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_2_3_visual_5" pos="0.00149990153372645 0.00300001000000968 0.0180000057053005" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="right_hand" name="right_hand_2_3_collision_0" pos="-0.00549983263802964 0.0 -0.0440000209199011" quat="0.999999999996505 1.836598970818675e-06 -1.9018392524399623e-06 6.7155853887913164e-12" type="mesh" mesh="compact_hand_2_3"/>
+                                      <body name="right_hand_2_4" pos="-1.14110408483414e-07 0.0 0.0299999999998002">
+                                        <joint type="hinge" name="right_hand_2_4" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                        <inertial pos="-0.00153401670525386 5.96675999901499e-05 0.0149079941651998" mass="0.00848267" fullinertia="9.93317933904e-07 9.05573e-07 2.67549066096e-07 3.79302686536e-09 8.68976059281e-09 -7.06298557259e-09"/>
+                                        <geom class="visual" name="right_hand_2_4_visual_0" pos="-0.0054997185276226 0.0 -0.0740000209197011" quat="0.999999999996505 1.836598970818675e-06 -1.9018392524399623e-06 6.7155853887913164e-12" type="mesh" mesh="hand_2_4" material="friday_hand_link_material"/>
+                                        <geom class="visual" name="right_hand_2_4_visual_1" pos="-0.0054997185276226 0.0 -0.0740000209197011" quat="0.999999999996505 1.836598970818675e-06 -1.9018392524399623e-06 6.7155853887913164e-12" type="mesh" mesh="tactile_dip" material="tactile_material"/>
+                                        <geom class="visual" name="right_hand_2_4_visual_2" pos="0.00149994796933678 -0.0029999899999903 0.0110500057054004" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_2_4_visual_3" pos="0.0014999279692981 0.00300001000000971 0.0110500057053005" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_2_4_visual_4" pos="0.00149992514725536 -0.00299998999999028 0.0170500057054004" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_2_4_visual_5" pos="0.00149990514721669 0.00300001000000972 0.0170500057053005" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_2_4_visual_6" pos="0.00149990232517396 -0.00299998999999027 0.0230500057053004" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_2_4_visual_7" pos="0.00149988232513528 0.00300001000000974 0.0230500057052005" quat="0.7071067811827326 -0.7071067811878049 -1.34480571090005e-06 -1.3448011533669595e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="right_hand" name="right_hand_2_4_collision_0" pos="-0.0054997185276226 0.0 -0.0740000209197011" quat="0.999999999996505 1.836598970818675e-06 -1.9018392524399623e-06 6.7155853887913164e-12" type="mesh" mesh="compact_hand_2_4"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                                <body name="right_hand_3_1" pos="0.0181995801564 0.00969999999988 -0.114300066851" quat="1.3819683100680683e-11 0.7071067811882787 0.7071067811848163 1.431834446548983e-11">
+                                  <joint type="hinge" name="right_hand_3_1" axis="1.0 -6.55452029142e-12 4.98636620086e-13" range="-0.2618 0.2618"/>
+                                  <inertial pos="-0.00566497 0.000873497000033 -0.00397540999999" mass="0.00738742" fullinertia="6.32072e-07 6.13926e-07 3.30211e-07 2.1112e-08 -4.7341e-08 -2.4361e-08"/>
+                                  <geom class="visual" name="right_hand_3_1_visual_0" pos="-0.0055 3.13128137187e-14 0.0095" quat="0.9999999999966269 1.836606565940412e-06 -3.622361461424834e-12 -1.8366025990204121e-06" type="mesh" mesh="hand_3_1" material="friday_hand_shell_material"/>
+                                  <body name="right_hand_3_2" pos="-4.73706852739e-15 -4.73704788416e-15 0.0095" quat="0.9999999999966269 7.385415002356165e-12 1.836597304228501e-06 -1.8366058289382388e-06">
+                                    <joint type="hinge" name="right_hand_3_2" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                    <inertial pos="-0.00331827884256903 -0.00017895900002137 0.0187418878115003" mass="0.0153719" fullinertia="2.74279092796e-06 2.65598e-06 6.8823807204e-07 -2.06798569621e-08 -1.26311453237e-07 -3.89410759613e-08"/>
+                                    <geom class="visual" name="right_hand_3_2_visual_0" pos="-0.00549999999996 0.0 -2.02025547559949e-08" quat="0.9999999999966269 1.8365985260419341e-06 -1.8365975549452106e-06 6.598854126917336e-12" type="mesh" mesh="hand_3_2" material="friday_hand_link_material"/>
+                                    <geom class="visual" name="right_hand_3_2_visual_1" pos="-0.00549999999996 0.0 -2.02025547559949e-08" quat="0.9999999999966269 1.8365985260419341e-06 -1.8365975549452106e-06 6.598854126917336e-12" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
+                                    <geom class="visual" name="right_hand_3_2_visual_2" pos="0.00149994224851924 -0.00299998999999028 0.0130000055097003" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_3_2_visual_3" pos="0.00149992224848051 0.00300001000000972 0.0130000055096004" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_3_2_visual_4" pos="0.00149990918978915 -0.00299998999999025 0.0220000055096003" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_3_2_visual_5" pos="0.00149988918975042 0.00300001000000975 0.0220000055095004" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_3_2_visual_6" pos="0.00149987613105906 -0.00299998999999022 0.0310000055095003" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_3_2_visual_7" pos="0.00149985613102033 0.00300001000000978 0.0310000055095004" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="right_hand" name="right_hand_3_2_collision_0" pos="-0.00549999999996 0.0 -2.02025547559949e-08" quat="0.9999999999966269 1.8365985260419341e-06 -1.8365975549452106e-06 6.598854126917336e-12" type="mesh" mesh="compact_hand_3_2"/>
+                                    <body name="right_hand_3_3" pos="-1.61620440697341e-07 0.0 0.0439999999997003">
+                                      <joint type="hinge" name="right_hand_3_3" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                      <inertial pos="-0.00304223382959937 -0.00011355900001962 0.0119322888254003" mass="0.00960055" fullinertia="1.08863056166e-06 9.9172e-07 4.00899438342e-07 -1.64440031405e-08 -7.64524738338e-08 8.54939598028e-10"/>
+                                      <geom class="visual" name="right_hand_3_3_visual_0" pos="-0.00549983837951957 0.0 -0.0440000202022997" quat="0.9999999999966269 1.8365985260419341e-06 -1.8365975549452106e-06 6.598854126917336e-12" type="mesh" mesh="hand_3_3" material="friday_hand_link_material"/>
+                                      <geom class="visual" name="right_hand_3_3_visual_1" pos="-0.00549983837951957 0.0 -0.0440000202022997" quat="0.9999999999966269 1.8365985260419341e-06 -1.8365975549452106e-06 6.598854126917336e-12" type="mesh" mesh="tactile_pip" material="tactile_material"/>
+                                      <geom class="visual" name="right_hand_3_3_visual_2" pos="0.00149994592170926 -0.00299998999999031 0.0120000055097003" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_3_3_visual_3" pos="0.00149992592167055 0.0030000100000097 0.0120000055096004" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_3_3_visual_4" pos="0.0014999238825592 -0.00299998999999029 0.0180000055096003" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_3_3_visual_5" pos="0.0014999038825205 0.00300001000000971 0.0180000055096004" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="right_hand" name="right_hand_3_3_collision_0" pos="-0.00549983837951957 0.0 -0.0440000202022997" quat="0.9999999999966269 1.8365985260419341e-06 -1.8365975549452106e-06 6.598854126917336e-12" type="mesh" mesh="compact_hand_3_3"/>
+                                      <body name="right_hand_3_4" pos="-1.10195754965403e-07 0.0 0.0299999999998003">
+                                        <joint type="hinge" name="right_hand_3_4" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                        <inertial pos="-0.00153401475993045 5.96675999901291e-05 0.0149079943654" mass="0.00848267" fullinertia="9.93317936172e-07 9.05573e-07 2.67549063828e-07 3.79302594373e-09 8.68966588852e-09 -7.06298606754e-09"/>
+                                        <geom class="visual" name="right_hand_3_4_visual_0" pos="-0.00549972818375922 0.0 -0.0740000202021" quat="0.9999999999966269 1.8365985260419341e-06 -1.8365975549452106e-06 6.598854126917336e-12" type="mesh" mesh="hand_3_4" material="friday_hand_link_material"/>
+                                        <geom class="visual" name="right_hand_3_4_visual_1" pos="-0.00549972818375922 0.0 -0.0740000202021" quat="0.9999999999966269 1.8365985260419341e-06 -1.8365975549452106e-06 6.598854126917336e-12" type="mesh" mesh="tactile_dip" material="tactile_material"/>
+                                        <geom class="visual" name="right_hand_3_4_visual_2" pos="0.00149994941123936 -0.0029999899999903 0.0110500055097" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_3_4_visual_3" pos="0.00149992941120062 0.0030000100000097 0.0110500055096001" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_3_4_visual_4" pos="0.0014999273720893 -0.00299998999999028 0.0170500055096" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_3_4_visual_5" pos="0.00149990737205056 0.00300001000000972 0.0170500055096001" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_3_4_visual_6" pos="0.00149990533293925 -0.00299998999999026 0.0230500055096" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_3_4_visual_7" pos="0.00149988533290051 0.00300001000000974 0.0230500055095001" quat="0.7071067811825077 -0.7071067811882021 -1.2986728663715597e-06 -1.2986683044659816e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="right_hand" name="right_hand_3_4_collision_0" pos="-0.00549972818375922 0.0 -0.0740000202021" quat="0.9999999999966269 1.8365985260419341e-06 -1.8365975549452106e-06 6.598854126917336e-12" type="mesh" mesh="compact_hand_3_4"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                                <body name="right_hand_4_1" pos="-0.00280040515081 0.00970000000002 -0.110299989714" quat="1.3819683100680683e-11 0.7071067811882787 0.7071067811848163 1.431834446548983e-11">
+                                  <joint type="hinge" name="right_hand_4_1" axis="1.0 -6.55452029142e-12 4.98636620086e-13" range="-0.2618 0.2618"/>
+                                  <inertial pos="-0.00566497 0.00101171816094 -0.00394250022701" mass="0.00738742" fullinertia="6.32072e-07 6.15279878e-07 3.28857122e-07 2.27514753e-08 -4.65752853e-08 -1.44052007e-08"/>
+                                  <geom class="visual" name="right_hand_4_1_visual_0" pos="-0.0055 -0.000331577641106 0.00949421172441" quat="0.9998476332955853 0.017455949983987265 3.20526612012916e-08 -1.8363219029882485e-06" type="mesh" mesh="hand_4_1" material="friday_hand_shell_material"/>
+                                  <body name="right_hand_4_2" pos="-6.90750101405e-15 -0.000331577641107 0.00949421172441" quat="0.9998476653519236 0.01745411366380675 1.8053612454653047e-06 -1.8053668291324634e-06">
+                                    <joint type="hinge" name="right_hand_4_2" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                    <inertial pos="-0.0033182764803248 -0.000178959000021371 0.0187418882297005" mass="0.0153719" fullinertia="2.74279089612e-06 2.65598e-06 6.88238103881e-07 -2.06798618703e-08 -1.26311712195e-07 -3.89410733549e-08"/>
+                                    <geom class="visual" name="right_hand_4_2_visual_0" pos="-0.00549999999997 0.0 -1.95093291993945e-08" quat="0.9999999999967407 1.8365928573161457e-06 -1.773574162421824e-06 6.4833041053182745e-12" type="mesh" mesh="hand_4_2" material="friday_hand_link_material"/>
+                                    <geom class="visual" name="right_hand_4_2_visual_1" pos="-0.00549999999997 0.0 -1.95093291993945e-08" quat="0.9999999999967407 1.8365928573161457e-06 -1.773574162421824e-06 6.4833041053182745e-12" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
+                                    <geom class="visual" name="right_hand_4_2_visual_2" pos="0.00149994388705217 -0.00299998999999029 0.0130000053205996" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_4_2_visual_3" pos="0.00149992388701344 0.00300001000000971 0.0130000053204997" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_4_2_visual_4" pos="0.00149991196269411 -0.00299998999999026 0.0220000053204996" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_4_2_visual_5" pos="0.0014998919626554 0.00300001000000974 0.0220000053204997" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_4_2_visual_6" pos="0.00149988003833606 -0.00299998999999023 0.0310000053204996" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_4_2_visual_7" pos="0.00149986003829732 0.00300001000000977 0.0310000053203997" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="right_hand" name="right_hand_4_2_collision_0" pos="-0.00549999999997 0.0 -1.95093291993945e-08" quat="0.9999999999967407 1.8365928573161457e-06 -1.773574162421824e-06 6.4833041053182745e-12" type="mesh" mesh="compact_hand_4_2"/>
+                                    <body name="right_hand_4_3" pos="-1.5607463277334e-07 0.0 0.0439999999996996">
+                                      <joint type="hinge" name="right_hand_4_3" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                      <inertial pos="-0.00304223232564669 -0.0001135590000196 0.0119322892088007" mass="0.00960055" fullinertia="1.08863054239e-06 9.9172e-07 4.00899457613e-07 -1.64440030327e-08 -7.6452560516e-08 8.54941670644e-10"/>
+                                      <geom class="visual" name="right_hand_4_3_visual_0" pos="-0.0054998439253295 0.0 -0.0440000195089986" quat="0.9999999999967407 1.8365928573161457e-06 -1.773574162421824e-06 6.4833041053182745e-12" type="mesh" mesh="hand_4_3" material="friday_hand_link_material"/>
+                                      <geom class="visual" name="right_hand_4_3_visual_1" pos="-0.0054998439253295 0.0 -0.0440000195089986" quat="0.9999999999967407 1.8365928573161457e-06 -1.773574162421824e-06 6.4833041053182745e-12" type="mesh" mesh="tactile_pip" material="tactile_material"/>
+                                      <geom class="visual" name="right_hand_4_3_visual_2" pos="0.00149994743420197 -0.00299998999999028 0.0120000053205998" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_4_3_visual_3" pos="0.00149992743416323 0.00300001000000972 0.0120000053204999" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_4_3_visual_4" pos="0.00149992615129326 -0.00299998999999026 0.0180000053205998" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_4_3_visual_5" pos="0.00149990615125452 0.00300001000000974 0.0180000053204999" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="right_hand" name="right_hand_4_3_collision_0" pos="-0.0054998439253295 0.0 -0.0440000195089986" quat="0.9999999999967407 1.8365928573161457e-06 -1.773574162421824e-06 6.4833041053182745e-12" type="mesh" mesh="compact_hand_4_3"/>
+                                      <body name="right_hand_4_4" pos="-1.06414522249576e-07 0.0 0.0299999999998002">
+                                        <joint type="hinge" name="right_hand_4_4" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                        <inertial pos="-0.0015340128809072 5.96675999901419e-05 0.0149079945587002" mass="0.00848267" fullinertia="9.93317938363e-07 9.05573e-07 2.67549061637e-07 3.79302505351e-09 8.68957441198e-09 -7.06298654562e-09"/>
+                                        <geom class="visual" name="right_hand_4_4_visual_0" pos="-0.00549973751080599 0.0 -0.0740000195087989" quat="0.9999999999967407 1.8365928573161457e-06 -1.773574162421824e-06 6.4833041053182745e-12" type="mesh" mesh="hand_4_4" material="friday_hand_link_material"/>
+                                        <geom class="visual" name="right_hand_4_4_visual_1" pos="-0.00549973751080599 0.0 -0.0740000195087989" quat="0.9999999999967407 1.8365928573161457e-06 -1.773574162421824e-06 6.4833041053182745e-12" type="mesh" mesh="tactile_dip" material="tactile_material"/>
+                                        <geom class="visual" name="right_hand_4_4_visual_2" pos="0.00149995080399173 -0.00299998999999029 0.0110500053205996" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_4_4_visual_3" pos="0.00149993080395299 0.00300001000000972 0.0110500053204997" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_4_4_visual_4" pos="0.00149992952109302 -0.00299998999999027 0.0170500053205996" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_4_4_visual_5" pos="0.00149990952105429 0.00300001000000973 0.0170500053204997" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_4_4_visual_6" pos="0.00149990823818431 -0.00299998999999025 0.0230500053204996" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_4_4_visual_7" pos="0.00149988823814558 0.00300001000000975 0.0230500053204997" quat="0.7071067811822628 -0.707106781188608 -1.2541085982919937e-06 -1.2541040360920615e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="right_hand" name="right_hand_4_4_collision_0" pos="-0.00549973751080599 0.0 -0.0740000195087989" quat="0.9999999999967407 1.8365928573161457e-06 -1.773574162421824e-06 6.4833041053182745e-12" type="mesh" mesh="compact_hand_4_4"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                                <body name="right_hand_5_1" pos="-0.023800390458 0.00970000000015 -0.106299912578" quat="1.3819683100680683e-11 0.7071067811882787 0.7071067811848163 1.431834446548983e-11">
+                                  <joint type="hinge" name="right_hand_5_1" axis="1.0 -6.55452029142e-12 4.98636620086e-13" range="-0.2618 0.2618"/>
+                                  <inertial pos="-0.00566497 0.00114870645793 -0.00390478618501" mass="0.00738742" fullinertia="6.32072e-07 6.15935908e-07 3.28201092e-07 2.43632259e-08 -4.57528146e-08 -4.37920704e-09"/>
+                                  <geom class="visual" name="right_hand_5_1_visual_0" pos="-0.0055 -0.000662751226816 0.00947685395115" quat="0.9993906437265961 0.034904745069496486 6.409915887823177e-08 -1.8354834270466535e-06" type="mesh" mesh="hand_5_1" material="friday_hand_shell_material"/>
+                                  <body name="right_hand_5_2" pos="-9.0695161277e-15 -0.000662751226817 0.00947685395115" quat="0.9993907078295587 0.03490290958684189 1.7757017829683606e-06 -1.7757099137166382e-06">
+                                    <joint type="hinge" name="right_hand_5_2" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                    <inertial pos="-0.00331827419634056 -0.000178959000021301 0.0187418886341014" mass="0.0153719" fullinertia="2.74279086533e-06 2.65598e-06 6.88238134667e-07 -2.06798666159e-08 -1.26311962573e-07 -3.89410708347e-08"/>
+                                    <geom class="visual" name="right_hand_5_2_visual_0" pos="-0.00549999999996997 0.0 -1.88390691394503e-08" quat="0.9999999999968469 1.8365923809157246e-06 -1.7126439848768794e-06 6.365940600936692e-12" type="mesh" mesh="hand_5_2" material="friday_hand_link_material"/>
+                                    <geom class="visual" name="right_hand_5_2_visual_1" pos="-0.00549999999996997 0.0 -1.88390691394503e-08" quat="0.9999999999968469 1.8365923809157246e-06 -1.7126439848768794e-06 6.365940600936692e-12" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
+                                    <geom class="visual" name="right_hand_5_2_visual_2" pos="0.00149994547129509 -0.00299998999999027 0.0130000051377993" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_5_2_visual_3" pos="0.00149992547125643 0.00300001000000973 0.0130000051376993" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_5_2_visual_4" pos="0.00149991464372905 -0.00299998999999024 0.0220000051377993" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_5_2_visual_5" pos="0.0014998946436904 0.00300001000000976 0.0220000051376993" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_5_2_visual_6" pos="0.00149988381616301 -0.00299998999999021 0.0310000051376993" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="right_hand_5_2_visual_7" pos="0.00149986381612436 0.00300001000000979 0.0310000051375993" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="right_hand" name="right_hand_5_2_collision_0" pos="-0.00549999999996997 0.0 -1.88390691394503e-08" quat="0.9999999999968469 1.8365923809157246e-06 -1.7126439848768794e-06 6.365940600936692e-12" type="mesh" mesh="compact_hand_5_2"/>
+                                    <body name="right_hand_5_3" pos="-1.50712552160481e-07 0.0 0.0439999999996996">
+                                      <joint type="hinge" name="right_hand_5_3" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                      <inertial pos="-0.00304223087151391 -0.000113559000019569 0.0119322895796013" mass="0.00960055" fullinertia="1.08863052375e-06 9.9172e-07 4.00899476247e-07 -1.64440029285e-08 -7.64526443265e-08 8.54943674597e-10"/>
+                                      <geom class="visual" name="right_hand_5_3_visual_0" pos="-0.00549984928741928 0.0 -0.0440000188387976" quat="0.9999999999968469 1.8365923809157246e-06 -1.7126439848768794e-06 6.365940600936692e-12" type="mesh" mesh="hand_5_3" material="friday_hand_link_material"/>
+                                      <geom class="visual" name="right_hand_5_3_visual_1" pos="-0.00549984928741928 0.0 -0.0440000188387976" quat="0.9999999999968469 1.8365923809157246e-06 -1.7126439848768794e-06 6.365940600936692e-12" type="mesh" mesh="tactile_pip" material="tactile_material"/>
+                                      <geom class="visual" name="right_hand_5_3_visual_2" pos="0.00149994889658473 -0.0029999899999903 0.0120000051377994" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_5_3_visual_3" pos="0.00149992889654608 0.0030000100000097 0.0120000051377994" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_5_3_visual_4" pos="0.00149992834487737 -0.00299998999999028 0.0180000051377994" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="right_hand_5_3_visual_5" pos="0.00149990834483872 0.00300001000000972 0.0180000051376994" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="right_hand" name="right_hand_5_3_collision_0" pos="-0.00549984928741928 0.0 -0.0440000188387976" quat="0.9999999999968469 1.8365923809157246e-06 -1.7126439848768794e-06 6.365940600936692e-12" type="mesh" mesh="compact_hand_5_3"/>
+                                      <body name="right_hand_5_4" pos="-1.02758558329086e-07 0.0 0.0299999999998">
+                                        <joint type="hinge" name="right_hand_5_4" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                        <inertial pos="-0.00153401106414381 5.96675999901311e-05 0.0149079947457006" mass="0.00848267" fullinertia="9.93317940481e-07 9.05573e-07 2.67549059519e-07 3.79302419277e-09 8.68948596598e-09 -7.06298700785e-09"/>
+                                        <geom class="visual" name="right_hand_5_4_visual_0" pos="-0.00549974652885261 0.0 -0.0740000188385976" quat="0.9999999999968469 1.8365923809157246e-06 -1.7126439848768794e-06 6.365940600936692e-12" type="mesh" mesh="hand_5_4" material="friday_hand_link_material"/>
+                                        <geom class="visual" name="right_hand_5_4_visual_1" pos="-0.00549974652885261 0.0 -0.0740000188385976" quat="0.9999999999968469 1.8365923809157246e-06 -1.7126439848768794e-06 6.365940600936692e-12" type="mesh" mesh="tactile_dip" material="tactile_material"/>
+                                        <geom class="visual" name="right_hand_5_4_visual_2" pos="0.00149995215060421 -0.00299998999999034 0.0110500051377994" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_5_4_visual_3" pos="0.00149993215056554 0.00300001000000965 0.0110500051377994" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_5_4_visual_4" pos="0.00149993159889686 -0.00299998999999032 0.0170500051377994" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_5_4_visual_5" pos="0.00149991159885818 0.00300001000000967 0.0170500051376994" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_5_4_visual_6" pos="0.0014999110471895 -0.00299998999999029 0.0230500051377994" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="right_hand_5_4_visual_7" pos="0.00149989104715083 0.00300001000000969 0.0230500051376994" quat="0.7071067811784665 -0.7071067811925544 -1.2110244527046203e-06 -1.2110198982374141e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="right_hand" name="right_hand_5_4_collision_0" pos="-0.00549974652885261 0.0 -0.0740000188385976" quat="0.9999999999968469 1.8365923809157246e-06 -1.7126439848768794e-06 6.365940600936692e-12" type="mesh" mesh="compact_hand_5_4"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                                <body name="right_wrist_cam" pos="-0.00975011748267 0.019031 -0.0319839641864" quat="1.6967842935328598e-06 -7.02831178737151e-07 -0.9238795325092799 -0.38268343236552754">
+                                  <geom class="visual" name="right_wrist_cam_visual_0" type="sphere" size="0.01" material="polyurethane_green"/>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <body name="left_arm_1" pos="-1.2023667534291e-06 0.163667249651 0.244688600437" quat="0.9961946980851739 0.08715574274536672 3.201409189136841e-07 3.6592274475095553e-06">
+                    <joint type="hinge" name="left_arm_1" axis="-0.0 1.0 -0.0" range="-2.1817 0.7854"/>
+                    <inertial pos="-1.75910707e-08 0.0495645414 1.18115508e-08" mass="0.589982705" fullinertia="0.000732967148 0.000569751463 0.00075617386 -4.40392862e-10 -6.65332419e-10 3.89217352e-10"/>
+                    <geom class="visual" name="left_arm_1_visual_0" quat="0.7071067811848175 0.7071067811882776 0.0 0.0" type="mesh" mesh="left_arm_1" material="friday_body_material"/>
+                    <geom class="left_arm" name="left_arm_1_collision_0" quat="0.7071067811848175 0.7071067811882776 0.0 0.0" type="mesh" mesh="compact_left_arm_1"/>
+                    <body name="left_arm_2" pos="0.0 0.0649999999999999 0.0" quat="0.9961946980921079 -0.08715574274351601 1.5661555354079687e-13 -1.7901239684829565e-12">
+                      <joint type="hinge" name="left_arm_2" axis="1.0 0.0 0.0" range="-0.2967 3.3161"/>
+                      <inertial pos="3.64042865e-09 0.00912432503 -0.0884367713" mass="0.825116825" fullinertia="0.00192070908 0.0022945932 0.00119871281 -4.86940895e-09 1.29364243e-09 6.89393875e-05"/>
+                      <geom class="visual" name="left_arm_2_visual_0" quat="0.49999999999984973 0.5000000000001485 0.5000000000022982 0.49999999999770367" type="mesh" mesh="left_arm_2" material="friday_body_material"/>
+                      <geom class="left_arm" name="left_arm_2_collision_0" quat="0.49999999999984973 0.5000000000001485 0.5000000000022982 0.49999999999770367" type="mesh" mesh="compact_left_arm_2"/>
+                      <body name="left_arm_3" pos="0.0 0.00999999999857595 -0.155" quat="0.9999999999932538 -2.565114259734654e-12 -2.448365512432306e-12 -3.6732033322500497e-06">
+                        <joint type="hinge" name="left_arm_3" axis="0.0 0.0 1.0" range="-1.5708 1.5708"/>
+                        <inertial pos="0.00127996245 5.9498137e-10 -0.0683334448" mass="0.836764547" fullinertia="0.00250150061 0.00211468509 0.00123286035 -1.62942219e-09 0.000105969358 2.32321709e-10"/>
+                        <geom class="visual" name="left_arm_3_visual_0" quat="0.7071041838313314 -1.6580764923270473e-12 -1.6580886732922148e-12 0.707109378532223" type="mesh" mesh="left_arm_3" material="friday_body_material"/>
+                        <geom class="left_arm" name="left_arm_3_collision_0" quat="0.7071041838313314 -1.6580764923270473e-12 -1.6580886732922148e-12 0.707109378532223" type="mesh" mesh="compact_left_arm_3"/>
+                        <body name="left_arm_4" pos="0.0134999999996 9.91765171654002e-08 -0.163" quat="0.9999999999932537 -2.4482915794956317e-12 2.1361975604410715e-12 3.6732043378112e-06">
+                          <joint type="hinge" name="left_arm_4" axis="-0.0 1.0 -0.0" range="-2.2689 -0.0"/>
+                          <inertial pos="-0.0083060547 -8.93644741e-09 -0.0367004747" mass="0.860649367" fullinertia="0.00183943891 0.00184629648 0.000867553842 -1.65100577e-10 -0.000184857732 -1.91140699e-10"/>
+                          <geom class="visual" name="left_arm_4_visual_0" quat="0.7071067811848175 0.7071067811882776 -1.5105261400649498e-12 1.5105261400723413e-12" type="mesh" mesh="left_arm_4" material="friday_body_material"/>
+                          <geom class="left_arm" name="left_arm_4_collision_0" quat="0.7071067811848175 0.7071067811882776 -1.5105261400649498e-12 1.5105261400723413e-12" type="mesh" mesh="compact_left_arm_4"/>
+                          <body name="left_arm_5" pos="-0.0134999999995088 0.0 -0.110499999999999" quat="0.9999999999915672 1.5702079648397733e-11 -1.8366046863174395e-06 -3.673204337846231e-06">
+                            <joint type="hinge" name="left_arm_5" axis="0.0 0.0 1.0" range="-1.5708 1.5708"/>
+                            <inertial pos="7.29527e-05 0.00030085 -0.0390987" mass="0.195155" fullinertia="0.000299126 0.000293745 0.000107749 1.0853e-05 -2.24329e-06 -3.21406e-06"/>
+                            <geom class="visual" name="left_arm_5_visual_0" pos="0.0999999999939 1.10196137789138e-06 -0.0685" quat="9.381822318775055e-07 -0.7071028851524319 -0.7071106771979521 9.381925703428272e-07" type="mesh" mesh="left_wrist_base_lowpoly" material="friday_hand_shell_material"/>
+                            <geom class="left_arm" name="left_arm_5_collision_0" quat="0.7071028851530543 -1.6580734466897544e-12 -1.6580917181238607e-12 0.7071106771985745" type="mesh" mesh="compact_left_wrist_base"/>
+                            <body name="left_arm_6" pos="0.0 0.0 -0.1195" quat="0.9999999999831345 -7.315544448072377e-12 1.836602344924738e-06 5.50980822910063e-06">
+                              <joint type="hinge" name="left_arm_6" axis="1.0 0.0 0.0" range="-0.6981 0.6981"/>
+                              <inertial pos="-0.000227239 0.000127382999918337 -0.0144593999999995" mass="0.118788" fullinertia="9.115780000000008e-05 0.0001142209999999948 7.587690000000512e-05 -1.1777500000002469e-05 5.651270000659887e-07 6.049639997846949e-07"/>
+                              <geom class="visual" name="left_arm_6_visual_0" pos="-0.1 3.13906918145969e-13 -0.074" quat="9.247470481850676e-13 -1.8366025516586098e-06 0.9999999999966269 -1.8366053616330851e-06" type="mesh" mesh="left_wrist_pitch_lowpoly" material="friday_hand_shell_material"/>
+                              <geom class="left_arm" name="left_arm_6_collision_0" pos="-0.1 3.13906918145969e-13 -0.074" quat="9.247470481850676e-13 -1.8366025516586098e-06 0.9999999999966269 -1.8366053616330851e-06" type="mesh" mesh="compact_left_wrist_pitch"/>
+                              <body name="left_arm_7" pos="0.0 2.12219131157e-13 -0.05" quat="0.9999999999966269 -1.836605361601906e-06 1.9143499091414293e-11 -1.836602551626906e-06">
+                                <joint type="hinge" name="left_arm_7" axis="-0.0 1.0 -0.0" range="-0.6981 0.6981"/>
+                                <inertial pos="0.00248254000227 -0.00603203 -0.0484289999999" mass="0.140721" fullinertia="0.000183871 0.000212242 7.28442e-05 2.35157e-06 2.08536e-05 -2.82771e-05"/>
+                                <geom class="visual" name="left_arm_7_visual_0" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="mesh" mesh="left_wrist_roll_lowpoly" material="friday_hand_shell_material"/>
+                                <geom class="visual" name="left_arm_7_visual_1" pos="0.258200000006 -0.00419999999999 -0.123799999988" quat="2.236842108253502e-06 0.7071067811847407 -0.7071067811847244 3.6050612623623386e-07" type="mesh" mesh="left_wrist_tactile" material="tactile_material"/>
+                                <geom class="visual" name="left_arm_7_visual_2" pos="-0.00519079999797 -0.0182298 -0.0431817000002" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_3" pos="-0.017993299998 -0.0182298 -0.0409242000008" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_4" pos="-0.00779555999728 -0.0182298 -0.0579538000004" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_5" pos="-0.0205979999973 -0.0182298 -0.0556963000009" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_6" pos="0.0408096000038 -0.0182299 -0.081755799998" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_7" pos="0.0280071000037 -0.0182299 -0.0794982999987" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_8" pos="0.0152046000036 -0.0182299 -0.0772408999993" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_9" pos="0.00240208000351 -0.0182299 -0.0749833999999" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_10" pos="-0.0104003999966 -0.0182299 -0.0727260000005" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_11" pos="-0.0232028999966 -0.0182299 -0.070468400001" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_12" pos="0.0382048000045 -0.0182299 -0.0965278999983" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_13" pos="0.0254023000044 -0.0182299 -0.0942704999988" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_14" pos="0.0125998000043 -0.0182299 -0.0920128999994" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_15" pos="-0.000202674995789 -0.0182299 -0.0897555" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_16" pos="-0.0130051999959 -0.0182299 -0.0874980000006" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_17" pos="-0.025807699996 -0.0182299 -0.0852405000012" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_18" pos="0.0356000000052 -0.01823 -0.111299999999" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_19" pos="0.0227976000051 -0.01823 -0.109042999999" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_20" pos="0.00999506000501 -0.01823 -0.106785" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_21" pos="-0.0028074299951 -0.0182299 -0.104528" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_22" pos="-0.0156098999952 -0.0182299 -0.102270000001" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="visual" name="left_arm_7_visual_23" pos="-0.0284123999954 -0.0182299 -0.100013000001" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="sphere" size="0.0015" material="magnet_material"/>
+                                <geom class="left_arm" name="left_arm_7_collision_0" quat="0.5000000000074484 0.5000000000100001 0.49999999999 -0.4999999999925517" type="mesh" mesh="compact_left_wrist_roll"/>
+                                <body name="left_hand_1_1" pos="0.0263009000026 -0.0137 -0.0552412999987" quat="0.1830128677328789 -0.6830125111640608 0.6830123687184002 -0.1830144912711336">
+                                  <joint type="hinge" name="left_hand_1_1" axis="1e-06 -1e-06 1.0" range="0.0 1.5708"/>
+                                  <inertial pos="0.000130292105914 -2.42429209895e-10 0.000104305867699" mass="0.00574066" fullinertia="2.27878e-07 3.50936e-07 1.38986e-07 1.28857892e-13 7.7909738e-11 2.16278427e-13"/>
+                                  <geom class="visual" name="left_hand_1_1_visual_0" pos="-0.00949998709178 -0.0412949462213 0.0553230677155" quat="0.965925665845893 0.25881964388283224 3.548166674717953e-07 -6.374423313042102e-07" type="mesh" mesh="hand_1_1" material="friday_hand_shell_material"/>
+                                  <body name="left_hand_1_2" quat="0.993404775832614 0.11466015581735295 -3.1597969886996855e-07 4.560118560094439e-06">
+                                    <joint type="hinge" name="left_hand_1_2" axis="1.0 -1.3e-05 4e-06" range="-0.0 0.8028"/>
+                                    <inertial pos="0.00430779526286 -0.0160882139221 0.0180326551544" mass="0.0263023" fullinertia="6.61226673e-06 7.39023112e-06 3.00756215e-06 4.62253015e-07 -1.7884244e-06 6.43101453e-07"/>
+                                    <geom class="visual" name="left_hand_1_2_visual_0" pos="-0.00950245574753 -0.122231848203 0.208654543563" quat="0.929878382824348 -0.3678670862289201 2.475651117819996e-07 -5.03569713155027e-06" type="mesh" mesh="left_hand_1_2" material="friday_hand_link_material"/>
+                                    <geom class="visual" name="left_hand_1_2_visual_1" pos="0.0817817937564 -0.0324545514168 0.0196799084219" quat="0.5474654640477885 0.42674183207199984 0.2648029545993469 0.6693671411641217" type="mesh" mesh="tactile_thumb_mcp" material="tactile_material"/>
+                                    <geom class="visual" name="left_hand_1_2_visual_2" pos="0.0127215002311 -0.0167385558257 0.0196246758812" quat="0.5540282290128911 0.43936985234639575 -0.554036256490824 -0.43937533021276864" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_1_2_visual_3" pos="0.00768260583787 -0.0120760720872 0.0209925924853" quat="0.5540282290128911 0.43936985234639575 -0.554036256490824 -0.43937533021276864" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_1_2_visual_4" pos="0.0146864706913 -0.0167385138907 0.0268626820167" quat="0.5540282290128911 0.43936985234639575 -0.554036256490824 -0.43937533021276864" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_1_2_visual_5" pos="0.00964759629671 -0.0120761275233 0.0282306214017" quat="0.5540282290128911 0.43936985234639575 -0.554036256490824 -0.43937533021276864" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_1_2_visual_6" pos="0.0166514411502 -0.0167385921071 0.0341006135625" quat="0.5540282290128911 0.43936985234639575 -0.554036256490824 -0.43937533021276864" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_1_2_visual_7" pos="0.0115405975513 -0.0120094817854 0.0354881684629" quat="0.5540282290128911 0.43936985234639575 -0.554036256490824 -0.43937533021276864" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="left_hand" name="left_hand_1_2_collision_0" pos="-0.00950245574753 -0.122231848203 0.208654543563" quat="0.929878382824348 -0.3678670862289201 2.475651117819996e-07 -5.03569713155027e-06" type="mesh" mesh="compact_left_hand_1_2"/>
+                                    <body name="left_hand_1_3" pos="0.016455903771 -0.0155261386685 0.0471580356714" quat="0.9047003802623057 0.054002077583669976 0.12062164568952558 0.40503261123153667">
+                                      <joint type="hinge" name="left_hand_1_3" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                      <inertial pos="-0.00368816265001 0.000785116 0.0174800070545" mass="0.0176726" fullinertia="3.12388729e-06 2.8199e-06 8.46252707e-07 6.44799033e-08 -6.7150483e-08 -1.22857079e-08"/>
+                                      <geom class="visual" name="left_hand_1_3_visual_0" pos="-0.124459402792 -0.0208269 0.149054207433" quat="0.8213938325164192 -0.3830222350998753 0.036833876864952694 -0.42100998187475586" type="mesh" mesh="left_hand_1_3" material="friday_hand_link_material"/>
+                                      <geom class="visual" name="left_hand_1_3_visual_1" pos="0.0341597045918 -0.063696 -0.00940299468779" quat="0.8213935746637492 0.3830227880662235 0.036834160290969184 0.42100995707791034" type="mesh" mesh="tactile_thumb_pip" material="tactile_material"/>
+                                      <geom class="visual" name="left_hand_1_3_visual_2" pos="0.00149998962969 -0.00349998 0.0125000114178" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_1_3_visual_3" pos="0.00149997110916 0.00350002 0.0125000038689" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_1_3_visual_4" pos="0.00150000485369 -0.00349997 0.0199999979412" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_1_3_visual_5" pos="0.00149997707283 0.00350003 0.0199999866175" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_1_3_visual_6" pos="0.00150002933798 -0.00349996 0.027499988239" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_1_3_visual_7" pos="0.00150002933798 0.00350004 0.027499988239" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="left_hand" name="left_hand_1_3_collision_0" pos="-0.124459402792 -0.0208269 0.149054207433" quat="0.8213938325164192 -0.3830222350998753 0.036833876864952694 -0.42100998187475586" type="mesh" mesh="compact_left_hand_1_3"/>
+                                      <body name="left_hand_1_4" pos="-1.5156133027e-17 -1.06099687661e-18 0.0400000390131">
+                                        <joint type="hinge" name="left_hand_1_4" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                        <inertial pos="-0.00362731940021 0.00093461 0.0138114024747" mass="0.0140376" fullinertia="1.62631452e-06 1.47075e-06 5.44495482e-07 4.13013562e-08 -4.39697502e-08 3.00587584e-08"/>
+                                        <geom class="visual" name="left_hand_1_4_visual_0" pos="-0.124459478283 -0.0208269 0.109054353625" quat="0.8213938325164192 -0.3830222350998753 0.036833876864952694 -0.42100998187475586" type="mesh" mesh="left_hand_1_4" material="friday_hand_link_material"/>
+                                        <geom class="visual" name="left_hand_1_4_visual_1" pos="0.0347596615207 -0.0636744 -0.0494029742839" quat="0.8213935746637492 0.3830227880662235 0.036834160290969184 0.42100995707791034" type="mesh" mesh="tactile_thumb_dip" material="tactile_material"/>
+                                        <geom class="visual" name="left_hand_1_4_visual_2" pos="0.00149999769212 -0.00349998 0.0112999984154" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_1_4_visual_3" pos="0.00149997917158 0.00350002 0.0112999908664" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_1_4_visual_4" pos="0.00150001364587 -0.00349998 0.0172999783737" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_1_4_visual_5" pos="0.00149998586492 0.00350002 0.0172999670501" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_1_4_visual_6" pos="0.00150001998723 -0.00349997 0.023300008408" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_1_4_visual_7" pos="0.00150001998723 0.00350003 0.023300008408" quat="0.6939072518727935 -0.6939072518763347 -0.13598796195176957 -0.13598796195246393" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="left_hand" name="left_hand_1_4_collision_0" pos="-0.124459478283 -0.0208269 0.109054353625" quat="0.8213938325164192 -0.3830222350998753 0.036833876864952694 -0.42100998187475586" type="mesh" mesh="compact_left_hand_1_4"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                                <body name="left_hand_2_1" pos="0.0392000000052 -0.0097 -0.111799999998" quat="9.272783897617027e-12 -0.7071066398800455 0.7071069224911997 -1.6050943692117615e-06">
+                                  <joint type="hinge" name="left_hand_2_1" axis="0.999999999997 -3.9967377097e-07 2.2699337726e-06" range="-0.2618 0.2618"/>
+                                  <inertial pos="-0.00566496064641 0.00101168653248 -0.00394252178341" mass="0.00738742" fullinertia="6.3207223e-07 6.15279612e-07 3.28857158e-07 2.27511009e-08 -4.65747983e-08 -1.44075928e-08"/>
+                                  <geom class="visual" name="left_hand_2_1_visual_0" pos="-0.00550002168371 -0.000331493823839 0.00949420208988" quat="0.9998477083179406 0.017451652278490114 -1.1703265524748126e-06 1.6563221778089448e-06" type="mesh" mesh="hand_2_1" material="friday_hand_shell_material"/>
+                                  <body name="left_hand_2_2" pos="-2.16837285723e-08 -0.000331496022045 0.00949421457451" quat="0.9998477403643893 0.017449815956562368 -2.9436560719950124e-06 1.6253735706429357e-06">
+                                    <joint type="hinge" name="left_hand_2_2" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                    <inertial pos="-0.00331814351885011 -0.000178958999999997 0.0187419117702003" mass="0.0153719" fullinertia="2.74278910382e-06 2.65598e-06 6.88239896181e-07 -2.06801381311e-08 -1.26326287886e-07 -3.89409266438e-08"/>
+                                    <geom class="visual" name="left_hand_2_2_visual_0" pos="-0.00549999999996988 0.0 1.95095623304721e-08" quat="0.9999999999967406 1.8366025198453186e-06 1.773597366219709e-06 -3.257393392000755e-12" type="mesh" mesh="hand_2_2" material="friday_hand_link_material"/>
+                                    <geom class="visual" name="left_hand_2_2_visual_1" pos="-0.00549999999996988 0.0 1.95095623304721e-08" quat="0.9999999999967406 1.8366025198453186e-06 1.773597366219709e-06 -3.257393392000755e-12" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
+                                    <geom class="visual" name="left_hand_2_2_visual_2" pos="0.00150003611349994 -0.00299999000000002 0.0129999946792003" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_2_2_visual_3" pos="0.00150001611349997 0.00300000999999998 0.0129999946792003" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_2_2_visual_4" pos="0.00150006803823983 -0.00299999000000002 0.0219999946791003" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_2_2_visual_5" pos="0.00150004803823986 0.00300000999999998 0.0219999946792003" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_2_2_visual_6" pos="0.00150009996297972 -0.00299999000000002 0.0309999946791003" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_2_2_visual_7" pos="0.00150007996297975 0.00300000999999998 0.0309999946791003" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="left_hand" name="left_hand_2_2_collision_0" pos="-0.00549999999996988 0.0 1.95095623304721e-08" quat="0.9999999999967406 1.8366025198453186e-06 1.773597366219709e-06 -3.257393392000755e-12" type="mesh" mesh="compact_hand_2_2"/>
+                                    <body name="left_hand_2_3" pos="1.5607649594962e-07 0.0 0.0439999999997005">
+                                      <joint type="hinge" name="left_hand_2_3" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                      <inertial pos="-0.00304214767381014 -0.000113558999999969 0.0119323107911002" mass="0.00960055" fullinertia="1.08862945759e-06 9.9172e-07 4.0090054241e-07 -1.64439969671e-08 -7.64574395092e-08 8.55058330038e-10"/>
+                                      <geom class="visual" name="left_hand_2_3_visual_0" pos="-0.00550015607645946 0.0 -0.0439999804900997" quat="0.9999999999967406 1.8366025198453186e-06 1.773597366219709e-06 -3.257393392000755e-12" type="mesh" mesh="hand_2_3" material="friday_hand_link_material"/>
+                                      <geom class="visual" name="left_hand_2_3_visual_1" pos="-0.00550015607645946 0.0 -0.0439999804900997" quat="0.9999999999967406 1.8366025198453186e-06 1.773597366219709e-06 -3.257393392000755e-12" type="mesh" mesh="tactile_pip" material="tactile_material"/>
+                                      <geom class="visual" name="left_hand_2_3_visual_2" pos="0.00150003256630983 -0.00299999 0.0119999946792002" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_2_3_visual_3" pos="0.00150001256630989 0.00300001 0.0119999946793002" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_2_3_visual_4" pos="0.00150005384946977 -0.00299999 0.0179999946791002" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_2_3_visual_5" pos="0.0015000338494698 0.00300001 0.0179999946792002" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="left_hand" name="left_hand_2_3_collision_0" pos="-0.00550015607645946 0.0 -0.0439999804900997" quat="0.9999999999967406 1.8366025198453186e-06 1.773597366219709e-06 -3.257393392000755e-12" type="mesh" mesh="compact_hand_2_3"/>
+                                      <body name="left_hand_2_4" pos="1.06415792733294e-07 0.0 0.0299999999998003">
+                                        <joint type="hinge" name="left_hand_2_4" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                        <inertial pos="-0.00153390711843015 5.96676000000492e-05 0.0149080054411" mass="0.00848267" fullinertia="9.9331806162e-07 9.05573e-07 2.6754893838e-07 3.79297494615e-09 8.68442555699e-09 -7.06301345446e-09"/>
+                                        <geom class="visual" name="left_hand_2_4_visual_0" pos="-0.00550026249225908 0.0 -0.0739999804899" quat="0.9999999999967406 1.8366025198453186e-06 1.773597366219709e-06 -3.257393392000755e-12" type="mesh" mesh="hand_2_4" material="friday_hand_link_material"/>
+                                        <geom class="visual" name="left_hand_2_4_visual_1" pos="-0.00550026249225908 0.0 -0.0739999804899" quat="0.9999999999967406 1.8366025198453186e-06 1.773597366219709e-06 -3.257393392000755e-12" type="mesh" mesh="tactile_dip" material="tactile_material"/>
+                                        <geom class="visual" name="left_hand_2_4_visual_2" pos="0.00150002919647989 -0.00299998999999998 0.0110499946792" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_2_4_visual_3" pos="0.00150000919647992 0.00300001000000002 0.0110499946793" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_2_4_visual_4" pos="0.00150005047963979 -0.00299998999999998 0.0170499946792" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_2_4_visual_5" pos="0.00150003047963982 0.00300001000000002 0.0170499946792" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_2_4_visual_6" pos="0.00150007176278973 -0.00299998999999998 0.0230499946791" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_2_4_visual_7" pos="0.00150005176278977 0.00300001000000002 0.0230499946792" quat="0.7071067811871418 -0.7071067811837288 1.2541227247536984e-06 1.2541227247476453e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="left_hand" name="left_hand_2_4_collision_0" pos="-0.00550026249225908 0.0 -0.0739999804899" quat="0.9999999999967406 1.8366025198453186e-06 1.773597366219709e-06 -3.257393392000755e-12" type="mesh" mesh="compact_hand_2_4"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                                <body name="left_hand_3_1" pos="0.0182000000053 -0.0097 -0.114299999999" quat="9.272783897617027e-12 -0.7071066398800455 0.7071069224911997 -1.6050943692117615e-06">
+                                  <joint type="hinge" name="left_hand_3_1" axis="0.999999999997 -3.9967377097e-07 2.2699337726e-06" range="-0.2618 0.2618"/>
+                                  <inertial pos="-0.00566496062695 0.000873504842797 -0.00397542163332" mass="0.00738742" fullinertia="6.32072232e-07 6.13926051e-07 3.30210717e-07 2.11121145e-08 -4.73402949e-08 -2.4360535e-08"/>
+                                  <geom class="visual" name="left_hand_3_1_visual_0" pos="-0.00550002156436 -1.11330610945e-08 0.00949998751533" quat="0.9999999999947952 2.5382463226412855e-06 -1.1349653131132127e-06 1.6367685370429116e-06" type="mesh" mesh="hand_3_1" material="friday_hand_shell_material"/>
+                                  <body name="left_hand_3_2" pos="-2.15643761679e-08 -1.33312669599e-08 0.00949999999997" quat="0.9999999999939992 7.016467097875114e-07 -2.9715690503632143e-06 1.6367669201996395e-06">
+                                    <joint type="hinge" name="left_hand_3_2" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                    <inertial pos="-0.00331814115720025 -0.000178958999999918 0.0187419121882998" mass="0.0153719" fullinertia="2.74278907198e-06 2.65598e-06 6.88239928019e-07 -2.0680143038e-08 -1.26326546777e-07 -3.89409240379e-08"/>
+                                    <geom class="visual" name="left_hand_3_2_visual_0" pos="-0.00549999999996003 0.0 2.02026085433297e-08" quat="0.9999999999966269 1.8366025498165198e-06 1.83660245126095e-06 -3.3731087449965093e-12" type="mesh" mesh="hand_3_2" material="friday_hand_link_material"/>
+                                    <geom class="visual" name="left_hand_3_2_visual_1" pos="-0.00549999999996003 0.0 2.02026085433297e-08" quat="0.9999999999966269 1.8366025498165198e-06 1.83660245126095e-06 -3.3731087449965093e-12" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
+                                    <geom class="visual" name="left_hand_3_2_visual_2" pos="0.00150003775160976 -0.00299999000000003 0.0129999944901998" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_3_2_visual_3" pos="0.00150001775160988 0.00300000999999997 0.0129999944901998" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_3_2_visual_4" pos="0.00150007081042966 -0.00299999000000003 0.0219999944900998" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_3_2_visual_5" pos="0.00150005081042977 0.00300000999999997 0.0219999944901998" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_3_2_visual_6" pos="0.00150010386923957 -0.00299999000000003 0.0309999944899998" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_3_2_visual_7" pos="0.00150008386923969 0.00300000999999997 0.0309999944900998" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="left_hand" name="left_hand_3_2_collision_0" pos="-0.00549999999996003 0.0 2.02026085433297e-08" quat="0.9999999999966269 1.8366025498165198e-06 1.83660245126095e-06 -3.3731087449965093e-12" type="mesh" mesh="compact_hand_3_2"/>
+                                    <body name="left_hand_3_3" pos="1.61620870242629e-07 0.0 0.0439999999997002">
+                                      <joint type="hinge" name="left_hand_3_3" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                      <inertial pos="-0.00304214617024008 -0.000113558999999943 0.0119323111744999" mass="0.00960055" fullinertia="1.08862943832e-06 9.9172e-07 4.00900561679e-07 -1.64439968593e-08 -7.64575261689e-08 8.55060402122e-10"/>
+                                      <geom class="visual" name="left_hand_3_3_visual_0" pos="-0.00550016162082945 0.0 -0.0439999797970001" quat="0.9999999999966269 1.8366025498165198e-06 1.83660245126095e-06 -3.3731087449965093e-12" type="mesh" mesh="hand_3_3" material="friday_hand_link_material"/>
+                                      <geom class="visual" name="left_hand_3_3_visual_1" pos="-0.00550016162082945 0.0 -0.0439999797970001" quat="0.9999999999966269 1.8366025498165198e-06 1.83660245126095e-06 -3.3731087449965093e-12" type="mesh" mesh="tactile_pip" material="tactile_material"/>
+                                      <geom class="visual" name="left_hand_3_3_visual_2" pos="0.00150003407840986 -0.00299999000000003 0.0119999944901999" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_3_3_visual_3" pos="0.00150001407840998 0.00300000999999997 0.0119999944901999" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_3_3_visual_4" pos="0.0015000561176198 -0.00299999000000003 0.0179999944900999" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_3_3_visual_5" pos="0.00150003611761992 0.00300000999999997 0.0179999944901999" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="left_hand" name="left_hand_3_3_collision_0" pos="-0.00550016162082945 0.0 -0.0439999797970001" quat="0.9999999999966269 1.8366025498165198e-06 1.83660245126095e-06 -3.3731087449965093e-12" type="mesh" mesh="compact_hand_3_3"/>
+                                      <body name="left_hand_3_4" pos="1.10196047786726e-07 0.0 0.0299999999997999">
+                                        <joint type="hinge" name="left_hand_3_4" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                        <inertial pos="-0.00153390523990017 5.96676000000371e-05 0.0149080056343999" mass="0.00848267" fullinertia="9.93318063808e-07 9.05573e-07 2.67548936192e-07 3.79297405615e-09 8.68433410391e-09 -7.06301393241e-09"/>
+                                        <geom class="visual" name="left_hand_3_4_visual_0" pos="-0.00550027181687917 0.0 -0.0739999797968001" quat="0.9999999999966269 1.8366025498165198e-06 1.83660245126095e-06 -3.3731087449965093e-12" type="mesh" mesh="hand_3_4" material="friday_hand_link_material"/>
+                                        <geom class="visual" name="left_hand_3_4_visual_1" pos="-0.00550027181687917 0.0 -0.0739999797968001" quat="0.9999999999966269 1.8366025498165198e-06 1.83660245126095e-06 -3.3731087449965093e-12" type="mesh" mesh="tactile_dip" material="tactile_material"/>
+                                        <geom class="visual" name="left_hand_3_4_visual_2" pos="0.00150003058886983 -0.00299999000000003 0.0110499944901999" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_3_4_visual_3" pos="0.00150001058886995 0.00300000999999997 0.0110499944901999" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_3_4_visual_4" pos="0.00150005262807973 -0.00299999000000003 0.0170499944900999" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_3_4_visual_5" pos="0.00150003262807985 0.00300000999999997 0.0170499944901999" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_3_4_visual_6" pos="0.00150007466728968 -0.00299999000000003 0.0230499944900999" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_3_4_visual_7" pos="0.0015000546672898 0.00300000999999997 0.0230499944901999" quat="0.7071067811835471 -0.7071067811871627 1.2986740440966143e-06 1.2986740441032548e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="left_hand" name="left_hand_3_4_collision_0" pos="-0.00550027181687917 0.0 -0.0739999797968001" quat="0.9999999999966269 1.8366025498165198e-06 1.83660245126095e-06 -3.3731087449965093e-12" type="mesh" mesh="compact_hand_3_4"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                                <body name="left_hand_4_1" pos="-0.00279999999483 -0.0097 -0.1103" quat="9.272783897617027e-12 -0.7071066398800455 0.7071069224911997 -1.6050943692117615e-06">
+                                  <joint type="hinge" name="left_hand_4_1" axis="0.999999999997 -3.9967377097e-07 2.2699337726e-06" range="-0.2618 0.2618"/>
+                                  <inertial pos="-0.00566496061892 0.000734219291519 -0.00400348722942" mass="0.00738742" fullinertia="6.32072234e-07 6.11880952e-07 3.32255815e-07 1.9446935e-08 -4.80483315e-08 -3.4197636e-08"/>
+                                  <geom class="visual" name="left_hand_4_1_visual_0" pos="-0.0055000214187 0.000331566516092 0.00949419970504" quat="0.9998477096530064 -0.017451575797479014 -1.099248199052107e-06 1.6167081065158597e-06" type="mesh" mesh="hand_4_1" material="friday_hand_shell_material"/>
+                                  <body name="left_hand_4_2" pos="-2.14187153325e-08 0.000331564317886 0.00949421218967" quat="0.9998476775958357 -0.01745341211587829 -3.0008235547829026e-06 1.649901541937496e-06">
+                                    <joint type="hinge" name="left_hand_4_2" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                    <inertial pos="-0.00331813871095008 -0.000178958999999961 0.0187419126213997" mass="0.0153719" fullinertia="2.74278903901e-06 2.65598e-06 6.88239960995e-07 -2.06801481207e-08 -1.26326814941e-07 -3.89409213387e-08"/>
+                                    <geom class="visual" name="left_hand_4_2_visual_0" pos="-0.00549999999995988 0.0 2.09204823687539e-08" quat="0.9999999999965049 1.8366027401217958e-06 1.901862396381076e-06 -3.4929656885402973e-12" type="mesh" mesh="hand_4_2" material="friday_hand_link_material"/>
+                                    <geom class="visual" name="left_hand_4_2_visual_1" pos="-0.00549999999995988 0.0 2.09204823687539e-08" quat="0.9999999999965049 1.8366027401217958e-06 1.901862396381076e-06 -3.4929656885402973e-12" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
+                                    <geom class="visual" name="left_hand_4_2_visual_2" pos="0.00150003944839991 -0.00299999000000003 0.0129999942943997" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_4_2_visual_3" pos="0.0015000194484 0.00300000999999997 0.0129999942943997" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_4_2_visual_4" pos="0.00150007368191983 -0.00299999000000003 0.0219999942942997" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_4_2_visual_5" pos="0.00150005368191992 0.00300000999999997 0.0219999942943997" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_4_2_visual_6" pos="0.00150010791543975 -0.00299999000000003 0.0309999942941997" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_4_2_visual_7" pos="0.00150008791543984 0.00300000999999997 0.0309999942942997" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="left_hand" name="left_hand_4_2_collision_0" pos="-0.00549999999995988 0.0 2.09204823687539e-08" quat="0.9999999999965049 1.8366027401217958e-06 1.901862396381076e-06 -3.4929656885402973e-12" type="mesh" mesh="compact_hand_4_2"/>
+                                    <body name="left_hand_4_3" pos="1.67363861630632e-07 0.0 0.0439999999996995">
+                                      <joint type="hinge" name="left_hand_4_3" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                      <inertial pos="-0.00304214461280018 -0.000113558999999955 0.0119323115714998" mass="0.00960055" fullinertia="1.08862941836e-06 9.9172e-07 4.00900581638e-07 -1.64439967477e-08 -7.6457615933e-08 8.55062548434e-10"/>
+                                      <geom class="visual" name="left_hand_4_3_visual_0" pos="-0.00550016736382958 0.0 -0.0439999790792002" quat="0.9999999999965049 1.8366027401217958e-06 1.901862396381076e-06 -3.4929656885402973e-12" type="mesh" mesh="hand_4_3" material="friday_hand_link_material"/>
+                                      <geom class="visual" name="left_hand_4_3_visual_1" pos="-0.00550016736382958 0.0 -0.0439999790792002" quat="0.9999999999965049 1.8366027401217958e-06 1.901862396381076e-06 -3.4929656885402973e-12" type="mesh" mesh="tactile_pip" material="tactile_material"/>
+                                      <geom class="visual" name="left_hand_4_3_visual_2" pos="0.00150003564467977 -0.00299999000000003 0.0119999942943998" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_4_3_visual_3" pos="0.00150001564467986 0.00300000999999997 0.0119999942944998" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_4_3_visual_4" pos="0.0015000584670297 -0.00299999000000003 0.0179999942942998" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_4_3_visual_5" pos="0.0015000384670298 0.00300000999999997 0.0179999942943998" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="left_hand" name="left_hand_4_3_collision_0" pos="-0.00550016736382958 0.0 -0.0439999790792002" quat="0.9999999999965049 1.8366027401217958e-06 1.901862396381076e-06 -3.4929656885402973e-12" type="mesh" mesh="compact_hand_4_3"/>
+                                      <body name="left_hand_4_4" pos="1.14111723875654e-07 0.0 0.0299999999998">
+                                        <joint type="hinge" name="left_hand_4_4" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                        <inertial pos="-0.00153390329407006 5.96676000000253e-05 0.0149080058345998" mass="0.00848267" fullinertia="9.93318066075e-07 9.05573e-07 2.67548933925e-07 3.79297313427e-09 8.68423937469e-09 -7.06301442748e-09"/>
+                                        <geom class="visual" name="left_hand_4_4_visual_0" pos="-0.00550028147553909 0.0 -0.0739999790789001" quat="0.9999999999965049 1.8366027401217958e-06 1.901862396381076e-06 -3.4929656885402973e-12" type="mesh" mesh="hand_4_4" material="friday_hand_link_material"/>
+                                        <geom class="visual" name="left_hand_4_4_visual_1" pos="-0.00550028147553909 0.0 -0.0739999790789001" quat="0.9999999999965049 1.8366027401217958e-06 1.901862396381076e-06 -3.4929656885402973e-12" type="mesh" mesh="tactile_dip" material="tactile_material"/>
+                                        <geom class="visual" name="left_hand_4_4_visual_2" pos="0.00150003203113995 -0.00299999000000002 0.0110499942943998" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_4_4_visual_3" pos="0.00150001203114004 0.00300000999999997 0.0110499942944998" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_4_4_visual_4" pos="0.00150005485348989 -0.00299999000000002 0.0170499942942998" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_4_4_visual_5" pos="0.00150003485348998 0.00300000999999997 0.0170499942943998" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_4_4_visual_6" pos="0.00150007767582983 -0.00299999000000002 0.0230499942942998" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_4_4_visual_7" pos="0.00150005767582992 0.00300000999999997 0.0230499942943998" quat="0.7071067811834785 -0.7071067811870588 1.3448197973636198e-06 1.344819797370429e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="left_hand" name="left_hand_4_4_collision_0" pos="-0.00550028147553909 0.0 -0.0739999790789001" quat="0.9999999999965049 1.8366027401217958e-06 1.901862396381076e-06 -3.4929656885402973e-12" type="mesh" mesh="compact_hand_4_4"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                                <body name="left_hand_5_1" pos="-0.023799999995 -0.0097 -0.106300000001" quat="9.272783897617027e-12 -0.7071066398800455 0.7071069224911997 -1.6050943692117615e-06">
+                                  <joint type="hinge" name="left_hand_5_1" axis="0.999999999997 -3.9967377097e-07 2.2699337726e-06" range="-0.2618 0.2618"/>
+                                  <inertial pos="-0.00566496062231 0.000594039034874 -0.00402667425436" mass="0.00738742" fullinertia="6.32072235e-07 6.09154566e-07 3.34982198e-07 1.77580572e-08 -4.86978179e-08 -4.38680967e-08"/>
+                                  <geom class="visual" name="left_hand_5_1_visual_0" pos="-0.00550002124694 0.00066274012616 0.00947684239652" quat="0.9993907964200063 -0.034900372882073025 -1.0631961982795626e-06 1.59615680606752e-06" type="mesh" mesh="hand_5_1" material="friday_hand_shell_material"/>
+                                  <body name="left_hand_5_2" pos="-2.12469539861e-08 0.000662737927955 0.00947685488116" quat="0.9993907323161028 -0.03490220836454006 -3.0315254989108697e-06 1.6648972685924102e-06">
+                                    <joint type="hinge" name="left_hand_5_2" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                    <inertial pos="-0.00331813617465008 -0.000178958999999939 0.0187419130704" mass="0.0153719" fullinertia="2.74278900482e-06 2.65598e-06 6.88239995186e-07 -2.06801533905e-08 -1.2632709298e-07 -3.89409185401e-08"/>
+                                    <geom class="visual" name="left_hand_5_2_visual_0" pos="-0.00549999999995988 0.0 2.16647888086385e-08" quat="0.9999999999963739 1.8366026000039902e-06 1.96952737156746e-06 -3.617239091412938e-12" type="mesh" mesh="hand_5_2" material="friday_hand_link_material"/>
+                                    <geom class="visual" name="left_hand_5_2_visual_1" pos="-0.00549999999995988 0.0 2.16647888086385e-08" quat="0.9999999999963739 1.8366026000039902e-06 1.96952737156746e-06 -3.617239091412938e-12" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
+                                    <geom class="visual" name="left_hand_5_2_visual_2" pos="0.00150004120766995 -0.00299999000000001 0.0129999940914" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_5_2_visual_3" pos="0.00150002120767003 0.00300000999999999 0.0129999940915" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_5_2_visual_4" pos="0.00150007665914983 -0.00299999000000001 0.0219999940913" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_5_2_visual_5" pos="0.00150005665914995 0.00300000999999999 0.0219999940914" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_5_2_visual_6" pos="0.00150011211061975 -0.00299999000000002 0.0309999940912" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="visual" name="left_hand_5_2_visual_7" pos="0.00150009211061984 0.00300000999999998 0.0309999940913" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                    <geom class="left_hand" name="left_hand_5_2_collision_0" pos="-0.00549999999995988 0.0 2.16647888086385e-08" quat="0.9999999999963739 1.8366026000039902e-06 1.96952737156746e-06 -3.617239091412938e-12" type="mesh" mesh="compact_hand_5_2"/>
+                                    <body name="left_hand_5_3" pos="1.73318310509041e-07 0.0 0.0439999999997002">
+                                      <joint type="hinge" name="left_hand_5_3" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                      <inertial pos="-0.00304214299802011 -0.000113558999999914 0.0119323119831997" mass="0.00960055" fullinertia="1.08862939767e-06 9.9172e-07 4.00900602332e-07 -1.6443996632e-08 -7.64577090022e-08 8.55064773773e-10"/>
+                                      <geom class="visual" name="left_hand_5_3_visual_0" pos="-0.00550017331825957 0.0 -0.0439999783348003" quat="0.9999999999963739 1.8366026000039902e-06 1.96952737156746e-06 -3.617239091412938e-12" type="mesh" mesh="hand_5_3" material="friday_hand_link_material"/>
+                                      <geom class="visual" name="left_hand_5_3_visual_1" pos="-0.00550017331825957 0.0 -0.0439999783348003" quat="0.9999999999963739 1.8366026000039902e-06 1.96952737156746e-06 -3.617239091412938e-12" type="mesh" mesh="tactile_pip" material="tactile_material"/>
+                                      <geom class="visual" name="left_hand_5_3_visual_2" pos="0.00150003726861982 -0.00299998999999998 0.0119999940913997" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_5_3_visual_3" pos="0.00150001726861991 0.00300001000000002 0.0119999940914997" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_5_3_visual_4" pos="0.00150006090293977 -0.00299998999999998 0.0179999940912997" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="visual" name="left_hand_5_3_visual_5" pos="0.00150004090293986 0.00300001000000002 0.0179999940913997" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                      <geom class="left_hand" name="left_hand_5_3_collision_0" pos="-0.00550017331825957 0.0 -0.0439999783348003" quat="0.9999999999963739 1.8366026000039902e-06 1.96952737156746e-06 -3.617239091412938e-12" type="mesh" mesh="compact_hand_5_3"/>
+                                      <body name="left_hand_5_4" pos="1.18171575413939e-07 0.0 0.0299999999998002">
+                                        <joint type="hinge" name="left_hand_5_4" axis="0.0 1.0 0.0" range="0.0 1.5708"/>
+                                        <inertial pos="-0.00153390127659002 5.96676000000492e-05 0.0149080060422" mass="0.00848267" fullinertia="9.93318068426e-07 9.05573e-07 2.67548931574e-07 3.79297217844e-09 8.68414115752e-09 -7.06301494077e-09"/>
+                                        <geom class="visual" name="left_hand_5_4_visual_0" pos="-0.00550029148984914 0.0 -0.0739999783346" quat="0.9999999999963739 1.8366026000039902e-06 1.96952737156746e-06 -3.617239091412938e-12" type="mesh" mesh="hand_5_4" material="friday_hand_link_material"/>
+                                        <geom class="visual" name="left_hand_5_4_visual_1" pos="-0.00550029148984914 0.0 -0.0739999783346" quat="0.9999999999963739 1.8366026000039902e-06 1.96952737156746e-06 -3.617239091412938e-12" type="mesh" mesh="tactile_dip" material="tactile_material"/>
+                                        <geom class="visual" name="left_hand_5_4_visual_2" pos="0.00150003352651994 -0.00299999 0.0110499940914" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_5_4_visual_3" pos="0.00150001352652003 0.00300001 0.0110499940915" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_5_4_visual_4" pos="0.00150005716083989 -0.00299999 0.0170499940913" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_5_4_visual_5" pos="0.00150003716083998 0.00300001 0.0170499940914" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_5_4_visual_6" pos="0.00150008079514983 -0.00299999 0.0230499940913" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="visual" name="left_hand_5_4_visual_7" pos="0.00150006079514992 0.00300001 0.0230499940914" quat="0.7071067811834035 -0.7071067811869486 1.3926661601667256e-06 1.3926661601737077e-06" type="sphere" size="0.0015" material="magnet_material"/>
+                                        <geom class="left_hand" name="left_hand_5_4_collision_0" pos="-0.00550029148984914 0.0 -0.0739999783346" quat="0.9999999999963739 1.8366026000039902e-06 1.96952737156746e-06 -3.617239091412938e-12" type="mesh" mesh="compact_hand_5_4"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                                <body name="left_wrist_cam" pos="-0.0097499999985 -0.019031 -0.0319840000005" quat="0.38268343236617297 0.9238795325108381 -8.995899495930817e-12 2.1718022568749446e-11">
+                                  <geom class="visual" name="left_wrist_cam_visual_0" type="sphere" size="0.01" material="polyurethane_green"/>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <body name="head_1" pos="0.0 0.0 0.33" quat="0.9999999999932537 2.448294430056858e-12 8.993087600182336e-18 3.6732051054467396e-06">
+                    <joint type="hinge" name="head_1" axis="0.0 1.0 0.0" range="-1.309 0.5236"/>
+                    <inertial pos="3.0561952e-16 1.20628421e-16 0.0420817082" mass="0.254023002" fullinertia="0.000449234116 0.000399773941 0.000144027076 -2.76142264e-20 -1.90662159e-18 -8.20443792e-19"/>
+                    <geom class="visual" name="head_1_visual_0" quat="7.179652316483608e-14 7.179652316448451e-14 -0.7071067811848163 -0.7071067811882787" type="mesh" mesh="head_1" material="friday_body_material"/>
+                    <geom class="head" name="head_1_collision_0" quat="7.179652316483608e-14 7.179652316448451e-14 -0.7071067811848163 -0.7071067811882787" type="mesh" mesh="compact_head_1"/>
+                    <body name="head_2" pos="0.0 0.0 0.0845" quat="0.9999999999983135 8.993270865595979e-18 4.896688923657587e-12 -1.8366024482648324e-06">
+                      <joint type="hinge" name="head_2" axis="1.0 0.0 0.0" range="-0.9599 0.9599"/>
+                      <inertial pos="-4.38511863e-13 9.70110908e-17 0.0448099286" mass="0.313075583" fullinertia="0.000421911152 0.00044840489 0.000207299312 5.48754421e-18 2.10046422e-15 -7.83883201e-19"/>
+                      <geom class="visual" name="head_2_visual_0" quat="0.4999999999975517 0.5000000000024466 0.5000000000000001 0.5000000000000017" type="mesh" mesh="head_2" material="friday_body_material"/>
+                      <geom class="head" name="head_2_collision_0" quat="0.4999999999975517 0.5000000000024466 0.5000000000000001 0.5000000000000017" type="mesh" mesh="compact_head_2"/>
+                      <body name="head_3" pos="0.0 0.0 0.0945" quat="0.9999999999983135 2.448289933227286e-12 -2.448379332744411e-12 -1.8366026571881024e-06">
+                        <joint type="hinge" name="head_3" axis="0.0 0.0 1.0" range="-1.5708 1.5708"/>
+                        <inertial pos="0.0251739754 -7.07876019e-05 0.0217886504" mass="0.711275771" fullinertia="0.00285000982 0.0030943448 0.00186665865 -6.09174492e-07 0.000353770915 3.63386291e-06"/>
+                        <geom class="visual" name="head_3_visual_0" quat="0.7071054825112363 -1.6580795377855737e-12 -1.6580856282629793e-12 0.7071080798594735" type="mesh" mesh="head_3" material="friday_body_material"/>
+                        <geom class="head" name="head_3_collision_0" quat="0.7071054825112363 -1.6580795377855737e-12 -1.6580856282629793e-12 0.7071080798594735" type="mesh" mesh="compact_head_3"/>
+                        <body name="head_stereo" pos="0.0955433217 0.0296023122 -0.0175141477" quat="0.4999999933950225 -0.49999999500242576 0.5000000066001258 -0.5000000050024258">
+                          <geom class="visual" name="head_stereo_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <body name="body_stereo" pos="0.071109168 0.0296007425 0.0221473069" quat="0.3535533907594711 -0.6123724342913623 0.6123724362541042 -0.3535533918926033">
+                    <geom class="visual" name="body_stereo_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+                  </body>
+                  <body name="front_left_shoulder_cam" pos="0.0711232522 0.11019075 0.313997304" quat="0.6710100699693605 -0.46984631100950097 0.32898993003014637 -0.46984631100950097">
+                    <geom class="visual" name="front_left_shoulder_cam_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+                  </body>
+                  <body name="front_right_shoulder_cam" pos="0.071125456 -0.11018925 0.31399731" quat="0.4698463088582299 -0.328989928525118 0.4698463120633332 -0.6710100714756967">
+                    <geom class="visual" name="front_right_shoulder_cam_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+                  </body>
+                  <body name="rear_right_shoulder_cam" pos="-0.116054544 -0.110191122 0.31400686" quat="0.4698463088589914 -0.3289899285240304 -0.4698463120640947 0.6710100714751634">
+                    <geom class="visual" name="rear_right_shoulder_cam_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+                  </body>
+                  <body name="rear_left_shoulder_cam" pos="-0.116056748 0.110188878 0.314006854" quat="0.6710100699690796 -0.4698463110099021 -0.32898993002957355 0.4698463110099021">
+                    <geom class="visual" name="rear_left_shoulder_cam_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+                  </body>
+                  <body name="body_lidar_3d" pos="-0.132594543 -1.286359e-06 0.335627701" quat="0.6644725180336398 0.24182901226999687 -0.24182661209351575 -0.6644658691655455">
+                    <geom class="visual" name="body_lidar_3d_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+        <body name="front_right_caster_yoke" pos="0.225 -0.2 0.00231">
+          <joint type="hinge" name="front_right_caster_swivel" axis="0.0 0.0 1.0"/>
+          <inertial pos="-0.00755571588 0.00029896738 -0.0213093564" mass="0.05" fullinertia="1e-05 1e-05 1e-05 0.0 0.0 0.0"/>
+          <geom class="visual" name="front_right_caster_yoke_visual_0" type="mesh" mesh="front_right_caster_yoke" material="friday_body_material"/>
+          <body name="front_right_caster_wheel_link" pos="-0.021 0.0 -0.04231">
+            <joint type="hinge" name="front_right_caster_wheel" axis="0.0 1.0 0.0"/>
+            <inertial pos="0.0 1.82797e-06 0.0" mass="0.05" fullinertia="1e-05 1e-05 1e-05 0.0 0.0 0.0"/>
+            <geom class="visual" name="front_right_caster_wheel_link_visual_0" quat="0.7071067811882787 0.7071067811848163 0.0 0.0" type="mesh" mesh="front_right_caster_wheel_link" material="friday_body_material"/>
+            <geom class="mobile_base" name="front_right_caster_wheel_link_collision_0" quat="0.7071067811882787 0.7071067811848163 0.0 0.0" type="cylinder" size="0.03 0.0075"/>
+          </body>
+        </body>
+        <body name="front_left_caster_yoke" pos="0.225 0.2 0.00231">
+          <joint type="hinge" name="front_left_caster_swivel" axis="0.0 0.0 1.0"/>
+          <inertial pos="-0.00755571588 0.00029896738 -0.0213093564" mass="0.05" fullinertia="1e-05 1e-05 1e-05 0.0 0.0 0.0"/>
+          <geom class="visual" name="front_left_caster_yoke_visual_0" type="mesh" mesh="front_left_caster_yoke" material="friday_body_material"/>
+          <body name="front_left_caster_wheel_link" pos="-0.021 0.0 -0.04231">
+            <joint type="hinge" name="front_left_caster_wheel" axis="0.0 1.0 0.0"/>
+            <inertial pos="0.0 1.82797e-06 0.0" mass="0.05" fullinertia="1e-05 1e-05 1e-05 0.0 0.0 0.0"/>
+            <geom class="visual" name="front_left_caster_wheel_link_visual_0" quat="0.7071067811882787 0.7071067811848163 0.0 0.0" type="mesh" mesh="front_left_caster_wheel_link" material="friday_body_material"/>
+            <geom class="mobile_base" name="front_left_caster_wheel_link_collision_0" quat="0.7071067811882787 0.7071067811848163 0.0 0.0" type="cylinder" size="0.03 0.0075"/>
+          </body>
+        </body>
+        <body name="rear_caster_pivot" pos="-0.264 0.0 -0.013">
+          <joint type="hinge" name="rear_caster_pivot" axis="1.0 0.0 0.0"/>
+          <inertial pos="0.00185188622 -9.35947001e-15 0.0775317644" mass="8.48109032" fullinertia="0.205074009 0.0324553626 0.198432244 -8.80334965e-13 -0.00208734252 1.06436583e-14"/>
+          <geom class="visual" name="rear_caster_pivot_visual_0" quat="0.4999999999975517 0.5000000000024466 0.5000000000000001 0.5000000000000018" type="mesh" mesh="rear_caster_pivot" material="friday_body_material"/>
+          <body name="rear_right_caster_yoke" pos="-0.011 -0.195 0.01531" quat="0.9999999999983135 -1.8366025516763824e-06 7.551630677573013e-12 -2.551737839134932e-12">
+            <joint type="hinge" name="rear_right_caster_swivel" axis="0.0 0.0 1.0"/>
+            <inertial pos="-0.00755571478178006 0.000298995133654999 -0.0213093564" mass="0.05" fullinertia="1e-05 1e-05 1e-05 0.0 0.0 0.0"/>
+            <geom class="visual" name="rear_right_caster_yoke_visual_0" quat="0.9999999999983135 2.448294430092276e-12 -4.49653779856781e-18 -1.8366001013982425e-06" type="mesh" mesh="rear_right_caster_yoke" material="friday_body_material"/>
+            <body name="rear_right_caster_wheel_link" pos="-0.0209999999999 7.71372044017227e-08 -0.04231" quat="0.9999999999983135 2.4483206906886643e-12 -5.702010482073395e-12 -1.8366001015082424e-06">
+              <joint type="hinge" name="rear_right_caster_wheel" axis="0.0 1.0 0.0"/>
+              <inertial pos="0.0 1.82797e-06 0.0" mass="0.05" fullinertia="1e-05 1e-05 1e-05 0.0 0.0 0.0"/>
+              <geom class="visual" name="rear_right_caster_wheel_link_visual_0" quat="0.7071067811882787 0.7071067811848163 4.032005603376359e-12 -4.0320056033566155e-12" type="mesh" mesh="rear_right_caster_wheel_link" material="friday_body_material"/>
+              <geom class="mobile_base" name="rear_right_caster_wheel_link_collision_0" quat="0.7071067811882787 0.7071067811848163 4.032005603376359e-12 -4.0320056033566155e-12" type="cylinder" size="0.03 0.0075"/>
+            </body>
+          </body>
+          <body name="rear_left_caster_yoke" pos="-0.011 0.195 0.01531" quat="0.9999999999983135 -1.8366025516763824e-06 7.551630677573013e-12 -2.551737839134932e-12">
+            <joint type="hinge" name="rear_left_caster_swivel" axis="0.0 0.0 1.0"/>
+            <inertial pos="-0.00755571478178 0.000298995133654972 -0.0213093564" mass="0.05" fullinertia="1e-05 1e-05 1e-05 0.0 0.0 0.0"/>
+            <geom class="visual" name="rear_left_caster_yoke_visual_0" quat="0.9999999999983135 2.448294430092276e-12 -4.49653779856781e-18 -1.8366001013982425e-06" type="mesh" mesh="rear_left_caster_yoke" material="friday_body_material"/>
+            <body name="rear_left_caster_wheel_link" pos="-0.0209999999999 7.71372043739671e-08 -0.04231" quat="0.9999999999983135 2.4483206906886643e-12 -5.702010482073395e-12 -1.8366001015082424e-06">
+              <joint type="hinge" name="rear_left_caster_wheel" axis="0.0 1.0 0.0"/>
+              <inertial pos="0.0 1.82797e-06 0.0" mass="0.05" fullinertia="1e-05 1e-05 1e-05 0.0 0.0 0.0"/>
+              <geom class="visual" name="rear_left_caster_wheel_link_visual_0" quat="0.7071067811882787 0.7071067811848163 4.032005603376359e-12 -4.0320056033566155e-12" type="mesh" mesh="rear_left_caster_wheel_link" material="friday_body_material"/>
+              <geom class="mobile_base" name="rear_left_caster_wheel_link_collision_0" quat="0.7071067811882787 0.7071067811848163 4.032005603376359e-12 -4.0320056033566155e-12" type="cylinder" size="0.03 0.0075"/>
+            </body>
+          </body>
+        </body>
+        <body name="mobile_stereo" pos="0.301 0.0296 0.10476" quat="0.44018432012420605 -0.5533875339346187 0.5533875357061275 -0.44018432153775205">
+          <geom class="visual" name="mobile_stereo_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+        </body>
+        <body name="mobile_lidar_3d" pos="0.27437 7.96332246e-14 0.156263" quat="0.6532814814443828 -0.27059804951122773 0.2705980503753236 -0.6532814835395425">
+          <geom class="visual" name="mobile_lidar_3d_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+        </body>
+        <body name="left_lidar_2d" pos="0.05 0.215 0.16266" quat="0.7071067800533724 -1.7312055965770765e-12 1.7312055910114295e-12 0.7071067823197227">
+          <geom class="visual" name="left_lidar_2d_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+        </body>
+        <body name="right_lidar_2d" pos="0.05 -0.215 0.16266" quat="0.7071067800533724 -1.7312055965770765e-12 -1.7312055910114295e-12 -0.7071067823197227">
+          <geom class="visual" name="right_lidar_2d_visual_0" type="sphere" size="0.01" material="sensor_material"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position joint="waist_1" name="waist_1_pos_actuator" kp="5209.907" kv="651.238"/>
+    <position joint="waist_2" name="waist_2_pos_actuator" kp="13034.0" kv="1629.25"/>
+    <position joint="waist_3" name="waist_3_pos_actuator" kp="13034.0" kv="1629.25"/>
+    <position joint="waist_4" name="waist_4_pos_actuator" kp="13034.0" kv="1629.25"/>
+    <position joint="waist_5" name="waist_5_pos_actuator" kp="5840.87" kv="730.1"/>
+    <position joint="right_arm_1" name="right_arm_1_pos_actuator" kp="695.5" kv="69.55"/>
+    <position joint="right_arm_2" name="right_arm_2_pos_actuator" kp="695.5" kv="69.55"/>
+    <position joint="right_arm_3" name="right_arm_3_pos_actuator" kp="615.25" kv="30.7625"/>
+    <position joint="right_arm_4" name="right_arm_4_pos_actuator" kp="490.0" kv="49.0"/>
+    <position joint="right_arm_5" name="right_arm_5_pos_actuator" kp="111.492" kv="5.5746"/>
+    <position joint="right_arm_6" name="right_arm_6_pos_actuator" kp="64.0" kv="3.2"/>
+    <position joint="right_arm_7" name="right_arm_7_pos_actuator" kp="64.0" kv="3.2"/>
+    <position joint="right_hand_1_1" name="right_hand_1_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_1_2" name="right_hand_1_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_1_3" name="right_hand_1_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_1_4" name="right_hand_1_4_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_2_1" name="right_hand_2_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_2_2" name="right_hand_2_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_2_3" name="right_hand_2_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_2_4" name="right_hand_2_4_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_3_1" name="right_hand_3_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_3_2" name="right_hand_3_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_3_3" name="right_hand_3_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_3_4" name="right_hand_3_4_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_4_1" name="right_hand_4_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_4_2" name="right_hand_4_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_4_3" name="right_hand_4_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_4_4" name="right_hand_4_4_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_5_1" name="right_hand_5_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_5_2" name="right_hand_5_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_5_3" name="right_hand_5_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="right_hand_5_4" name="right_hand_5_4_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_arm_1" name="left_arm_1_pos_actuator" kp="695.5" kv="69.55"/>
+    <position joint="left_arm_2" name="left_arm_2_pos_actuator" kp="695.5" kv="69.55"/>
+    <position joint="left_arm_3" name="left_arm_3_pos_actuator" kp="615.25" kv="30.7625"/>
+    <position joint="left_arm_4" name="left_arm_4_pos_actuator" kp="490.0" kv="49.0"/>
+    <position joint="left_arm_5" name="left_arm_5_pos_actuator" kp="111.492" kv="5.5746"/>
+    <position joint="left_arm_6" name="left_arm_6_pos_actuator" kp="64.0" kv="3.2"/>
+    <position joint="left_arm_7" name="left_arm_7_pos_actuator" kp="64.0" kv="3.2"/>
+    <position joint="left_hand_1_1" name="left_hand_1_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_1_2" name="left_hand_1_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_1_3" name="left_hand_1_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_1_4" name="left_hand_1_4_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_2_1" name="left_hand_2_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_2_2" name="left_hand_2_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_2_3" name="left_hand_2_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_2_4" name="left_hand_2_4_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_3_1" name="left_hand_3_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_3_2" name="left_hand_3_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_3_3" name="left_hand_3_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_3_4" name="left_hand_3_4_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_4_1" name="left_hand_4_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_4_2" name="left_hand_4_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_4_3" name="left_hand_4_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_4_4" name="left_hand_4_4_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_5_1" name="left_hand_5_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_5_2" name="left_hand_5_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_5_3" name="left_hand_5_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="left_hand_5_4" name="left_hand_5_4_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="head_1" name="head_1_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="head_2" name="head_2_pos_actuator" kp="300.0" kv="60.0"/>
+    <position joint="head_3" name="head_3_pos_actuator" kp="300.0" kv="60.0"/>
+    <velocity joint="left_wheel_joint" kv="10000.0"/>
+    <velocity joint="right_wheel_joint" kv="10000.0"/>
+  </actuator>
+  <keyframe>
+    <key qpos="0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.48 0.96 -0.48 0.0 -0.92 -0.74 0.0 -1.27 -0.44 -0.09 0.0 -0.524 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.92 0.74 0.0 -1.27 0.44 0.09 0.0 0.524 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0" name="ready"/>
+    <key qpos="0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.1 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.1 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0" name="rest"/>
+    <key qpos="0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.381143 -0.785425 0.479866 1.270592 0.038312 0.0 1.547029 1.5385 -0.128934 0.0 1.568971 1.569903 -0.189681 0.042622 1.5708 1.5708 -0.255663 0.024391 1.5138 1.5708 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.381143 0.785425 1.5708 1.5708 -0.038312 0.0 1.5708 1.5701 0.128934 0.015739 1.568971 1.5708 0.189681 0.0 1.5708 1.569659 0.255663 0.021891 1.5708 1.5708 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0" name="grab"/>
+    <key qpos="0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.7854 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7854 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0" name="release"/>
+  </keyframe>
+</mujoco>
