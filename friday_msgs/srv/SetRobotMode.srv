@@ -1,5 +1,0 @@
-RobotMode mode
----
-bool success
-string message
-RobotMode current_mode

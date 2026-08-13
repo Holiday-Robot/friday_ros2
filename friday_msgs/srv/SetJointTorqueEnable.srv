@@ -1,5 +1,0 @@
-string[] names
-bool data
----
-bool success
-string message

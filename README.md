@@ -11,6 +11,32 @@ Public ROS 2 packages for the Friday.
 - `friday_msgs`: public ROS 2 interfaces for Friday.
 - `friday_teleop`: keyboard teleoperation launch files.
 
+## Public Interfaces
+
+`friday_msgs` provides the public message and service contracts used by Friday.
+
+- Robot and hardware state: `BatteryState`, `BoardStateArray`,
+  `BumperStateArray`, `EmergencyStop`, `JointLockState`,
+  `LoadCellStateArray`, `MotorStateArray`, `RangeStateArray`, and
+  `TactileStateArray`.
+- Static sensor metadata: `TactileLayout`.
+- Robot control: `ControlMode`, `Manipulation`, `JointReaching`,
+  `LinkReaching`, and `ViewReaching`.
+- Services: `GetMotorLimits`, `ResetBoardFaults`, `SetControlMode`,
+  `SetMotorCurrentLimit`, `SetMotorVelocityLimit`, and
+  `SetRangeSensorEnabled`.
+
+State arrays are keyed by the name or ID field documented in each entry type.
+Consumers must not depend on array order.
+
+The current contract removes the legacy `EncoderState`, `RobotStatus`,
+`TactileData`, `TactileMagnet`, `GetEncoderState`, `GetMotorLimit`,
+`GetMotorState`, `GetRobotStatus`, and `SetMotorLimit` interfaces. Motor and
+external encoder state are provided by `MotorStateArray`. Motor limit operations
+use `GetMotorLimits` and the separate velocity/current setters. Tactile state
+and layout use `TactileStateArray` and `TactileLayout`. Safety state is split
+across `EmergencyStop`, `BoardStateArray`, and `JointLockState`.
+
 ## Build
 
 Clone the repository and build it as a ROS 2 workspace:
@@ -47,11 +73,11 @@ This example lets you drive Friday interactively by publishing keyboard input as
 Before using keyboard teleop , turn on the robot torque and enable the controller:
 
 ```bash
-ros2 service call /hday/friday/rollout std_srvs/srv/SetBool '{data: true}'
-ros2 service call /hday/controller/rollout std_srvs/srv/SetBool '{data: true}'
+ros2 service call holiday/joints/torque/set_enabled std_srvs/srv/SetBool '{data: true}'
+ros2 service call holiday/control/set_enabled std_srvs/srv/SetBool '{data: true}'
 ```
 
-Start `teleop_twist_keyboard` for `/hday/controller/navigation_api`:
+Start `teleop_twist_keyboard` for `holiday/cmd_vel`:
 
 ```bash
 ros2 launch friday_teleop teleop_twist_keyboard.launch.py
@@ -115,8 +141,8 @@ Verify that the robot workspace is clear before running them.
 Before using running a manipulation example, turn on the robot torque and enable the controller:
 
 ```bash
-ros2 service call /hday/friday/rollout std_srvs/srv/SetBool '{data: true}'
-ros2 service call /hday/controller/rollout std_srvs/srv/SetBool '{data: true}'
+ros2 service call holiday/joints/torque/set_enabled std_srvs/srv/SetBool '{data: true}'
+ros2 service call holiday/control/set_enabled std_srvs/srv/SetBool '{data: true}'
 ```
 
 ### `joint_space`

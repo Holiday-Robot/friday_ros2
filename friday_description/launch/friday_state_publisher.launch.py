@@ -30,7 +30,7 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument(
                 "joint_state_topic",
-                default_value="/hday/friday/joint_state",
+                default_value="holiday/joint_states",
                 description="Joint state topic for robot state publisher",
             ),
             Node(

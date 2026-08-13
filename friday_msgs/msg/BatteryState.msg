@@ -1,12 +1,20 @@
-builtin_interfaces/Time stamp
+uint8 SOC_SOURCE_UNKNOWN=0
+uint8 SOC_SOURCE_NONE=1
+uint8 SOC_SOURCE_BMS=2
+uint8 SOC_SOURCE_ADC=3
 
-string name
-float64 percent
-float64 voltage
-int32 connected
-int32 lock_state    # latch state machine: 0 IDLE/1 LOCKED/2 UNLOCKED/3 LOCKING/4 UNLOCKING/5 ERROR
-uint8 threshold     # 0-100 low-battery alarm SoC
-int32 latch_sensor  # latch limit-switch GPIO: 0 NONE/1 CLOSED/2 OPEN/3 BOTH
-int32 is_charging   # 1 = charging
-int32 cycles        # battery charge/discharge cycle count
-float64 cell_temp   # cell temperature [degC]
+uint8 POWER_STATE_UNKNOWN=0
+uint8 POWER_STATE_NORMAL=1
+uint8 POWER_STATE_WARNING=2
+uint8 POWER_STATE_CRITICAL=3
+uint8 POWER_STATE_SHUTDOWN=4
+
+std_msgs/Header header
+float32 state_of_charge
+float32 voltage
+bool connected
+bool charging
+uint8 state_of_charge_source
+uint8 power_state
+bool controller_connected
+friday_msgs/BatteryPackState[<=2] packs

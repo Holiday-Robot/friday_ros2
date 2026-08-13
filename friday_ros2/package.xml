@@ -11,7 +11,7 @@
 
   <exec_depend>friday_description</exec_depend>
   <exec_depend>friday_manipulation</exec_depend>
-  <exec_depend>ros2_interfaces_public</exec_depend>
+  <exec_depend>friday_msgs</exec_depend>
   <exec_depend>friday_teleop</exec_depend>
 
   <export>

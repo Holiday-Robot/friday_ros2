@@ -16,11 +16,11 @@ import argparse
 import time
 
 import rclpy
+from friday_msgs.msg import JointReaching, Manipulation
 from rclpy.node import Node
 from rclpy.utilities import remove_ros_args
-from ros2_interfaces_public.msg import JointReaching, ManipulationAPI
 
-MANIPULATION_API_TOPIC = "/hday/controller/manipulation_api"
+MANIPULATION_TOPIC = "holiday/manipulation"
 SUBSCRIBER_WAIT_SECONDS = 5.0
 POST_PUBLISH_SPIN_SECONDS = 0.5
 
@@ -51,15 +51,15 @@ def build_joint_targets(pose: str) -> tuple[tuple[str, float], ...]:
     return tuple(zip(ALL_JOINTS, ready_positions, strict=True))
 
 
-def _publish_once(node: Node, message: ManipulationAPI) -> None:
-    publisher = node.create_publisher(ManipulationAPI, MANIPULATION_API_TOPIC, 10)
+def _publish_once(node: Node, message: Manipulation) -> None:
+    publisher = node.create_publisher(Manipulation, MANIPULATION_TOPIC, 1)
 
     deadline = time.monotonic() + SUBSCRIBER_WAIT_SECONDS
     while publisher.get_subscription_count() == 0 and time.monotonic() < deadline:
         rclpy.spin_once(node, timeout_sec=0.1)
 
     if publisher.get_subscription_count() == 0:
-        node.get_logger().warning(f"No subscriber discovered on {MANIPULATION_API_TOPIC}; publishing anyway")
+        node.get_logger().warning(f"No subscriber discovered on {MANIPULATION_TOPIC}; publishing anyway")
 
     publisher.publish(message)
 
@@ -92,10 +92,15 @@ def main(args: list[str] | None = None) -> int:
     node = rclpy.create_node("joint_space")
 
     try:
-        message = ManipulationAPI()
+        message = Manipulation()
         message.header.stamp = node.get_clock().now().to_msg()
         message.joint_reaching = [
-            JointReaching(target_joint=joint, target_position=position)
+            JointReaching(
+                target_joint=joint,
+                target_position=position,
+                target_velocity=0.0,
+                target_acceleration=0.0,
+            )
             for joint, position in build_joint_targets(cli_args.pose)
         ]
 

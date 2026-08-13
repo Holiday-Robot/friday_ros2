@@ -1,0 +1,31 @@
+uint8 LATCH_STATE_UNKNOWN=0
+uint8 LATCH_STATE_IDLE=1
+uint8 LATCH_STATE_LOCKED=2
+uint8 LATCH_STATE_UNLOCKED=3
+uint8 LATCH_STATE_LOCKING=4
+uint8 LATCH_STATE_UNLOCKING=5
+uint8 LATCH_STATE_ERROR=6
+
+uint8 LATCH_SENSOR_UNKNOWN=0
+uint8 LATCH_SENSOR_NONE=1
+uint8 LATCH_SENSOR_CLOSED=2
+uint8 LATCH_SENSOR_OPEN=3
+uint8 LATCH_SENSOR_CONFLICT=4
+
+string<=32 slot_id
+builtin_interfaces/Time detail_stamp
+bool detail_valid
+bool detected
+bool connected
+bool charging
+uint16 bms_error_code
+uint32 bms_error_count
+uint32 cycle_count
+float32 temperature
+float32 remaining_charge
+float32 capacity
+float32 voltage
+float32 state_of_charge
+float32 current
+uint8 latch_state
+uint8 latch_sensor_state
