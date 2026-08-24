@@ -38,6 +38,7 @@ def generate_launch_description():
                 executable="robot_state_publisher",
                 output="screen",
                 parameters=[params],
+                condition=IfCondition(use_joint_state_publisher_gui),
                 remappings=[("/joint_states", joint_state_topic)],
             ),
             Node(
