@@ -27,8 +27,9 @@ Public ROS 2 packages for the Friday.
   `SetMotorCurrentLimit`, `SetMotorVelocityLimit`, and
   `SetRangeSensorEnabled`.
 
-State arrays are keyed by the name or ID field documented in each entry type.
-Consumers must not depend on array order.
+State arrays are keyed by the name or ID field documented in each entry type,
+except tactile state. `TactileStateArray.points[i]` corresponds to
+`TactileLayout.sensors[i]`.
 
 The current contract removes the legacy `EncoderState`, `RobotStatus`,
 `TactileData`, `TactileMagnet`, `GetEncoderState`, `GetMotorLimit`,
