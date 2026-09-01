@@ -1,11 +1,12 @@
 import os
 
 from ament_index_python.packages import get_package_share_directory
-from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
+
+from launch import LaunchDescription
 
 
 def generate_launch_description():
@@ -14,7 +15,7 @@ def generate_launch_description():
     use_joint_state_publisher_gui = LaunchConfiguration("use_joint_state_publisher_gui", default="false")
     joint_state_topic = LaunchConfiguration("joint_state_topic")
 
-    urdf_path = os.path.join(get_package_share_directory("friday_description"), "urdf", "FM26A.urdf")
+    urdf_path = os.path.join(get_package_share_directory("friday_description"), "urdf", "FM26B.urdf")
     with open(urdf_path, encoding="utf-8") as urdf_file:
         robot_description = urdf_file.read()
 
