@@ -1,0 +1,2772 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="FM26B">
+  <material name="friday_black_material">
+    <color rgba="0.05 0.05 0.05 1.0"/>
+  </material>
+  <material name="friday_blue_material">
+    <color rgba="0.1 0.04 0.68 1.0"/>
+  </material>
+  <material name="friday_green_material">
+    <color rgba="0.0 0.85 0.0 1.0"/>
+  </material>
+  <material name="friday_white_material">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+  <material name="sensor_material">
+    <color rgba="1.0 0.0 0.0 1.0"/>
+  </material>
+  <material name="tactile_material">
+    <color rgba="0.917647 0.917647 0.917647 1.0"/>
+  </material>
+  <link name="base_footprint">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.01194219674 0.00015674297 0.06007553961" rpy="0.0 0.0 0.0"/>
+      <mass value="64.7049400392"/>
+      <inertia ixx="1.49407626353" ixy="-0.00170900078311" ixz="-0.0542550809744" iyy="2.2246620802" iyz="-0.0013015790829" izz="3.16177327889"/>
+    </inertial>
+    <visual name="base_link_visual_0">
+      <origin xyz="0.0 0.0 -0.07" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/base.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="base_link_visual_1">
+      <origin xyz="0.0 0.0 -0.07" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/base_cover_white.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+    <visual name="base_link_visual_2">
+      <origin xyz="0.0 0.0 -0.07" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/base_cover_black.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="base_link_visual_3">
+      <origin xyz="0.0 0.0 -0.07" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/base_cover_blue.stl"/>
+      </geometry>
+      <material name="friday_blue_material"/>
+    </visual>
+    <collision name="base_link_collision_0">
+      <origin xyz="-0.025 0.0 0.13" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.6 0.5 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_footprint" type="fixed">
+    <origin xyz="0.0 0.0 0.07" rpy="0.0 0.0 0.0"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+  <link name="right_wheel_carrier">
+    <inertial>
+      <origin xyz="0.00711020465 -0.08228003584 0.00281798107" rpy="0.0 0.0 0.0"/>
+      <mass value="3.87749248763"/>
+      <inertia ixx="0.00923797807535" ixy="0.00148362378171" ixz="0.000325339314383" iyy="0.00579525873283" iyz="0.000663853330685" izz="0.00976921183081"/>
+    </inertial>
+    <visual name="right_wheel_carrier_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_wheel_carrier.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+  </link>
+  <joint name="right_wheel_suspension" type="prismatic">
+    <origin xyz="0.0 -0.152 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="right_wheel_carrier"/>
+    <axis xyz="-0.0 -0.0 1.0"/>
+    <dynamics damping="2000.0"/>
+    <limit effort="10000.0" velocity="10.0" lower="-0.025" upper="0.025"/>
+  </joint>
+  <link name="right_wheel">
+    <inertial>
+      <origin xyz="3.66443e-06 -0.00083462134 2.37146e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="2.07074"/>
+      <inertia ixx="0.00471335061511" ixy="1.397134241e-08" ixz="-2.6034025669e-07" iyy="0.0069070825534" iyz="-2.97024467e-09" izz="0.00471319821882"/>
+    </inertial>
+    <visual name="right_wheel_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_wheel.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="right_wheel_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="-1.57079632679979 0.0 0.0"/>
+      <geometry>
+        <cylinder radius="0.07" length="0.088"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_wheel_joint" type="continuous">
+    <origin xyz="0.0 -0.1102 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="right_wheel_carrier"/>
+    <child link="right_wheel"/>
+    <axis xyz="-0.0 1.0 -0.0"/>
+  </joint>
+  <link name="left_wheel_carrier">
+    <inertial>
+      <origin xyz="0.00667483134 0.0822800458 0.00281798322" rpy="0.0 0.0 0.0"/>
+      <mass value="3.87749193716"/>
+      <inertia ixx="0.00923797529749" ixy="-0.00145447313447" ixz="0.000295239153222" iyy="0.00581852991547" iyz="-0.00066385395889" izz="0.00979248038335"/>
+    </inertial>
+    <visual name="left_wheel_carrier_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_wheel_carrier.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+  </link>
+  <joint name="left_wheel_suspension" type="prismatic">
+    <origin xyz="0.0 0.152 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="left_wheel_carrier"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="2000.0"/>
+    <limit effort="10000.0" velocity="10.0" lower="-0.025" upper="0.025"/>
+  </joint>
+  <link name="left_wheel">
+    <inertial>
+      <origin xyz="-3.66443e-06 0.00083462134 2.37146e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="2.07074"/>
+      <inertia ixx="0.00471335061511" ixy="1.397134241e-08" ixz="2.6034025669e-07" iyy="0.0069070825534" iyz="2.97024467e-09" izz="0.00471319821882"/>
+    </inertial>
+    <visual name="left_wheel_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_wheel.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="left_wheel_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="-1.57079632679979 0.0 0.0"/>
+      <geometry>
+        <cylinder radius="0.07" length="0.088"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_wheel_joint" type="continuous">
+    <origin xyz="0.0 0.1102 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="left_wheel_carrier"/>
+    <child link="left_wheel"/>
+    <axis xyz="-0.0 1.0 -0.0"/>
+  </joint>
+  <link name="waist_1">
+    <inertial>
+      <origin xyz="0.00101667169 -0.00460640095 0.057108588" rpy="0.0 0.0 0.0"/>
+      <mass value="3.56380655342"/>
+      <inertia ixx="0.0253941436113" ixy="9.85087853966e-05" ixz="0.000231135217404" iyy="0.0167770477473" iyz="6.20115398128e-06" izz="0.0229952386706"/>
+    </inertial>
+    <visual name="waist_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/waist_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="waist_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_waist_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="waist_1" type="revolute">
+    <origin xyz="0.0 0.0 0.14" rpy="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="waist_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="530.4" velocity="2.93" lower="-5.4978" upper="5.4978"/>
+  </joint>
+  <link name="waist_2">
+    <inertial>
+      <origin xyz="-0.00607082854 -0.02734770587 0.17480026658" rpy="0.0 0.0 0.0"/>
+      <mass value="9.14664247554"/>
+      <inertia ixx="0.253134218456" ixy="-0.00196412399158" ixz="-0.00172359339439" iyy="0.245064124928" iyz="0.000364705714267" izz="0.0303103919961"/>
+    </inertial>
+    <visual name="waist_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/waist_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="waist_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_waist_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="waist_2" type="revolute">
+    <origin xyz="0.0 0.0 0.14" rpy="0.0 0.0 0.0"/>
+    <parent link="waist_1"/>
+    <child link="waist_2"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="837.2" velocity="1.86" lower="-1.5708" upper="0.174533"/>
+  </joint>
+  <link name="waist_3">
+    <inertial>
+      <origin xyz="-0.01899871059 -0.00172929414 0.161230471" rpy="0.0 0.0 0.0"/>
+      <mass value="4.32773305457"/>
+      <inertia ixx="0.0834249061557" ixy="0.000109676223528" ixz="0.00346550809335" iyy="0.0647166955632" iyz="0.000381417809936" izz="0.0343317200247"/>
+    </inertial>
+    <visual name="waist_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/waist_3.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+    <collision name="waist_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_waist_3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="waist_3" type="revolute">
+    <origin xyz="0.0 0.0 0.35" rpy="0.0 0.0 0.0"/>
+    <parent link="waist_2"/>
+    <child link="waist_3"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="837.2" velocity="1.86" lower="-0.174533" upper="2.618"/>
+  </joint>
+  <link name="waist_4">
+    <inertial>
+      <origin xyz="-0.0332643518 -0.01745601027 0.03238843487" rpy="0.0 0.0 0.0"/>
+      <mass value="7.07210301574"/>
+      <inertia ixx="0.0252317726874" ixy="-0.00395508249535" ixz="-0.00429686524821" iyy="0.0396285702613" iyz="0.00419456082743" izz="0.0383591114742"/>
+    </inertial>
+    <visual name="waist_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/waist_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="waist_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_waist_4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="waist_4" type="revolute">
+    <origin xyz="0.0 0.0 0.35" rpy="0.0 0.0 0.0"/>
+    <parent link="waist_3"/>
+    <child link="waist_4"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="837.2" velocity="1.86" lower="-1.8326" upper="1.0472"/>
+  </joint>
+  <link name="waist_5">
+    <inertial>
+      <origin xyz="-0.04365913264 0.00055182353 0.19194181276" rpy="0.0 0.0 0.0"/>
+      <mass value="13.8223286304"/>
+      <inertia ixx="0.216686071595" ixy="-0.000204523877984" ixz="0.0112799536778" iyy="0.187043002682" iyz="0.000481534952868" izz="0.155086984357"/>
+    </inertial>
+    <visual name="waist_5_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/waist_5.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="waist_5_visual_1">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/waist_5_cover_white.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+    <visual name="waist_5_visual_2">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/waist_5_cover_green.stl"/>
+      </geometry>
+      <material name="friday_green_material"/>
+    </visual>
+    <visual name="waist_5_visual_3">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/waist_5_cover_blue.stl"/>
+      </geometry>
+      <material name="friday_blue_material"/>
+    </visual>
+    <collision name="waist_5_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_waist_5.stl"/>
+      </geometry>
+    </collision>
+    <collision name="waist_5_collision_1">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 1.5707963000000003"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_waist_5_left.stl"/>
+      </geometry>
+    </collision>
+    <collision name="waist_5_collision_2">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 1.5707963000000003"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_waist_5_right.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="waist_5" type="revolute">
+    <origin xyz="0.0 0.0 0.127" rpy="0.0 0.0 0.0"/>
+    <parent link="waist_4"/>
+    <child link="waist_5"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="450.8" velocity="3.45" lower="-5.4978" upper="5.4978"/>
+  </joint>
+  <link name="right_arm_1">
+    <inertial>
+      <origin xyz="-0.00285115612 -0.06019445586 -3.051266e-05" rpy="0.0 0.0 0.0"/>
+      <mass value="1.3598784586"/>
+      <inertia ixx="0.00176791778496" ixy="2.6816184038e-07" ixz="2.3454767874e-07" iyy="0.00185430392497" iyz="2.2951589471e-07" izz="0.00212086201374"/>
+    </inertial>
+    <visual name="right_arm_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_arm_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="right_arm_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_right_arm_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_1" type="revolute">
+    <origin xyz="0.0 -0.163667249655127 0.244688600436976" rpy="-0.174532925199439 0.0 0.0"/>
+    <parent link="waist_5"/>
+    <child link="right_arm_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="130.0" velocity="11.96" lower="-2.268" upper="0.7853"/>
+  </joint>
+  <link name="right_arm_2">
+    <inertial>
+      <origin xyz="-0.0006815229 -0.00967347381 -0.10046233135" rpy="0.0 0.0 0.0"/>
+      <mass value="1.7179053818"/>
+      <inertia ixx="0.00368469408182" ixy="-1.18373856977e-06" ixz="-8.11427758698e-05" iyy="0.00451008447059" iyz="0.00011458650005" izz="0.0025190693569"/>
+    </inertial>
+    <visual name="right_arm_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_arm_2.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+    <collision name="right_arm_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_right_arm_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_2" type="revolute">
+    <origin xyz="0.0 -0.065 0.0" rpy="0.174532925199439 0.0 0.0"/>
+    <parent link="right_arm_1"/>
+    <child link="right_arm_2"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <limit effort="130.0" velocity="11.96" lower="-2.97" upper="0.1"/>
+  </joint>
+  <link name="right_arm_3">
+    <inertial>
+      <origin xyz="-0.00227165994 0.00022611656 -0.07977277404" rpy="0.0 0.0 0.0"/>
+      <mass value="1.30277741813"/>
+      <inertia ixx="0.00311175581904" ixy="4.22860970657e-06" ixz="0.000202426111561" iyy="0.00308433114233" iyz="-2.55092040038e-05" izz="0.00146879161989"/>
+    </inertial>
+    <visual name="right_arm_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_arm_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_arm_3_visual_1">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_arm_3_cover_white.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+    <collision name="right_arm_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_right_arm_3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_3" type="revolute">
+    <origin xyz="0.0 -0.01 -0.155" rpy="0.0 0.0 0.0"/>
+    <parent link="right_arm_2"/>
+    <child link="right_arm_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="68.3" velocity="11.47" lower="-1.38" upper="1.38"/>
+  </joint>
+  <link name="right_arm_4">
+    <inertial>
+      <origin xyz="0.00982082475 0.0 0.02170172753" rpy="0.0 0.0 0.0"/>
+      <mass value="0.11090938673"/>
+      <inertia ixx="4.63649811489e-05" ixy="5e-17" ixz="-3.94142182759e-06" iyy="6.50412920563e-05" iyz="3.2e-16" izz="6.56708683646e-05"/>
+    </inertial>
+    <visual name="right_arm_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_arm_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="right_arm_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_right_arm_4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_4" type="revolute">
+    <origin xyz="0.0135 0.0 -0.163" rpy="0.0 0.0 0.0"/>
+    <parent link="right_arm_3"/>
+    <child link="right_arm_4"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="71.7" velocity="3.95" lower="-2.02" upper="0.0"/>
+  </joint>
+  <link name="right_arm_5">
+    <inertial>
+      <origin xyz="0.00671300024 0.00076538642 -0.05277968095" rpy="0.0 0.0 0.0"/>
+      <mass value="1.02987270048"/>
+      <inertia ixx="0.00230400794452" ixy="2.71291772794e-05" ixz="-0.000145652407734" iyy="0.00269442992515" iyz="-3.31946889116e-05" izz="0.00118273320418"/>
+    </inertial>
+    <visual name="right_arm_5_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_arm_5.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+    <collision name="right_arm_5_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_right_arm_5.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_5" type="revolute">
+    <origin xyz="-0.0135 0.0 -0.0429999999999999" rpy="0.0 0.0 0.0"/>
+    <parent link="right_arm_4"/>
+    <child link="right_arm_5"/>
+    <axis xyz="-0.0 -0.0 1.0"/>
+    <limit effort="12.5" velocity="30.93" lower="-1.5708" upper="1.5708"/>
+  </joint>
+  <link name="right_arm_6">
+    <inertial>
+      <origin xyz="0.00431525881 -0.01773598306 0.005400991" rpy="0.0 0.0 0.0"/>
+      <mass value="0.5356605154"/>
+      <inertia ixx="0.000491519050202" ixy="4.7190249544e-06" ixz="8.90205545992e-05" iyy="0.00067821340568" iyz="1.52916955029e-05" izz="0.000442485948732"/>
+    </inertial>
+    <visual name="right_arm_6_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_arm_6.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="right_arm_6_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_right_arm_6.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_6" type="revolute">
+    <origin xyz="0.0 0.0 -0.167" rpy="0.0 0.0 0.0"/>
+    <parent link="right_arm_5"/>
+    <child link="right_arm_6"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <limit effort="12.5" velocity="35.19" lower="-0.785398" upper="0.785398"/>
+  </joint>
+  <link name="right_arm_7">
+    <inertial>
+      <origin xyz="0.00376313633081 0.0368524786573 -0.0863429406532" rpy="0.0 0.0 0.0"/>
+      <mass value="0.300897291735"/>
+      <inertia ixx="0.000667848904995" ixy="-7.83541319612e-06" ixz="5.06877336341e-05" iyy="0.000644857637451" iyz="0.00014517485285" izz="0.000213478794166"/>
+    </inertial>
+    <visual name="right_arm_7_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_arm_7.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_arm_7_visual_1">
+      <origin xyz="-0.0115464 0.05875 -0.145422" rpy="-1.5707999999999998 1e-12 -9.999999999999998e-13"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_wrist_tactile.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_arm_7_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_arm_7.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_arm_7_tactile">
+      <origin xyz="-0.0115464 0.05875 -0.145422" rpy="-1.5707999999999998 1e-12 -9.999999999999998e-13"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_wrist_tactile.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_7" type="revolute">
+    <origin xyz="0.0 -0.03325 0.0" rpy="-6.535897930762882e-07 6.535897930762881e-07 -6.535897930762883e-07"/>
+    <parent link="right_arm_6"/>
+    <child link="right_arm_7"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="12.5" velocity="35.19" lower="-0.7155" upper="0.7155"/>
+  </joint>
+  <link name="right_hand_1_1">
+    <inertial>
+      <origin xyz="0.000130292 -0.0 -0.000104306" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00574066"/>
+      <inertia ixx="2.27878e-07" ixy="-0.0" ixz="-7.8e-11" iyy="3.50936e-07" iyz="0.0" izz="1.38986e-07"/>
+    </inertial>
+    <visual name="right_hand_1_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_1_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="right_hand_1_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_1_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_1_1" type="revolute">
+    <origin xyz="0.0263009 0.05775 -0.0944413" rpy="-0.523599 4.0000225354219765e-12 1.5708"/>
+    <parent link="right_arm_7"/>
+    <child link="right_hand_1_1"/>
+    <axis xyz="-0.0 -0.0 -1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-1.45" upper="0.11"/>
+  </joint>
+  <link name="right_hand_1_2">
+    <inertial>
+      <origin xyz="0.0201691 0.015014 0.0045946" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0283292"/>
+      <inertia ixx="7.44767e-06" ixy="-1.73458e-06" ixz="-8.88582e-07" iyy="3.67429e-06" iyz="-1.75686e-06" izz="7.21735e-06"/>
+    </inertial>
+    <visual name="right_hand_1_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_1_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_1_2_visual_1">
+      <origin xyz="-0.0412949 0.0553231 -0.0095" rpy="2.0943926535943262 -1.5707926535755432 3.141592653589793"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_mcp.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_1_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_1_2.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_1_2_tactile">
+      <origin xyz="-0.0412949 0.0553231 -0.0095" rpy="2.0943926535943262 -1.5707926535755432 3.141592653589793"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_1_2" type="revolute">
+    <origin xyz="0.0 -0.0 0.0" rpy="-1.5707999999999998 -5.551115123125783e-17 -1.5707999999999998"/>
+    <parent link="right_hand_1_1"/>
+    <child link="right_hand_1_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.775" upper="0.081"/>
+  </joint>
+  <link name="right_hand_1_3">
+    <inertial>
+      <origin xyz="-0.0038076 -0.0183229 -0.000889352" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0197159"/>
+      <inertia ixx="3.31216e-06" ixy="3.6275e-08" ixz="-7.0224e-08" iyy="9.05174e-07" iyz="-2.7512e-08" izz="3.04142e-06"/>
+    </inertial>
+    <visual name="right_hand_1_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_1_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_1_3_visual_1">
+      <origin xyz="0.0347597 0.00940297 -0.0636744" rpy="2.60962 -0.8035809999999999 -0.387044"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_pip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_1_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_1_3.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_1_3_tactile">
+      <origin xyz="0.0347597 0.00940297 -0.0636744" rpy="2.60962 -0.8035809999999999 -0.387044"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_1_3" type="revolute">
+    <origin xyz="0.0258606 0.0423811 0.0164563" rpy="-0.349066 -0.698132 -3.14159"/>
+    <parent link="right_hand_1_2"/>
+    <child link="right_hand_1_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_1_4">
+    <inertial>
+      <origin xyz="-0.00362737 -0.0138155 -0.000936454" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0140308"/>
+      <inertia ixx="1.62492e-06" ixy="4.3995e-08" ixz="-4.1325e-08" iyy="5.43896e-07" iyz="3.0153e-08" izz="1.46993e-06"/>
+    </inertial>
+    <visual name="right_hand_1_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_1_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_1_4_visual_1">
+      <origin xyz="0.0347597 0.049403 -0.0636744" rpy="2.60962 -0.8035809999999999 -0.387044"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_dip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_1_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_1_4.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_1_4_tactile">
+      <origin xyz="0.0347597 0.049403 -0.0636744" rpy="2.60962 -0.8035809999999999 -0.387044"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_dip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_1_4" type="revolute">
+    <origin xyz="0.0 -0.04 -0.0" rpy="0.0 0.0 1.29348e-07"/>
+    <parent link="right_hand_1_3"/>
+    <child link="right_hand_1_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_2_1">
+    <inertial>
+      <origin xyz="0.000113231 0.00458804 0.00575426" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00976917"/>
+      <inertia ixx="7.06407e-07" ixy="1.5127e-08" ixz="1.301e-09" iyy="3.8309e-07" iyz="-5.995e-08" izz="7.2331e-07"/>
+    </inertial>
+    <visual name="right_hand_2_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_2_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="right_hand_2_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_2_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_2_1" type="revolute">
+    <origin xyz="0.0392 0.05375 -0.151" rpy="1.5707999999999998 -0.0349066 -1.000000715683979e-12"/>
+    <parent link="right_arm_7"/>
+    <child link="right_hand_2_1"/>
+    <axis xyz="-0.0 -0.0 -1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.2618" upper="0.2618"/>
+  </joint>
+  <link name="right_hand_2_2">
+    <inertial>
+      <origin xyz="-0.00374375 -0.0199104 -0.000614941" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0179165"/>
+      <inertia ixx="2.97764e-06" ixy="7.9836e-08" ixz="-4.6863e-08" iyy="7.54025e-07" iyz="-1.9623e-08" izz="2.87953e-06"/>
+    </inertial>
+    <visual name="right_hand_2_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_2_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_2_2_visual_1">
+      <origin xyz="-0.0055 0.0 0.0" rpy="1.5707999999999998 0.0 -9.999999999999998e-13"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_2_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_2_2.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_2_2_tactile">
+      <origin xyz="-0.0055 0.0 0.0" rpy="1.5707999999999998 0.0 -9.999999999999998e-13"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_2_2" type="revolute">
+    <origin xyz="-0.0 -0.0095 0.0" rpy="3.141592653589793 1.5707926535755432 3.141592653589793"/>
+    <parent link="right_hand_2_1"/>
+    <child link="right_hand_2_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_2_3">
+    <inertial>
+      <origin xyz="-0.00369959 -0.0126321 -0.000444273" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0116171"/>
+      <inertia ixx="1.17373e-06" ixy="5.1616e-08" ixz="-2.8375e-08" iyy="4.54002e-07" iyz="-1.3796e-08" izz="1.09499e-06"/>
+    </inertial>
+    <visual name="right_hand_2_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_2_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_2_3_visual_1">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_2_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_2_3.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_2_3_tactile">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_2_3" type="revolute">
+    <origin xyz="-0.0 -0.044 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="right_hand_2_2"/>
+    <child link="right_hand_2_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_2_4">
+    <inertial>
+      <origin xyz="-0.00153406 -0.0149176 5.9432e-05" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00847547"/>
+      <inertia ixx="9.92205e-07" ixy="-8.68e-09" ixz="3.792e-09" iyy="2.67276e-07" iyz="7.11e-09" izz="9.04521e-07"/>
+    </inertial>
+    <visual name="right_hand_2_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_2_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_2_4_visual_1">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_2_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_2_4.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_2_4_tactile">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_2_4" type="revolute">
+    <origin xyz="0.0 -0.03 -0.0" rpy="0.0 -0.0 0.0"/>
+    <parent link="right_hand_2_3"/>
+    <child link="right_hand_2_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_3_1">
+    <inertial>
+      <origin xyz="0.000113231 0.00458804 0.00575426" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00976917"/>
+      <inertia ixx="7.06407e-07" ixy="1.5127e-08" ixz="1.301e-09" iyy="3.8309e-07" iyz="-5.995e-08" izz="7.2331e-07"/>
+    </inertial>
+    <visual name="right_hand_3_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_3_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="right_hand_3_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_3_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_3_1" type="revolute">
+    <origin xyz="0.0182 0.05375 -0.1535" rpy="1.5707999999999998 9.999999999999998e-13 -1e-12"/>
+    <parent link="right_arm_7"/>
+    <child link="right_hand_3_1"/>
+    <axis xyz="-0.0 -0.0 -1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.2618" upper="0.2618"/>
+  </joint>
+  <link name="right_hand_3_2">
+    <inertial>
+      <origin xyz="-0.00374375 -0.0199104 -0.000614941" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0179165"/>
+      <inertia ixx="2.97764e-06" ixy="7.9836e-08" ixz="-4.6863e-08" iyy="7.54025e-07" iyz="-1.9623e-08" izz="2.87953e-06"/>
+    </inertial>
+    <visual name="right_hand_3_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_3_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_3_2_visual_1">
+      <origin xyz="-0.0055 0.0 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_3_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_3_2.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_3_2_tactile">
+      <origin xyz="-0.0055 0.0 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_3_2" type="revolute">
+    <origin xyz="-0.0 -0.0095 -0.0" rpy="3.141592653589793 1.5707926535755432 3.141592653589793"/>
+    <parent link="right_hand_3_1"/>
+    <child link="right_hand_3_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_3_3">
+    <inertial>
+      <origin xyz="-0.00361708 -0.0126321 -0.000444273" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0116171"/>
+      <inertia ixx="1.17373e-06" ixy="5.4671e-08" ixz="-2.6883e-08" iyy="4.48403e-07" iyz="-1.3796e-08" izz="1.08939e-06"/>
+    </inertial>
+    <visual name="right_hand_3_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_3_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_3_3_visual_1">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_3_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_3_3.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_3_3_tactile">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_3_3" type="revolute">
+    <origin xyz="-0.0 -0.044 -0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="right_hand_3_2"/>
+    <child link="right_hand_3_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_3_4">
+    <inertial>
+      <origin xyz="-0.00153406 -0.0149176 5.9432e-05" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00847547"/>
+      <inertia ixx="9.92205e-07" ixy="-8.68e-09" ixz="3.792e-09" iyy="2.67276e-07" iyz="7.11e-09" izz="9.04521e-07"/>
+    </inertial>
+    <visual name="right_hand_3_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_3_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_3_4_visual_1">
+      <origin xyz="-0.0055 0.074 -0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_3_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_3_4.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_3_4_tactile">
+      <origin xyz="-0.0055 0.074 -0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_3_4" type="revolute">
+    <origin xyz="-0.0 -0.03 0.0" rpy="0.0 -0.0 0.0"/>
+    <parent link="right_hand_3_3"/>
+    <child link="right_hand_3_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_4_1">
+    <inertial>
+      <origin xyz="0.000113231 0.00458804 0.00575426" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00976917"/>
+      <inertia ixx="7.06407e-07" ixy="1.5127e-08" ixz="1.301e-09" iyy="3.8309e-07" iyz="-5.995e-08" izz="7.2331e-07"/>
+    </inertial>
+    <visual name="right_hand_4_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_4_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="right_hand_4_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_4_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_4_1" type="revolute">
+    <origin xyz="-0.0028 0.05375 -0.1495" rpy="1.5708 0.0349066 -9.99993772560508e-13"/>
+    <parent link="right_arm_7"/>
+    <child link="right_hand_4_1"/>
+    <axis xyz="-0.0 -0.0 -1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.2618" upper="0.2618"/>
+  </joint>
+  <link name="right_hand_4_2">
+    <inertial>
+      <origin xyz="-0.00374375 -0.0199104 -0.000614941" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0179165"/>
+      <inertia ixx="2.97764e-06" ixy="7.9836e-08" ixz="-4.6863e-08" iyy="7.54025e-07" iyz="-1.9623e-08" izz="2.87953e-06"/>
+    </inertial>
+    <visual name="right_hand_4_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_4_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_4_2_visual_1">
+      <origin xyz="-0.0055 -0.0 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_4_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_4_2.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_4_2_tactile">
+      <origin xyz="-0.0055 -0.0 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_4_2" type="revolute">
+    <origin xyz="-0.0 -0.0095 0.0" rpy="3.141592653589793 1.5707926535755432 3.141592653589793"/>
+    <parent link="right_hand_4_1"/>
+    <child link="right_hand_4_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_4_3">
+    <inertial>
+      <origin xyz="-0.00359227 -0.0126321 -0.000444273" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0116171"/>
+      <inertia ixx="1.17373e-06" ixy="5.5589e-08" ixz="-2.6435e-08" iyy="4.46866e-07" iyz="-1.3796e-08" izz="1.08785e-06"/>
+    </inertial>
+    <visual name="right_hand_4_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_4_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_4_3_visual_1">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_4_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_4_3.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_4_3_tactile">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_4_3" type="revolute">
+    <origin xyz="0.0 -0.044 -0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="right_hand_4_2"/>
+    <child link="right_hand_4_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_4_4">
+    <inertial>
+      <origin xyz="-0.00153406 -0.0149176 5.9432e-05" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00847547"/>
+      <inertia ixx="9.92205e-07" ixy="-8.68e-09" ixz="3.792e-09" iyy="2.67276e-07" iyz="7.11e-09" izz="9.04521e-07"/>
+    </inertial>
+    <visual name="right_hand_4_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_4_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_4_4_visual_1">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_4_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_4_4.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_4_4_tactile">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_4_4" type="revolute">
+    <origin xyz="0.0 -0.03 -0.0" rpy="0.0 -0.0 0.0"/>
+    <parent link="right_hand_4_3"/>
+    <child link="right_hand_4_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_5_1">
+    <inertial>
+      <origin xyz="0.000113231 0.00458804 0.00575426" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00976917"/>
+      <inertia ixx="7.06407e-07" ixy="1.5127e-08" ixz="1.301e-09" iyy="3.8309e-07" iyz="-5.995e-08" izz="7.2331e-07"/>
+    </inertial>
+    <visual name="right_hand_5_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_5_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="right_hand_5_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_5_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_5_1" type="revolute">
+    <origin xyz="-0.0238 0.05375 -0.1455" rpy="1.5707999999999998 0.0698132 -1.000006048656765e-12"/>
+    <parent link="right_arm_7"/>
+    <child link="right_hand_5_1"/>
+    <axis xyz="-0.0 -0.0 -1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.2618" upper="0.2618"/>
+  </joint>
+  <link name="right_hand_5_2">
+    <inertial>
+      <origin xyz="-0.00374375 -0.0199172 -0.000614941" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0179165"/>
+      <inertia ixx="2.97897e-06" ixy="7.95e-08" ixz="-4.6863e-08" iyy="7.54025e-07" iyz="-1.9791e-08" izz="2.88087e-06"/>
+    </inertial>
+    <visual name="right_hand_5_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_5_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_5_2_visual_1">
+      <origin xyz="-0.0055 -0.0 -0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_5_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_5_2.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_5_2_tactile">
+      <origin xyz="-0.0055 -0.0 -0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_5_2" type="revolute">
+    <origin xyz="-0.0 -0.0095 -0.0" rpy="3.141592653589793 1.5707926535755432 3.141592653589793"/>
+    <parent link="right_hand_5_1"/>
+    <child link="right_hand_5_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_5_3">
+    <inertial>
+      <origin xyz="-0.00361708 -0.0126321 -0.000444273" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0116171"/>
+      <inertia ixx="1.17373e-06" ixy="5.4671e-08" ixz="-2.6883e-08" iyy="4.48403e-07" iyz="-1.3796e-08" izz="1.08939e-06"/>
+    </inertial>
+    <visual name="right_hand_5_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_5_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_5_3_visual_1">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_5_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_5_3.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_5_3_tactile">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_5_3" type="revolute">
+    <origin xyz="-0.0 -0.044 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="right_hand_5_2"/>
+    <child link="right_hand_5_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_hand_5_4">
+    <inertial>
+      <origin xyz="-0.00153406 -0.0149176 5.9432e-05" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00847547"/>
+      <inertia ixx="9.92205e-07" ixy="-8.68e-09" ixz="3.792e-09" iyy="2.67276e-07" iyz="7.11e-09" izz="9.04521e-07"/>
+    </inertial>
+    <visual name="right_hand_5_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_5_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="right_hand_5_4_visual_1">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="right_hand_5_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/right_hand_5_4.stl"/>
+      </geometry>
+    </collision>
+    <collision name="right_hand_5_4_tactile">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_hand_5_4" type="revolute">
+    <origin xyz="0.0 -0.03 -0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="right_hand_5_3"/>
+    <child link="right_hand_5_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="right_wrist_cam">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="right_wrist_cam_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="right_wrist_cam" type="fixed">
+    <origin xyz="-0.00975 0.063081 -0.071184" rpy="2.3561945 3.308722450212111e-24 3.1415926071795868"/>
+    <parent link="right_arm_7"/>
+    <child link="right_wrist_cam"/>
+  </joint>
+  <link name="left_arm_1">
+    <inertial>
+      <origin xyz="-0.00285115612 0.06019445586 -3.051266e-05" rpy="0.0 0.0 0.0"/>
+      <mass value="1.3598784586"/>
+      <inertia ixx="0.00176791778496" ixy="-2.6816184038e-07" ixz="2.3454767874e-07" iyy="0.00185430392497" iyz="-2.2951589471e-07" izz="0.00212086201374"/>
+    </inertial>
+    <visual name="left_arm_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_arm_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="left_arm_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_left_arm_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_1" type="revolute">
+    <origin xyz="0.0 0.163667249655128 0.244688600436976" rpy="0.17453292519943803 0.0 0.0"/>
+    <parent link="waist_5"/>
+    <child link="left_arm_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="130.0" velocity="11.96" lower="-2.268" upper="0.7853"/>
+  </joint>
+  <link name="left_arm_2">
+    <inertial>
+      <origin xyz="-0.00068800619 0.00967350845 -0.10046241929" rpy="0.0 0.0 0.0"/>
+      <mass value="1.71790555889"/>
+      <inertia ixx="0.00368467496067" ixy="1.44296791132e-06" ixz="-8.0632307949e-05" iyy="0.00451004581174" iyz="-0.000114583115324" izz="0.00251904387093"/>
+    </inertial>
+    <visual name="left_arm_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_arm_2.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+    <collision name="left_arm_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_left_arm_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_2" type="revolute">
+    <origin xyz="0.0 0.065 0.0" rpy="-0.17453292519943803 0.0 0.0"/>
+    <parent link="left_arm_1"/>
+    <child link="left_arm_2"/>
+    <axis xyz="1.0 -0.0 -0.0"/>
+    <limit effort="130.0" velocity="11.96" lower="-0.1" upper="2.97"/>
+  </joint>
+  <link name="left_arm_3">
+    <inertial>
+      <origin xyz="-0.00244261896 -5.496118e-05 -0.07977276714" rpy="0.0 0.0 0.0"/>
+      <mass value="1.30277751083"/>
+      <inertia ixx="0.0031188738541" ixy="-3.73452589943e-06" ixz="0.000192646272282" iyy="0.0030762335107" iyz="3.52773529461e-05" izz="0.00146781331954"/>
+    </inertial>
+    <visual name="left_arm_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_arm_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_arm_3_visual_1">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_arm_3_cover_white.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+    <collision name="left_arm_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_left_arm_3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_3" type="revolute">
+    <origin xyz="0.0 0.01 -0.155" rpy="0.0 0.0 0.0"/>
+    <parent link="left_arm_2"/>
+    <child link="left_arm_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="68.3" velocity="11.47" lower="-1.38" upper="1.38"/>
+  </joint>
+  <link name="left_arm_4">
+    <inertial>
+      <origin xyz="0.00982082475 0.0 0.02170172753" rpy="0.0 0.0 0.0"/>
+      <mass value="0.11090938673"/>
+      <inertia ixx="4.63649811489e-05" ixy="5e-17" ixz="-3.94142182759e-06" iyy="6.50412920563e-05" iyz="3.2e-16" izz="6.56708683646e-05"/>
+    </inertial>
+    <visual name="left_arm_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_arm_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="left_arm_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_left_arm_4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_4" type="revolute">
+    <origin xyz="0.0135 0.0 -0.163" rpy="0.0 0.0 0.0"/>
+    <parent link="left_arm_3"/>
+    <child link="left_arm_4"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="71.7" velocity="3.95" lower="-2.02" upper="0.0"/>
+  </joint>
+  <link name="left_arm_5">
+    <inertial>
+      <origin xyz="0.00671300024 -0.00033316311 -0.05271338915" rpy="0.0 0.0 0.0"/>
+      <mass value="1.02987270048"/>
+      <inertia ixx="0.0023015241042" ixy="-1.12978438273e-05" ixz="-0.000143784790868" iyy="0.00269145723627" iyz="-2.96212219475e-06" izz="0.00118322205273"/>
+    </inertial>
+    <visual name="left_arm_5_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_arm_5.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+    <collision name="left_arm_5_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_left_arm_5.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_5" type="revolute">
+    <origin xyz="-0.0135 0.0 -0.0429999999999999" rpy="0.0 0.0 0.0"/>
+    <parent link="left_arm_4"/>
+    <child link="left_arm_5"/>
+    <axis xyz="-0.0 -0.0 1.0"/>
+    <limit effort="12.5" velocity="30.93" lower="-1.5708" upper="1.5708"/>
+  </joint>
+  <link name="left_arm_6">
+    <inertial>
+      <origin xyz="0.00444055825 0.01773598306 0.00540002882" rpy="0.0 0.0 0.0"/>
+      <mass value="0.5356605154"/>
+      <inertia ixx="0.000491495910281" ixy="-6.32247661534e-06" ixz="9.00377068935e-05" iyy="0.000677602581381" iyz="-1.52827648395e-05" izz="0.000441898264354"/>
+    </inertial>
+    <visual name="left_arm_6_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_arm_6.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="left_arm_6_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_left_arm_6.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_6" type="revolute">
+    <origin xyz="0.0 0.0 -0.167" rpy="0.0 0.0 0.0"/>
+    <parent link="left_arm_5"/>
+    <child link="left_arm_6"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <limit effort="12.5" velocity="35.19" lower="-0.785398" upper="0.785398"/>
+  </joint>
+  <link name="left_arm_7">
+    <inertial>
+      <origin xyz="0.0039474667413 -0.0364810346967 -0.0865984168781" rpy="0.0 0.0 0.0"/>
+      <mass value="0.297000291735"/>
+      <inertia ixx="0.000663066260111" ixy="9.29396907433e-06" ixz="4.96871303791e-05" iyy="0.000642575329753" iyz="-0.000147369152882" izz="0.000209510383413"/>
+    </inertial>
+    <visual name="left_arm_7_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_arm_7.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_arm_7_visual_1">
+      <origin xyz="0.148454 -0.05875 -0.145422" rpy="-1.5707999999999998 0.0 -3.14159"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_wrist_tactile.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_arm_7_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_arm_7.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_arm_7_tactile">
+      <origin xyz="0.148454 -0.05875 -0.145422" rpy="-1.5707999999999998 0.0 -3.14159"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_wrist_tactile.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_7" type="revolute">
+    <origin xyz="0.0 0.03325 0.0" rpy="-6.535897930762882e-07 6.535897930762881e-07 -6.535897930762883e-07"/>
+    <parent link="left_arm_6"/>
+    <child link="left_arm_7"/>
+    <axis xyz="-0.0 1.0 -0.0"/>
+    <limit effort="12.5" velocity="35.19" lower="-0.7155" upper="0.7155"/>
+  </joint>
+  <link name="left_hand_1_1">
+    <inertial>
+      <origin xyz="0.000130292 0.0 0.000104306" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00574066"/>
+      <inertia ixx="2.27878e-07" ixy="0.0" ixz="7.8e-11" iyy="3.50936e-07" iyz="0.0" izz="1.38986e-07"/>
+    </inertial>
+    <visual name="left_hand_1_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_1_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="left_hand_1_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_1_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_1_1" type="revolute">
+    <origin xyz="0.0263009 -0.05775 -0.0944413" rpy="-2.61799 0.0 -1.5707999999999998"/>
+    <parent link="left_arm_7"/>
+    <child link="left_hand_1_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.11" upper="1.45"/>
+  </joint>
+  <link name="left_hand_1_2">
+    <inertial>
+      <origin xyz="0.0202332 0.0150143 -0.00453989" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0283292"/>
+      <inertia ixx="7.42468e-06" ixy="-1.7498e-06" ixz="9.01846e-07" iyy="3.65186e-06" iyz="1.74395e-06" izz="7.21815e-06"/>
+    </inertial>
+    <visual name="left_hand_1_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_1_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_1_2_visual_1">
+      <origin xyz="0.0360833 0.011769 -0.0817823" rpy="2.60962 -0.036365399999999985 2.62637"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_mcp.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_1_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_1_2.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_1_2_tactile">
+      <origin xyz="0.0360833 0.011769 -0.0817823" rpy="2.60962 -0.036365399999999985 2.62637"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_1_2" type="revolute">
+    <origin xyz="-0.0 0.0 0.0" rpy="1.5707999999999998 5.551115123125783e-17 -1.5707999999999998"/>
+    <parent link="left_hand_1_1"/>
+    <child link="left_hand_1_2"/>
+    <axis xyz="-0.0 -0.0 -1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.081" upper="0.775"/>
+  </joint>
+  <link name="left_hand_1_3">
+    <inertial>
+      <origin xyz="0.00339005 -0.0184046 0.000889411" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0197158"/>
+      <inertia ixx="2.94385e-06" ixy="8.67246e-07" ixz="5.4642e-08" iyy="1.27344e-06" iyz="5.198e-08" izz="3.04139e-06"/>
+    </inertial>
+    <visual name="left_hand_1_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_1_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_1_3_visual_1">
+      <origin xyz="0.0286393 0.0218276 -0.0636744" rpy="2.60962 -0.8035809999999999 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_pip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_1_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_1_3.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_1_3_tactile">
+      <origin xyz="0.0286393 0.0218276 -0.0636744" rpy="2.60962 -0.8035809999999999 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_1_3" type="revolute">
+    <origin xyz="0.0258606 0.0423811 -0.0164563" rpy="3.8557624443318923e-17 0.767215 2.62637"/>
+    <parent link="left_hand_1_2"/>
+    <child link="left_hand_1_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_1_4">
+    <inertial>
+      <origin xyz="0.00185567 -0.0141628 0.000936473" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0140308"/>
+      <inertia ixx="1.44016e-06" ixy="4.09312e-07" ixz="4.9644e-08" iyy="7.28668e-07" iyz="-1.2319e-08" izz="1.46993e-06"/>
+    </inertial>
+    <visual name="left_hand_1_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_1_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_1_4_visual_1">
+      <origin xyz="0.0135412 0.0588687 -0.0636744" rpy="2.60962 -0.8035809999999999 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_dip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_1_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_1_4.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_1_4_tactile">
+      <origin xyz="0.0135412 0.0588687 -0.0636744" rpy="2.60962 -0.8035809999999999 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_thumb_dip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_1_4" type="revolute">
+    <origin xyz="0.0150981 -0.0370412 -0.0" rpy="0.0 -0.0 0.0"/>
+    <parent link="left_hand_1_3"/>
+    <child link="left_hand_1_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_2_1">
+    <inertial>
+      <origin xyz="0.000113231 -0.00458804 -0.00575426" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00976917"/>
+      <inertia ixx="7.06407e-07" ixy="-1.5127e-08" ixz="-1.301e-09" iyy="3.8309e-07" iyz="-5.995e-08" izz="7.2331e-07"/>
+    </inertial>
+    <visual name="left_hand_2_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_2_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="left_hand_2_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_2_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_2_1" type="revolute">
+    <origin xyz="0.0392 -0.05375 -0.151" rpy="-1.5707999999999998 0.0349066 -3.14159"/>
+    <parent link="left_arm_7"/>
+    <child link="left_hand_2_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.2618" upper="0.2618"/>
+  </joint>
+  <link name="left_hand_2_2">
+    <inertial>
+      <origin xyz="-0.00374375 -0.0199104 -0.000614941" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0179165"/>
+      <inertia ixx="2.97764e-06" ixy="7.9836e-08" ixz="-4.6863e-08" iyy="7.54025e-07" iyz="-1.9623e-08" izz="2.87953e-06"/>
+    </inertial>
+    <visual name="left_hand_2_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_2_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_2_2_visual_1">
+      <origin xyz="-0.0055 0.0 0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_2_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_2_2.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_2_2_tactile">
+      <origin xyz="-0.0055 0.0 0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_2_2" type="revolute">
+    <origin xyz="-0.0 0.0095 -0.0" rpy="-2.6535897932834016e-06 -1.5707926535453185 3.141592653589793"/>
+    <parent link="left_hand_2_1"/>
+    <child link="left_hand_2_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_2_3">
+    <inertial>
+      <origin xyz="-0.00369959 -0.0126321 -0.000444273" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0116171"/>
+      <inertia ixx="1.17373e-06" ixy="5.1616e-08" ixz="-2.8375e-08" iyy="4.54002e-07" iyz="-1.3796e-08" izz="1.09499e-06"/>
+    </inertial>
+    <visual name="left_hand_2_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_2_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_2_3_visual_1">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_2_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_2_3.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_2_3_tactile">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_2_3" type="revolute">
+    <origin xyz="0.0 -0.044 -0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="left_hand_2_2"/>
+    <child link="left_hand_2_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_2_4">
+    <inertial>
+      <origin xyz="-0.00153406 -0.0149176 5.9432e-05" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00847547"/>
+      <inertia ixx="9.92205e-07" ixy="-8.68e-09" ixz="3.792e-09" iyy="2.67276e-07" iyz="7.11e-09" izz="9.04521e-07"/>
+    </inertial>
+    <visual name="left_hand_2_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_2_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_2_4_visual_1">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_2_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_2_4.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_2_4_tactile">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_2_4" type="revolute">
+    <origin xyz="0.0 -0.03 -0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="left_hand_2_3"/>
+    <child link="left_hand_2_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_3_1">
+    <inertial>
+      <origin xyz="0.000113231 -0.00458804 -0.00575426" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00976917"/>
+      <inertia ixx="7.06407e-07" ixy="-1.5127e-08" ixz="-1.301e-09" iyy="3.8309e-07" iyz="-5.995e-08" izz="7.2331e-07"/>
+    </inertial>
+    <visual name="left_hand_3_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_3_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="left_hand_3_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_3_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_3_1" type="revolute">
+    <origin xyz="0.0182 -0.05375 -0.1535" rpy="-1.5707999999999998 0.0 -3.14159"/>
+    <parent link="left_arm_7"/>
+    <child link="left_hand_3_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.2618" upper="0.2618"/>
+  </joint>
+  <link name="left_hand_3_2">
+    <inertial>
+      <origin xyz="-0.00374375 -0.0199104 -0.000614941" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0179165"/>
+      <inertia ixx="2.97764e-06" ixy="7.9836e-08" ixz="-4.6863e-08" iyy="7.54025e-07" iyz="-1.9623e-08" izz="2.87953e-06"/>
+    </inertial>
+    <visual name="left_hand_3_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_3_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_3_2_visual_1">
+      <origin xyz="-0.0055 -0.0 0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_3_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_3_2.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_3_2_tactile">
+      <origin xyz="-0.0055 -0.0 0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_3_2" type="revolute">
+    <origin xyz="0.0 0.0095 -0.0" rpy="-2.6535897932834016e-06 -1.5707926535453185 3.141592653589793"/>
+    <parent link="left_hand_3_1"/>
+    <child link="left_hand_3_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_3_3">
+    <inertial>
+      <origin xyz="-0.00361708 -0.0126321 -0.000444273" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0116171"/>
+      <inertia ixx="1.17373e-06" ixy="5.4671e-08" ixz="-2.6883e-08" iyy="4.48403e-07" iyz="-1.3796e-08" izz="1.08939e-06"/>
+    </inertial>
+    <visual name="left_hand_3_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_3_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_3_3_visual_1">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_3_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_3_3.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_3_3_tactile">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_3_3" type="revolute">
+    <origin xyz="0.0 -0.044 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="left_hand_3_2"/>
+    <child link="left_hand_3_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_3_4">
+    <inertial>
+      <origin xyz="-0.00153406 -0.0149176 5.9432e-05" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00847547"/>
+      <inertia ixx="9.92205e-07" ixy="-8.68e-09" ixz="3.792e-09" iyy="2.67276e-07" iyz="7.11e-09" izz="9.04521e-07"/>
+    </inertial>
+    <visual name="left_hand_3_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_3_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_3_4_visual_1">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_3_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_3_4.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_3_4_tactile">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_3_4" type="revolute">
+    <origin xyz="0.0 -0.03 -0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="left_hand_3_3"/>
+    <child link="left_hand_3_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_4_1">
+    <inertial>
+      <origin xyz="0.000113231 -0.00458804 -0.00575426" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00976917"/>
+      <inertia ixx="7.06407e-07" ixy="-1.5127e-08" ixz="-1.301e-09" iyy="3.8309e-07" iyz="-5.995e-08" izz="7.2331e-07"/>
+    </inertial>
+    <visual name="left_hand_4_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_4_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="left_hand_4_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_4_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_4_1" type="revolute">
+    <origin xyz="-0.0028 -0.05375 -0.1495" rpy="-1.5708 -0.0349066 -3.14159"/>
+    <parent link="left_arm_7"/>
+    <child link="left_hand_4_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.2618" upper="0.2618"/>
+  </joint>
+  <link name="left_hand_4_2">
+    <inertial>
+      <origin xyz="-0.00374375 -0.0199104 -0.000614941" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0179165"/>
+      <inertia ixx="2.97764e-06" ixy="7.9836e-08" ixz="-4.6863e-08" iyy="7.54025e-07" iyz="-1.9623e-08" izz="2.87953e-06"/>
+    </inertial>
+    <visual name="left_hand_4_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_4_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_4_2_visual_1">
+      <origin xyz="-0.0055 0.0 0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_4_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_4_2.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_4_2_tactile">
+      <origin xyz="-0.0055 0.0 0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_4_2" type="revolute">
+    <origin xyz="-0.0 0.0095 0.0" rpy="2.6535897932834016e-06 -1.5707926535453185 3.141592653589793"/>
+    <parent link="left_hand_4_1"/>
+    <child link="left_hand_4_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_4_3">
+    <inertial>
+      <origin xyz="-0.00359227 -0.0126321 -0.000444273" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0116171"/>
+      <inertia ixx="1.17373e-06" ixy="5.5589e-08" ixz="-2.6435e-08" iyy="4.46866e-07" iyz="-1.3796e-08" izz="1.08785e-06"/>
+    </inertial>
+    <visual name="left_hand_4_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_4_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_4_3_visual_1">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_4_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_4_3.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_4_3_tactile">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_4_3" type="revolute">
+    <origin xyz="-0.0 -0.044 -0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="left_hand_4_2"/>
+    <child link="left_hand_4_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_4_4">
+    <inertial>
+      <origin xyz="-0.00153406 -0.0149176 5.9432e-05" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00847547"/>
+      <inertia ixx="9.92205e-07" ixy="-8.68e-09" ixz="3.792e-09" iyy="2.67276e-07" iyz="7.11e-09" izz="9.04521e-07"/>
+    </inertial>
+    <visual name="left_hand_4_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_4_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_4_4_visual_1">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_4_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_4_4.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_4_4_tactile">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_4_4" type="revolute">
+    <origin xyz="0.0 -0.03 0.0" rpy="0.0 -0.0 0.0"/>
+    <parent link="left_hand_4_3"/>
+    <child link="left_hand_4_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_5_1">
+    <inertial>
+      <origin xyz="0.000113231 -0.00458804 -0.00575426" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00976917"/>
+      <inertia ixx="7.06407e-07" ixy="-1.5127e-08" ixz="-1.301e-09" iyy="3.8309e-07" iyz="-5.995e-08" izz="7.2331e-07"/>
+    </inertial>
+    <visual name="left_hand_5_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_5_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="left_hand_5_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_5_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_5_1" type="revolute">
+    <origin xyz="-0.0238 -0.05375 -0.1455" rpy="-1.5707999999999998 -0.06981319999999998 -3.14159"/>
+    <parent link="left_arm_7"/>
+    <child link="left_hand_5_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="-0.2618" upper="0.2618"/>
+  </joint>
+  <link name="left_hand_5_2">
+    <inertial>
+      <origin xyz="-0.00374375 -0.0199172 -0.000614941" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0179165"/>
+      <inertia ixx="2.97897e-06" ixy="7.95e-08" ixz="-4.6863e-08" iyy="7.54025e-07" iyz="-1.9791e-08" izz="2.88087e-06"/>
+    </inertial>
+    <visual name="left_hand_5_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_5_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_5_2_visual_1">
+      <origin xyz="-0.0055 0.0 0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_5_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_5_2.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_5_2_tactile">
+      <origin xyz="-0.0055 0.0 0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_5_2" type="revolute">
+    <origin xyz="-0.0 0.0095 -0.0" rpy="2.6535897932834016e-06 -1.5707926535453185 3.141592653589793"/>
+    <parent link="left_hand_5_1"/>
+    <child link="left_hand_5_2"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_5_3">
+    <inertial>
+      <origin xyz="-0.00361708 -0.0126321 -0.000444273" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0116171"/>
+      <inertia ixx="1.17373e-06" ixy="5.4671e-08" ixz="-2.6883e-08" iyy="4.48403e-07" iyz="-1.3796e-08" izz="1.08939e-06"/>
+    </inertial>
+    <visual name="left_hand_5_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_5_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_5_3_visual_1">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_5_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_5_3.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_5_3_tactile">
+      <origin xyz="-0.0055 0.044 0.0" rpy="1.5707999999999998 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_5_3" type="revolute">
+    <origin xyz="0.0 -0.044 -0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="left_hand_5_2"/>
+    <child link="left_hand_5_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_hand_5_4">
+    <inertial>
+      <origin xyz="-0.00153406 -0.0149176 5.9432e-05" rpy="0.0 0.0 0.0"/>
+      <mass value="0.00847547"/>
+      <inertia ixx="9.92205e-07" ixy="-8.68e-09" ixz="3.792e-09" iyy="2.67276e-07" iyz="7.11e-09" izz="9.04521e-07"/>
+    </inertial>
+    <visual name="left_hand_5_4_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_5_4.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="left_hand_5_4_visual_1">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+      <material name="tactile_material"/>
+    </visual>
+    <collision name="left_hand_5_4_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/left_hand_5_4.stl"/>
+      </geometry>
+    </collision>
+    <collision name="left_hand_5_4_tactile">
+      <origin xyz="-0.0055 0.074 0.0" rpy="1.5707999999999998 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/tactile_dip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_hand_5_4" type="revolute">
+    <origin xyz="0.0 -0.03 0.0" rpy="0.0 -0.0 0.0"/>
+    <parent link="left_hand_5_3"/>
+    <child link="left_hand_5_4"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
+  </joint>
+  <link name="left_wrist_cam">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="left_wrist_cam_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="left_wrist_cam" type="fixed">
+    <origin xyz="-0.00975 -0.063081 -0.071184" rpy="2.3561945 0.0 0.0"/>
+    <parent link="left_arm_7"/>
+    <child link="left_wrist_cam"/>
+  </joint>
+  <link name="head_1">
+    <inertial>
+      <origin xyz="-0.01703095806 0.00063327549 -0.01273753059" rpy="0.0 0.0 0.0"/>
+      <mass value="0.59479520371"/>
+      <inertia ixx="0.000890252242878" ixy="2.08265411256e-06" ixz="5.41729154005e-06" iyy="0.00072985620308" iyz="-3.26961772157e-05" izz="0.000477254163743"/>
+    </inertial>
+    <visual name="head_1_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/head_1.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="head_1_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_head_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="head_1" type="revolute">
+    <origin xyz="0.0 0.0 0.33" rpy="0.0 0.0 0.0"/>
+    <parent link="waist_5"/>
+    <child link="head_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="10.0" velocity="35.19" lower="-0.855" upper="0.3316"/>
+  </joint>
+  <link name="head_2">
+    <inertial>
+      <origin xyz="0.0037713012 -1.4693e-07 0.04284620384" rpy="0.0 0.0 0.0"/>
+      <mass value="0.17763899683"/>
+      <inertia ixx="0.000151160145578" ixy="1.11965057e-09" ixz="-1.24120201823e-05" iyy="0.000212339422052" iyz="1.35013346e-09" izz="0.000154998397521"/>
+    </inertial>
+    <visual name="head_2_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/head_2.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="head_2_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_head_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="head_2" type="revolute">
+    <origin xyz="0.0 0.0 0.0844999999999998" rpy="0.0 0.0 0.0"/>
+    <parent link="head_1"/>
+    <child link="head_2"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <limit effort="10.0" velocity="35.19" lower="-0.2792" upper="0.2792"/>
+  </joint>
+  <link name="head_3">
+    <inertial>
+      <origin xyz="0.02943728421 -0.0005023183 0.00860229209" rpy="0.0 0.0 0.0"/>
+      <mass value="1.19321206348"/>
+      <inertia ixx="0.00417230884338" ixy="-1.11667691067e-05" ixz="-0.000745583813401" iyy="0.00529289682259" iyz="7.16287053504e-06" izz="0.00520396306487"/>
+    </inertial>
+    <visual name="head_3_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/head_3.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <visual name="head_3_visual_1">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/head_3_white.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+    <visual name="head_3_visual_2">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/head_3_green.stl"/>
+      </geometry>
+      <material name="friday_green_material"/>
+    </visual>
+    <collision name="head_3_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/collision/compact_head_3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="head_3" type="revolute">
+    <origin xyz="0.0 0.0 0.0680000000000001" rpy="0.0 0.0 0.0"/>
+    <parent link="head_2"/>
+    <child link="head_3"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="10.0" velocity="35.19" lower="-0.965" upper="0.965"/>
+  </joint>
+  <link name="head_stereo">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="head_stereo_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="head_stereo" type="fixed">
+    <origin xyz="0.1106 0.03 -0.0311" rpy="-1.710423 -5.551115123125783e-17 -1.5707959999999999"/>
+    <parent link="head_3"/>
+    <child link="head_stereo"/>
+  </joint>
+  <link name="body_stereo">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="body_stereo_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="body_stereo" type="fixed">
+    <origin xyz="0.09492 0.0296 0.02216" rpy="-2.0943951 0.0 -1.5707963"/>
+    <parent link="waist_5"/>
+    <child link="body_stereo"/>
+  </joint>
+  <link name="front_left_shoulder_cam">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="front_left_shoulder_cam_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="front_left_shoulder_cam" type="fixed">
+    <origin xyz="0.07402 0.11034 0.31199" rpy="-1.2217304800000002 -5.551115123125783e-17 -1.2217304800000002"/>
+    <parent link="waist_5"/>
+    <child link="front_left_shoulder_cam"/>
+  </joint>
+  <link name="front_right_shoulder_cam">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="front_right_shoulder_cam_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="front_right_shoulder_cam" type="fixed">
+    <origin xyz="0.07402 -0.11034 0.31199" rpy="-1.22173048 5.551115123125783e-17 -1.91986218"/>
+    <parent link="waist_5"/>
+    <child link="front_right_shoulder_cam"/>
+  </joint>
+  <link name="rear_left_shoulder_cam">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="rear_left_shoulder_cam_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="rear_left_shoulder_cam" type="fixed">
+    <origin xyz="-0.11402 0.11034 0.31199" rpy="-1.2217304800000002 5.551115123125783e-17 1.2217304800000002"/>
+    <parent link="waist_5"/>
+    <child link="rear_left_shoulder_cam"/>
+  </joint>
+  <link name="rear_right_shoulder_cam">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="rear_right_shoulder_cam_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="rear_right_shoulder_cam" type="fixed">
+    <origin xyz="-0.11402 -0.11034 0.31199" rpy="-1.22173048 -5.551115123125783e-17 1.91986218"/>
+    <parent link="waist_5"/>
+    <child link="rear_right_shoulder_cam"/>
+  </joint>
+  <link name="body_lidar_3d">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="body_lidar_3d_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="body_lidar_3d" type="fixed">
+    <origin xyz="-0.13013 0.0 0.33563" rpy="0.8726646259999999 1.1102230246251565e-16 -1.5707963"/>
+    <parent link="waist_5"/>
+    <child link="body_lidar_3d"/>
+  </joint>
+  <link name="front_right_caster_yoke">
+    <inertial>
+      <origin xyz="-0.00755571588 0.00029896738 -0.02130935638" rpy="0.0 0.0 0.0"/>
+      <mass value="0.59723514297"/>
+      <inertia ixx="0.000548573119581" ixy="-2.97580242837e-06" ixz="6.54741569783e-05" iyy="0.000404831519899" iyz="-2.88888103271e-06" izz="0.000577819238635"/>
+    </inertial>
+    <visual name="front_right_caster_yoke_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/front_right_caster_yoke.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+  </link>
+  <joint name="front_right_caster_swivel" type="continuous">
+    <origin xyz="0.225 -0.2 0.00231" rpy="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="front_right_caster_yoke"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
+  <link name="front_right_caster_wheel_link">
+    <inertial>
+      <origin xyz="0.0 -1.82797e-06 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.14349424868"/>
+      <inertia ixx="6.32055839051e-05" ixy="0.0" ixz="0.0" iyy="6.4013031761e-05" iyz="0.0" izz="6.32055839051e-05"/>
+    </inertial>
+    <visual name="front_right_caster_wheel_link_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/front_right_caster_wheel_link.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="front_right_caster_wheel_link_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 0.0 0.0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.015"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="front_right_caster_wheel" type="continuous">
+    <origin xyz="-0.021 0.0 -0.04231" rpy="0.0 0.0 0.0"/>
+    <parent link="front_right_caster_yoke"/>
+    <child link="front_right_caster_wheel_link"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+  <link name="front_left_caster_yoke">
+    <inertial>
+      <origin xyz="-0.00755571588 0.00029896738 -0.02130935638" rpy="0.0 0.0 0.0"/>
+      <mass value="0.59723514297"/>
+      <inertia ixx="0.000548573119581" ixy="-2.97580242837e-06" ixz="6.54741569783e-05" iyy="0.000404831519899" iyz="-2.88888103271e-06" izz="0.000577819238635"/>
+    </inertial>
+    <visual name="front_left_caster_yoke_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/front_left_caster_yoke.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+  </link>
+  <joint name="front_left_caster_swivel" type="continuous">
+    <origin xyz="0.225 0.2 0.00231" rpy="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="front_left_caster_yoke"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
+  <link name="front_left_caster_wheel_link">
+    <inertial>
+      <origin xyz="0.0 -1.82797e-06 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.14349424868"/>
+      <inertia ixx="6.32055839051e-05" ixy="0.0" ixz="0.0" iyy="6.4013031761e-05" iyz="0.0" izz="6.32055839051e-05"/>
+    </inertial>
+    <visual name="front_left_caster_wheel_link_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/front_left_caster_wheel_link.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="front_left_caster_wheel_link_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 0.0 0.0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.015"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="front_left_caster_wheel" type="continuous">
+    <origin xyz="-0.021 0.0 -0.04231" rpy="0.0 0.0 0.0"/>
+    <parent link="front_left_caster_yoke"/>
+    <child link="front_left_caster_wheel_link"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+  <link name="rear_caster_pivot">
+    <inertial>
+      <origin xyz="-0.02583700335 2.143e-08 0.02409943311" rpy="0.0 0.0 0.0"/>
+      <mass value="4.93188722824"/>
+      <inertia ixx="0.108107516251" ixy="-6.94274721e-09" ixz="0.000659789074067" iyy="0.00671446151749" iyz="3.07707626e-09" izz="0.111158577829"/>
+    </inertial>
+    <visual name="rear_caster_pivot_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/rear_caster_pivot.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+  </link>
+  <joint name="rear_caster_pivot" type="continuous">
+    <origin xyz="-0.264 0.0 -0.013" rpy="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="rear_caster_pivot"/>
+    <axis xyz="1.0 0.0 0.0"/>
+  </joint>
+  <link name="rear_right_caster_yoke">
+    <inertial>
+      <origin xyz="-0.00755571588 0.00029896738 -0.02130935638" rpy="0.0 0.0 0.0"/>
+      <mass value="0.59723514297"/>
+      <inertia ixx="0.000548573119581" ixy="-2.97580242837e-06" ixz="6.54741569783e-05" iyy="0.000404831519899" iyz="-2.88888103271e-06" izz="0.000577819238635"/>
+    </inertial>
+    <visual name="rear_right_caster_yoke_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/rear_right_caster_yoke.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+  </link>
+  <joint name="rear_right_caster_swivel" type="continuous">
+    <origin xyz="-0.011 -0.195 0.0153099999999998" rpy="0.0 0.0 0.0"/>
+    <parent link="rear_caster_pivot"/>
+    <child link="rear_right_caster_yoke"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
+  <link name="rear_right_caster_wheel_link">
+    <inertial>
+      <origin xyz="0.0 -1.82797e-06 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.14349424868"/>
+      <inertia ixx="6.32055839051e-05" ixy="0.0" ixz="0.0" iyy="6.4013031761e-05" iyz="0.0" izz="6.32055839051e-05"/>
+    </inertial>
+    <visual name="rear_right_caster_wheel_link_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/rear_right_caster_wheel_link.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="rear_right_caster_wheel_link_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 1.14042340156904e-11 0.0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.015"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rear_right_caster_wheel" type="continuous">
+    <origin xyz="-0.0210000000000001 0.0 -0.04231" rpy="0.0 0.0 0.0"/>
+    <parent link="rear_right_caster_yoke"/>
+    <child link="rear_right_caster_wheel_link"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+  <link name="rear_left_caster_yoke">
+    <inertial>
+      <origin xyz="-0.00755571588 0.00029896738 -0.02130935638" rpy="0.0 0.0 0.0"/>
+      <mass value="0.59723514297"/>
+      <inertia ixx="0.000548573119581" ixy="-2.97580242837e-06" ixz="6.54741569783e-05" iyy="0.000404831519899" iyz="-2.88888103271e-06" izz="0.000577819238635"/>
+    </inertial>
+    <visual name="rear_left_caster_yoke_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/rear_left_caster_yoke.stl"/>
+      </geometry>
+      <material name="friday_white_material"/>
+    </visual>
+  </link>
+  <joint name="rear_left_caster_swivel" type="continuous">
+    <origin xyz="-0.011 0.195 0.0153100000000002" rpy="0.0 0.0 0.0"/>
+    <parent link="rear_caster_pivot"/>
+    <child link="rear_left_caster_yoke"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
+  <link name="rear_left_caster_wheel_link">
+    <inertial>
+      <origin xyz="0.0 -1.82797e-06 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.14349424868"/>
+      <inertia ixx="6.32055839051e-05" ixy="0.0" ixz="0.0" iyy="6.4013031761e-05" iyz="0.0" izz="6.32055839051e-05"/>
+    </inertial>
+    <visual name="rear_left_caster_wheel_link_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://friday_description/meshes/FM26B/visual/rear_left_caster_wheel_link.stl"/>
+      </geometry>
+      <material name="friday_black_material"/>
+    </visual>
+    <collision name="rear_left_caster_wheel_link_collision_0">
+      <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 1.14042340156904e-11 0.0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.015"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rear_left_caster_wheel" type="continuous">
+    <origin xyz="-0.021 0.0 -0.04231" rpy="0.0 0.0 0.0"/>
+    <parent link="rear_left_caster_yoke"/>
+    <child link="rear_left_caster_wheel_link"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+  <link name="mobile_stereo">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="mobile_stereo_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="mobile_stereo" type="fixed">
+    <origin xyz="0.301 0.0296 0.1045" rpy="-1.79768913 0.0 -1.5707963"/>
+    <parent link="base_link"/>
+    <child link="mobile_stereo"/>
+  </joint>
+  <link name="mobile_lidar_3d">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="mobile_lidar_3d_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="mobile_lidar_3d" type="fixed">
+    <origin xyz="0.27437 0.0 0.16237" rpy="-0.7853981630000001 1.1102230246251565e-16 -1.5707963000000003"/>
+    <parent link="base_link"/>
+    <child link="mobile_lidar_3d"/>
+  </joint>
+  <link name="left_lidar_2d">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="left_lidar_2d_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="left_lidar_2d" type="fixed">
+    <origin xyz="0.045 0.215 0.1624" rpy="0.0 0.0 1.5707963000000003"/>
+    <parent link="base_link"/>
+    <child link="left_lidar_2d"/>
+  </joint>
+  <link name="right_lidar_2d">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <visual name="right_lidar_2d_visual_0">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="sensor_material"/>
+    </visual>
+  </link>
+  <joint name="right_lidar_2d" type="fixed">
+    <origin xyz="0.045 -0.215 0.1624" rpy="0.0 0.0 -1.5707963000000003"/>
+    <parent link="base_link"/>
+    <child link="right_lidar_2d"/>
+  </joint>
+</robot>
