@@ -1,7 +1,5 @@
-uint8 DIRECT_JOINT_CONTROL=1
-uint8 COLLISION_AWARE_MOTION_PLANNING=2
-
-uint8 mode
+# Set the low-battery warning threshold. Platform-specific limits may reject a value.
+uint8 threshold # 0..100 percent state of charge.
 ---
 uint16 RESULT_SUCCESS=0
 uint16 RESULT_INVALID_ARGUMENT=1
@@ -12,6 +10,6 @@ uint16 RESULT_HARDWARE_ERROR=5
 uint16 RESULT_PERMISSION_DENIED=6
 uint16 RESULT_INTERNAL_ERROR=255
 
-bool success
+bool success # True when the driver reports successful writes; use GetBatteryAlarm to read back.
 uint16 result_code
 string<=128 message
