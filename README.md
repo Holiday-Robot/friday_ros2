@@ -23,34 +23,67 @@ Public ROS 2 packages for the Friday.
 - Static sensor metadata: `TactileLayout`.
 - Robot control: `ControlMode`, `Manipulation`, `JointReaching`,
   `LinkReaching`, and `ViewReaching`.
-- Services: `GetMotorLimits`, `ResetBoardFaults`, `SetControlMode`,
+- Avoidance state: `AvoidanceState`, including per-part-pair
+  `CollisionPairState` entries.
+- Services: `GetBatteryAlarm`, `GetMotorLimits`, `ResetBoardFaults`,
+  `SetAvoidanceEnabled`, `SetBatteryAlarm`, `SetCollisionPairEnabled`, `SetControlMode`,
   `SetMotorCurrentLimit`, `SetMotorVelocityLimit`, and
   `SetRangeSensorEnabled`.
 
-State arrays are keyed by the name or ID field documented in each entry type,
-except tactile state. `TactileStateArray.points[i]` corresponds to
-`TactileLayout.sensors[i]`.
-
-The current contract removes the legacy `EncoderState`, `RobotStatus`,
-`TactileData`, `TactileMagnet`, `GetEncoderState`, `GetMotorLimit`,
-`GetMotorState`, `GetRobotStatus`, and `SetMotorLimit` interfaces. Motor and
-external encoder state are provided by `MotorStateArray`. Motor limit operations
-use `GetMotorLimits` and the separate velocity/current setters. Tactile state
-and layout use `TactileStateArray` and `TactileLayout`. Safety state is split
-across `EmergencyStop`, `BoardStateArray`, and `JointLockState`.
-
 ## Build
 
-Clone the repository and build it as a ROS 2 workspace:
+Clone the repository:
 
 ```bash
 git clone https://github.com/Holiday-Robot/friday_ros2.git
 cd friday_ros2
+```
+
+### Local
+
+Requires ROS 2 Jazzy Desktop, CycloneDDS (`ros-jazzy-rmw-cyclonedds-cpp`),
+`colcon`, and initialized `rosdep` on the host.
+
+```bash
 source /opt/ros/jazzy/setup.bash
 rosdep install --from-paths . --ignore-src -r -y
 colcon build --base-paths . --symlink-install
 source install/setup.bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-138}
 ```
+
+### Container
+
+On a Linux host with Docker, build the development image and start a shell:
+
+```bash
+./script/docker-build.sh
+./script/docker-run.sh
+```
+
+The image includes ROS 2 Jazzy Desktop, CycloneDDS, and dependencies from
+`package.xml`. The shell starts at `/workspace`, with this repository bind-mounted
+at `/workspace/src/friday_ros2`. `ROS_DOMAIN_ID` defaults to `138`; the run script
+uses the host's value if set.
+
+Build inside the container:
+
+```bash
+colcon build --symlink-install
+source /workspace/install/setup.bash
+```
+
+To open another shell, run this from the host repository directory:
+
+```bash
+./script/docker-exec.sh
+```
+
+This requires exactly one running container mounting this repository. Source
+`/workspace/install/setup.bash` in each new shell to use the built packages.
+Exiting the original run shell removes the container and its build artifacts;
+files under the source bind mount remain on the host.
 
 ## Launch Friday Description
 
@@ -243,3 +276,56 @@ Show the built-in argument help:
 ```bash
 ros2 run friday_manipulation cartesian_space --help
 ```
+
+## Data Recording
+
+After building and sourcing the workspace, run the recording script:
+
+```bash
+./script/data-record.sh
+```
+
+Both arguments are optional:
+
+```text
+./script/data-record.sh [output_dir] [selection]
+```
+
+| Argument | Default | Description |
+| --- | --- | --- |
+| `output_dir` | `/workspace/src/friday_ros2/record` | Parent directory for timestamped recordings. Pass `""` to keep the default when specifying a selection. |
+| `selection` | `ALL` | A group, an absolute topic name, or a quoted list combining them. |
+
+| Group | Recorded data |
+| --- | --- |
+| `ALL` | All non-hidden topics and service events. Must be used alone. |
+| `JOINT_STATES` | `/holiday/joint_states` |
+| `CAMERA` | Topics under `/holiday/camera/` |
+| `LIDAR` | Topics under `/holiday/lidar/`, plus `/holiday/imu/lidar_3d_body` and `/holiday/imu/lidar_3d_mobile` |
+
+Select groups, individual topics, or a combination:
+
+```bash
+./script/data-record.sh "" JOINT_STATES
+./script/data-record.sh "" '[JOINT_STATES, CAMERA]'
+./script/data-record.sh "" /tf
+./script/data-record.sh record/session '[JOINT_STATES, /tf]'
+```
+
+Individual topic names match exactly. Hidden topics are excluded, and service
+events are recorded only with `ALL`.
+
+Press `Ctrl-C` to stop and finalize the recording. Each run saves MCAP data and
+`metadata.yaml` in a `YYYYMMDD_HHMMSS` directory using the container's current
+time, for example:
+
+```text
+record/20260809_143000/
+  20260809_143000_0.mcap
+  metadata.yaml
+```
+
+The default recording directory is inside the source bind mount, so recordings
+remain in the host repository's `record/` directory after the container exits.
+For local recording, use the same script from the repository directory and pass
+a local output path, for example `./script/data-record.sh record ALL`.

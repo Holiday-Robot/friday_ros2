@@ -477,154 +477,154 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_arm_7_visual_2">
-      <origin xyz="-0.0179940503226 0.0182300000001 -0.040924433905" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.02093086115 0.01877987771 -0.05078805186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_3">
-      <origin xyz="-0.0051915586144 0.01823 -0.0431818809308" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.009972861151 0.01877988123 -0.05174705186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_4">
-      <origin xyz="-0.020598804583 0.0182300000001 -0.0556965243374" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.02188986115 0.01877991796 -0.06174605186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_5">
-      <origin xyz="-0.00779625287484 0.01823 -0.0579539713634" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.01093186115 0.01877992149 -0.06270505186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_6">
-      <origin xyz="-0.0232035588438 0.0182300000001 -0.0704687147698" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.02284886115 0.01877995821 -0.07270405186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_7">
-      <origin xyz="-0.0104010671357 0.0182300000001 -0.0727261617956" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.01188986115 0.01877996174 -0.07366305186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_8">
-      <origin xyz="0.00240144457244 0.01823 -0.0749836088214" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.0009318611508 0.01877996526 -0.07462205186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_9">
-      <origin xyz="0.0152040162809 0.0182299999999 -0.0772409558475" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="0.01002613885 0.01877996878 -0.07558105186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_10">
-      <origin xyz="0.028006507989 0.0182299999998 -0.0794984028732" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.02380686115 0.01877999847 -0.08366305186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_11">
-      <origin xyz="0.0408088996971 0.0182299999997 -0.0817558498987" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.01283286115 0.01878000196 -0.08461405186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_12">
-      <origin xyz="-0.0258082131042 0.0182300000002 -0.0852408052026" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.001890861151 0.01878000551 -0.08558005186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_13">
-      <origin xyz="-0.0130057213962 0.0182300000001 -0.0874982522284" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="0.009067138849 0.01878000903 -0.08653905186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_14">
-      <origin xyz="-0.000203254688018 0.01823 -0.089755699254" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="0.02002513885 0.01878001255 -0.08749705186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_15">
-      <origin xyz="0.0125992620204 0.0182299999999 -0.0920130462799" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="0.03100913885 0.01878001616 -0.08848005186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_16">
-      <origin xyz="0.0254017537282 0.0182299999998 -0.0942705933056" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="0.04194213885 0.0187800196 -0.08941505186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_17">
-      <origin xyz="0.0382042454366 0.0182299999998 -0.0965279403314" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.02476586115 0.01878003872 -0.09462105186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_18">
-      <origin xyz="-0.0284129673647 0.0182300000002 -0.100012895635" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.01380786115 0.01878004224 -0.09557905186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_19">
-      <origin xyz="-0.0156104756551 0.0182300000001 -0.102269942661" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="-0.002849861151 0.01878004576 -0.09653805186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_20">
-      <origin xyz="-0.0028079539492 0.01823 -0.104527989687" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="0.008108138849 0.01878004928 -0.09749705186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_21">
-      <origin xyz="0.00999454776037 0.0182299999999 -0.106785036712" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="0.01906713885 0.01878005281 -0.09845605186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_22">
-      <origin xyz="0.0227969994663 0.0182299999999 -0.109043083738" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="0.03002613885 0.01878005632 -0.09941405186" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_23">
-      <origin xyz="0.0355995911758 0.0182299999998 -0.111300130764" rpy="-1.5707963258881392 1.5707926536057681 -3.1415926526981486"/>
+      <origin xyz="0.04098313885 0.01878005985 -0.1003730519" rpy="1.5708 1e-12 -1e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -686,42 +686,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_1_2_visual_2">
-      <origin xyz="0.00768296958386 0.0120761692312 0.0209924786135" rpy="1.57079953672 -0.2298180386489999 1.57079029826"/>
+      <origin xyz="0.008801473981 0.01077804617 0.02068864212" rpy="-1.391907021 0.1966992789 0.7465934452"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_2_visual_3">
-      <origin xyz="0.0127219500057 0.0167384763476 0.0196243741613" rpy="1.57079953672 -0.2298180386489999 1.57079029826"/>
+      <origin xyz="0.01384044359 0.01544037072 0.01932060883" rpy="-1.391907021 0.1966992789 0.7465934452"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_2_visual_4">
-      <origin xyz="0.00964800220602 0.0120761625972 0.0282303732172" rpy="1.57079953672 -0.2298180386489999 1.57079029826"/>
+      <origin xyz="0.01076650798 0.01077806293 0.02792664194" rpy="-1.391907021 0.1966992789 0.7465934452"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_2_visual_5">
-      <origin xyz="0.0146869726286 0.0167385443044 0.0268623889158" rpy="1.57079953672 -0.2298180386489999 1.57079029826"/>
+      <origin xyz="0.01580547759 0.01544038748 0.02655860865" rpy="-1.391907021 0.1966992789 0.7465934452"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_2_visual_6">
-      <origin xyz="0.011613074829 0.0120762305538 0.0354683879717" rpy="1.57079953672 -0.2298180386489999 1.57079029826"/>
+      <origin xyz="0.01273154199 0.01077807969 0.03516464176" rpy="-1.391907021 0.1966992789 0.7465934452"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_2_visual_7">
-      <origin xyz="0.0167239955427 0.0168051172358 0.0340808389975" rpy="1.57079953672 -0.2298180386489999 1.57079029826"/>
+      <origin xyz="0.01777051159 0.01544040424 0.03379660846" rpy="-1.391907021 0.1966992789 0.7465934452"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -762,42 +762,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_1_3_visual_2">
-      <origin xyz="0.00149999000001 -0.00349999000002 0.0125" rpy="-1.5707963268 1.4255263636199975e-13 4.540368081510001e-12"/>
+      <origin xyz="0.003240238597 -0.003500071766 0.0124998605" rpy="-1.570795437 -1.017352419e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_3_visual_3">
-      <origin xyz="0.00149995999996 0.00350000999998 0.0125" rpy="-1.5707963268 1.4255263636199975e-13 4.540368081510001e-12"/>
+      <origin xyz="0.003240247995 0.003499928234 0.01249986762" rpy="-1.570795437 -1.017352419e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_3_visual_4">
-      <origin xyz="0.00149998999998 -0.00349999000004 0.0199999999999" rpy="-1.5707963268 1.4255263636199975e-13 4.540368081510001e-12"/>
+      <origin xyz="0.003240245272 -0.003500079397 0.0199998605" rpy="-1.570795437 -1.017352419e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_3_visual_5">
-      <origin xyz="0.00149995999995 0.00350000999996 0.02" rpy="-1.5707963268 1.4255263636199975e-13 4.540368081510001e-12"/>
+      <origin xyz="0.00324025467 0.003499920603 0.01999986762" rpy="-1.570795437 -1.017352419e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_3_visual_6">
-      <origin xyz="0.00149999000002 -0.00349999000006 0.0275" rpy="-1.5707963268 1.4255263636199975e-13 4.540368081510001e-12"/>
+      <origin xyz="0.003240251946 -0.003500087027 0.0274998605" rpy="-1.570795437 -1.017352419e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_3_visual_7">
-      <origin xyz="0.00149995999996 0.00350000999994 0.0275" rpy="-1.5707963268 1.4255263636199975e-13 4.540368081510001e-12"/>
+      <origin xyz="0.003240261345 0.003499912973 0.02749986762" rpy="-1.570795437 -1.017352419e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -838,42 +838,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_1_4_visual_2">
-      <origin xyz="0.00149999146166 -0.00349999000002 0.011299999806" rpy="-1.5707963268000003 1.2934814264100003e-07 4.540368081507078e-12"/>
+      <origin xyz="0.003240274028 -0.00350011068 0.01074986008" rpy="-1.570795308 -1.017352894e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_4_visual_3">
-      <origin xyz="0.00149997146163 0.00350000999998 0.011299999806" rpy="-1.5707963268000003 1.2934814264100003e-07 4.540368081507078e-12"/>
+      <origin xyz="0.003240283426 0.00349988932 0.0107498672" rpy="-1.570795308 -1.017352894e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_4_visual_4">
-      <origin xyz="0.00149999223772 -0.00349999000004 0.017299999806" rpy="-1.5707963268000003 1.2934814264100003e-07 4.540368081507078e-12"/>
+      <origin xyz="0.003240280144 -0.003500116784 0.01674986008" rpy="-1.570795308 -1.017352894e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_4_visual_5">
-      <origin xyz="0.0014999722377 0.00350000999996 0.017299999806" rpy="-1.5707963268000003 1.2934814264100003e-07 4.540368081507078e-12"/>
+      <origin xyz="0.003240289542 0.003499883216 0.0167498672" rpy="-1.570795308 -1.017352894e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_4_visual_6">
-      <origin xyz="0.00149999301383 -0.00349999000005 0.023299999806" rpy="-1.5707963268000003 1.2934814264100003e-07 4.540368081507078e-12"/>
+      <origin xyz="0.00324028626 -0.003500122888 0.02274986008" rpy="-1.570795308 -1.017352894e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_1_4_visual_7">
-      <origin xyz="0.00149997301375 0.00350000999995 0.023299999806" rpy="-1.5707963268000003 1.2934814264100003e-07 4.540368081507078e-12"/>
+      <origin xyz="0.003240295658 0.003499877112 0.0227498672" rpy="-1.570795308 -1.017352894e-06 1.570794984"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -935,42 +935,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_2_2_visual_2">
-      <origin xyz="0.00149994055216632 -0.00299998999999029 0.0130000057054002" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240044219 -0.002999828316 0.01299995802" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_2_visual_3">
-      <origin xyz="0.00149992055212762 0.00300001000000971 0.0130000057053002" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.00324002218 0.003000171684 0.01299991842" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_2_visual_4">
-      <origin xyz="0.0014999063190442 -0.00299998999999027 0.0220000057053002" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240043044 -0.002999768916 0.02199995802" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_2_visual_5">
-      <origin xyz="0.00149988631900553 0.00300001000000974 0.0220000057052002" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240021005 0.003000231084 0.02199991842" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_2_visual_6">
-      <origin xyz="0.00149987208592211 -0.00299998999999025 0.0310000057053002" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.00324004187 -0.002999709516 0.03099995802" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_2_visual_7">
-      <origin xyz="0.0014998520858834 0.00300001000000975 0.0310000057052003" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240019831 0.003000290484 0.03099991842" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1011,28 +1011,28 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_2_3_visual_2">
-      <origin xyz="0.00149994435584657 -0.00299998999999034 0.0120000057054004" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240205969 -0.002999544517 0.01199995802" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_3_visual_3">
-      <origin xyz="0.00149992435580786 0.00300001000000967 0.0120000057053005" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.00324018393 0.003000455483 0.01199991842" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_3_visual_4">
-      <origin xyz="0.00149992153376515 -0.00299998999999032 0.0180000057053004" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240205186 -0.002999504917 0.01799995802" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_3_visual_5">
-      <origin xyz="0.00149990153372645 0.00300001000000968 0.0180000057053005" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240183147 0.003000495083 0.01799991842" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1073,42 +1073,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_2_4_visual_2">
-      <origin xyz="0.00149994796933678 -0.0029999899999903 0.0110500057054004" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240316282 -0.002999352457 0.01109995802" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_4_visual_3">
-      <origin xyz="0.0014999279692981 0.00300001000000971 0.0110500057053005" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240294243 0.003000647543 0.01109991842" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_4_visual_4">
-      <origin xyz="0.00149992514725536 -0.00299998999999028 0.0170500057054004" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240315499 -0.002999312857 0.01709995802" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_4_visual_5">
-      <origin xyz="0.00149990514721669 0.00300001000000972 0.0170500057053005" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.00324029346 0.003000687143 0.01709991842" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_4_visual_6">
-      <origin xyz="0.00149990232517396 -0.00299998999999027 0.0230500057053004" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240314716 -0.002999273257 0.02309995802" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_2_4_visual_7">
-      <origin xyz="0.00149988232513528 0.00300001000000974 0.0230500057052005" rpy="-1.5707963268020702 -3.8036785049004706e-06 6.445338749889727e-12"/>
+      <origin xyz="0.003240292677 0.003000726742 0.02309991842" rpy="-1.570796457 6.599977479e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1170,42 +1170,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_3_2_visual_2">
-      <origin xyz="0.00149994224851924 -0.00299998999999028 0.0130000055097003" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240045915 -0.002999970321 0.013" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_2_visual_3">
-      <origin xyz="0.00149992224848051 0.00300001000000972 0.0130000055096004" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240023876 0.003000029679 0.013" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_2_visual_4">
-      <origin xyz="0.00149990918978915 -0.00299998999999025 0.0220000055096003" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240045915 -0.002999970321 0.022" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_2_visual_5">
-      <origin xyz="0.00149988918975042 0.00300001000000975 0.0220000055095004" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240023876 0.003000029679 0.022" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_2_visual_6">
-      <origin xyz="0.00149987613105906 -0.00299998999999022 0.0310000055095003" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240045915 -0.002999970321 0.031" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_2_visual_7">
-      <origin xyz="0.00149985613102033 0.00300001000000978 0.0310000055095004" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240023876 0.003000029679 0.031" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1246,28 +1246,28 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_3_3_visual_2">
-      <origin xyz="0.00149994592170926 -0.00299998999999031 0.0120000055097003" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240207536 -0.002999970322 0.012" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_3_visual_3">
-      <origin xyz="0.00149992592167055 0.0030000100000097 0.0120000055096004" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240185497 0.003000029678 0.012" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_3_visual_4">
-      <origin xyz="0.0014999238825592 -0.00299998999999029 0.0180000055096003" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240207536 -0.002999970322 0.018" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_3_visual_5">
-      <origin xyz="0.0014999038825205 0.00300001000000971 0.0180000055096004" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240185497 0.003000029678 0.018" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1308,42 +1308,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_3_4_visual_2">
-      <origin xyz="0.00149994941123936 -0.0029999899999903 0.0110500055097" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240317732 -0.002999970322 0.0111" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_4_visual_3">
-      <origin xyz="0.00149992941120062 0.0030000100000097 0.0110500055096001" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240295693 0.003000029678 0.0111" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_4_visual_4">
-      <origin xyz="0.0014999273720893 -0.00299998999999028 0.0170500055096" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240317732 -0.002999970323 0.0171" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_4_visual_5">
-      <origin xyz="0.00149990737205056 0.00300001000000972 0.0170500055096001" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240295693 0.003000029677 0.0171" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_4_visual_6">
-      <origin xyz="0.00149990533293925 -0.00299998999999026 0.0230500055096" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240317732 -0.002999970323 0.0231" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_3_4_visual_7">
-      <origin xyz="0.00149988533290051 0.00300001000000974 0.0230500055095001" rpy="-1.5707963268029497 -3.6731951099105293e-06 6.451523529087041e-12"/>
+      <origin xyz="0.003240295693 0.003000029677 0.0231" rpy="-1.570796327 -1.927624727e-11 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1405,42 +1405,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_4_2_visual_2">
-      <origin xyz="0.00149994388705217 -0.00299998999999029 0.0130000053205996" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240047553 -0.002999905821 0.01300008688" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_2_visual_3">
-      <origin xyz="0.00149992388701344 0.00300001000000971 0.0130000053204997" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240025514 0.003000094178 0.01300006648" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_2_visual_4">
-      <origin xyz="0.00149991196269411 -0.00299998999999026 0.0220000053204996" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240048687 -0.002999875222 0.02200008688" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_2_visual_5">
-      <origin xyz="0.0014998919626554 0.00300001000000974 0.0220000053204997" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240026648 0.003000124778 0.02200006648" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_2_visual_6">
-      <origin xyz="0.00149988003833606 -0.00299998999999023 0.0310000053204996" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240049822 -0.002999844622 0.03100008688" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_2_visual_7">
-      <origin xyz="0.00149986003829732 0.00300001000000977 0.0310000053203997" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240027783 0.003000155378 0.03100006648" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1481,28 +1481,28 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_4_3_visual_2">
-      <origin xyz="0.00149994743420197 -0.00299998999999028 0.0120000053205998" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240209047 -0.002999759622 0.01200008688" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_3_visual_3">
-      <origin xyz="0.00149992743416323 0.00300001000000972 0.0120000053204999" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240187008 0.003000240378 0.01200006648" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_3_visual_4">
-      <origin xyz="0.00149992615129326 -0.00299998999999026 0.0180000053205998" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240209804 -0.002999739222 0.01800008688" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_3_visual_5">
-      <origin xyz="0.00149990615125452 0.00300001000000974 0.0180000053204999" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240187765 0.003000260778 0.01800006648" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1543,42 +1543,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_4_4_visual_2">
-      <origin xyz="0.00149995080399173 -0.00299998999999029 0.0110500053205996" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.00324031913 -0.002999660683 0.01110008688" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_4_visual_3">
-      <origin xyz="0.00149993080395299 0.00300001000000972 0.0110500053204997" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240297091 0.003000339317 0.01110006648" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_4_visual_4">
-      <origin xyz="0.00149992952109302 -0.00299998999999027 0.0170500053205996" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240319886 -0.002999640283 0.01710008688" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_4_visual_5">
-      <origin xyz="0.00149990952105429 0.00300001000000973 0.0170500053204997" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240297847 0.003000359717 0.01710006648" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_4_visual_6">
-      <origin xyz="0.00149990823818431 -0.00299998999999025 0.0230500053204996" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240320642 -0.002999619883 0.02310008688" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_4_4_visual_7">
-      <origin xyz="0.00149988823814558 0.00300001000000975 0.0230500053204997" rpy="-1.57079632680387 -3.54714832486334e-06 6.451940933579746e-12"/>
+      <origin xyz="0.003240298603 0.003000380117 0.02310006648" rpy="-1.570796201 3.399979936e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1640,42 +1640,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_5_2_visual_2">
-      <origin xyz="0.00149994547129509 -0.00299998999999027 0.0130000051377993" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240049137 -0.002999835908 0.01300017452" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_2_visual_3">
-      <origin xyz="0.00149992547125643 0.00300001000000973 0.0130000051376993" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240027097 0.003000164092 0.01300013372" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_2_visual_4">
-      <origin xyz="0.00149991464372905 -0.00299998999999024 0.0220000051377993" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240051368 -0.002999774708 0.02200017452" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_2_visual_5">
-      <origin xyz="0.0014998946436904 0.00300001000000976 0.0220000051376993" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240029329 0.003000225291 0.02200013372" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_2_visual_6">
-      <origin xyz="0.00149988381616301 -0.00299998999999021 0.0310000051376993" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240053599 -0.002999713509 0.03100017452" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_2_visual_7">
-      <origin xyz="0.00149986381612436 0.00300001000000979 0.0310000051375993" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.00324003156 0.003000286491 0.03100013372" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1716,28 +1716,28 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_5_3_visual_2">
-      <origin xyz="0.00149994889658473 -0.0029999899999903 0.0120000051377994" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240210509 -0.002999543509 0.01200017452" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_3_visual_3">
-      <origin xyz="0.00149992889654608 0.0030000100000097 0.0120000051377994" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240188469 0.003000456491 0.01200013372" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_3_visual_4">
-      <origin xyz="0.00149992834487737 -0.00299998999999028 0.0180000051377994" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240211996 -0.002999502709 0.01800017452" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_3_visual_5">
-      <origin xyz="0.00149990834483872 0.00300001000000972 0.0180000051376994" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240189957 0.00300049729 0.01800013372" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -1778,42 +1778,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="right_hand_5_4_visual_2">
-      <origin xyz="0.00149995215060421 -0.00299998999999034 0.0110500051377994" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240320481 -0.00299934563 0.01110017452" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_4_visual_3">
-      <origin xyz="0.00149993215056554 0.00300001000000965 0.0110500051377994" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240298442 0.00300065437 0.01110013372" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_4_visual_4">
-      <origin xyz="0.00149993159889686 -0.00299998999999032 0.0170500051377994" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240321968 -0.00299930483 0.01710017452" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_4_visual_5">
-      <origin xyz="0.00149991159885818 0.00300001000000967 0.0170500051376994" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240299929 0.00300069517 0.01710013372" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_4_visual_6">
-      <origin xyz="0.0014999110471895 -0.00299998999999029 0.0230500051377994" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240323456 -0.00299926403 0.02310017452" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_hand_5_4_visual_7">
-      <origin xyz="0.00149989104715083 0.00300001000000969 0.0230500051376994" rpy="-1.57079632681482 -3.4252879697730395e-06 6.441023414111432e-12"/>
+      <origin xyz="0.003240301416 0.00300073597 0.02310013372" rpy="-1.570796079 6.799976189e-06 1.5708"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2035,154 +2035,154 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_arm_7_visual_2">
-      <origin xyz="-0.00519079999797 -0.0182298 -0.0431817000002" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.009972445168 -0.01877990666 -0.05174698501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_3">
-      <origin xyz="-0.017993299998 -0.0182298 -0.0409242000008" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.02093044517 -0.01877993222 -0.05078798501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_4">
-      <origin xyz="-0.00779555999728 -0.0182298 -0.0579538000004" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.01093144517 -0.01877994946 -0.06270498501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_5">
-      <origin xyz="-0.0205979999973 -0.0182298 -0.0556963000009" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.02188944517 -0.01877997501 -0.06174598501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_6">
-      <origin xyz="0.0408096000038 -0.0182299 -0.081755799998" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="0.01002655483 -0.01877994114 -0.07558098501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_7">
-      <origin xyz="0.0280071000037 -0.0182299 -0.0794982999987" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.0009314451683 -0.01877996669 -0.07462198501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_8">
-      <origin xyz="0.0152046000036 -0.0182299 -0.0772408999993" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.01188944517 -0.01877999225 -0.07366298501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_9">
-      <origin xyz="0.00240208000351 -0.0182299 -0.0749833999999" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.02284844517 -0.01878001781 -0.07270398501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_10">
-      <origin xyz="-0.0104003999966 -0.0182299 -0.0727260000005" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="0.04194255483 -0.01877990726 -0.08941498501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_11">
-      <origin xyz="-0.0232028999966 -0.0182299 -0.070468400001" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="0.03100955483 -0.01877993284 -0.08847998501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_12">
-      <origin xyz="0.0382048000045 -0.0182299 -0.0965278999983" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="0.02002555483 -0.01877995838 -0.08749698501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_13">
-      <origin xyz="0.0254023000044 -0.0182299 -0.0942704999988" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="0.009067554832 -0.01877998393 -0.08653898501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_14">
-      <origin xyz="0.0125998000043 -0.0182299 -0.0920128999994" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.001890445168 -0.01878000949 -0.08557998501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_15">
-      <origin xyz="-0.000202674995789 -0.0182299 -0.0897555" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.01283244517 -0.01878003498 -0.08461398501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_16">
-      <origin xyz="-0.0130051999959 -0.0182299 -0.0874980000006" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.02380644517 -0.0187800606 -0.08366298501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_17">
-      <origin xyz="-0.025807699996 -0.0182299 -0.0852405000012" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="0.04098355483 -0.01877995006 -0.100372985" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_18">
-      <origin xyz="0.0356000000052 -0.01823 -0.111299999999" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="0.03002655483 -0.01877997561 -0.09941398501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_19">
-      <origin xyz="0.0227976000051 -0.01823 -0.109042999999" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="0.01906755483 -0.01878000117 -0.09845598501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_20">
-      <origin xyz="0.00999506000501 -0.01823 -0.106785" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="0.008108554832 -0.01878002673 -0.09749698501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_21">
-      <origin xyz="-0.0028074299951 -0.0182299 -0.104528" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.002849445168 -0.01878005229 -0.09653798501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_22">
-      <origin xyz="-0.0156098999952 -0.0182299 -0.102270000001" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.01380744517 -0.01878007784 -0.09557898501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_23">
-      <origin xyz="-0.0284123999954 -0.0182299 -0.100013000001" rpy="1.5708026896865126 1.5707963267948966 3.181460990505331e-06"/>
+      <origin xyz="-0.02476544517 -0.0187801034 -0.09462098501" rpy="1.5708 0 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2244,42 +2244,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_1_2_visual_2">
-      <origin xyz="0.0127215002311 -0.0167385558257 0.0196246758812" rpy="1.5708005183199996 -0.22982476958000003 -1.5708104055899996"/>
+      <origin xyz="0.01384001198 -0.01544064155 0.01932096837" rpy="-1.391904605 -0.19668849 2.394980578"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_2_visual_3">
-      <origin xyz="0.00768260583787 -0.0120760720872 0.0209925924853" rpy="1.5708005183199996 -0.22982476958000003 -1.5708104055899996"/>
+      <origin xyz="0.008801118405 -0.0107782131 0.0206889276" rpy="-1.391904605 -0.19668849 2.394980578"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_2_visual_4">
-      <origin xyz="0.0146864706913 -0.0167385138907 0.0268626820167" rpy="1.5708005183199996 -0.22982476958000003 -1.5708104055899996"/>
+      <origin xyz="0.01580500031 -0.01544062837 0.02655898059" rpy="-1.391904605 -0.19668849 2.394980578"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_2_visual_5">
-      <origin xyz="0.00964759629671 -0.0120761275233 0.0282306214017" rpy="1.5708005183199996 -0.22982476958000003 -1.5708104055899996"/>
+      <origin xyz="0.01076610673 -0.01077819992 0.02792693982" rpy="-1.391904605 -0.19668849 2.394980578"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_2_visual_6">
-      <origin xyz="0.0166514411502 -0.0167385921071 0.0341006135625" rpy="1.5708005183199996 -0.22982476958000003 -1.5708104055899996"/>
+      <origin xyz="0.01776998864 -0.01544061519 0.03379699281" rpy="-1.391904605 -0.19668849 2.394980578"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_2_visual_7">
-      <origin xyz="0.0115405975513 -0.0120094817854 0.0354881684629" rpy="1.5708005183199996 -0.22982476958000003 -1.5708104055899996"/>
+      <origin xyz="0.01273109507 -0.01077818674 0.03516495204" rpy="-1.391904605 -0.19668849 2.394980578"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2320,42 +2320,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_1_3_visual_2">
-      <origin xyz="0.00149998962969 -0.00349998 0.0125000114178" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.003240172642 -0.003499962358 0.01249999043" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_3_visual_3">
-      <origin xyz="0.00149997110916 0.00350002 0.0125000038689" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.003240113757 0.003500037641 0.01249997352" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_3_visual_4">
-      <origin xyz="0.00150000485369 -0.00349997 0.0199999979412" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.003240184242 -0.003499944235 0.01999999043" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_3_visual_5">
-      <origin xyz="0.00149997707283 0.00350003 0.0199999866175" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.003240125357 0.003500055764 0.01999997352" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_3_visual_6">
-      <origin xyz="0.00150002933798 -0.00349996 0.027499988239" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.003240195842 -0.003499926112 0.02749999043" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_3_visual_7">
-      <origin xyz="0.00150002933798 0.00350004 0.027499988239" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.003240136957 0.003500073888 0.02749997352" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2396,42 +2396,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_1_4_visual_2">
-      <origin xyz="0.00149999769212 -0.00349998 0.0112999984154" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.00324020971 -0.003499920883 0.01074998518" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_4_visual_3">
-      <origin xyz="0.00149997917158 0.00350002 0.0112999908664" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.003240150825 0.003500079117 0.01074996827" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_4_visual_4">
-      <origin xyz="0.00150001364587 -0.00349998 0.0172999783737" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.00324021899 -0.003499906385 0.01674998518" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_4_visual_5">
-      <origin xyz="0.00149998586492 0.00350002 0.0172999670501" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.003240160105 0.003500093615 0.01674996827" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_4_visual_6">
-      <origin xyz="0.00150001998723 -0.00349997 0.023300008408" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.00324022827 -0.003499891886 0.02274998518" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_1_4_visual_7">
-      <origin xyz="0.00150001998723 0.00350003 0.023300008408" rpy="-1.5707963268 -0.3870433574400001 -5.3950827549466655e-16"/>
+      <origin xyz="0.003240169385 0.003500108114 0.02274996827" rpy="-1.57079478 2.416401577e-06 1.570804739"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2493,42 +2493,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_2_2_visual_2">
-      <origin xyz="0.00150003611349994 -0.00299999000000002 0.0129999946792003" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239942407 -0.003000048763 0.01299999989" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_2_visual_3">
-      <origin xyz="0.00150001611349997 0.00300000999999998 0.0129999946792003" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239980358 0.002999951237 0.01300000153" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_2_visual_4">
-      <origin xyz="0.00150006803823983 -0.00299999000000002 0.0219999946791003" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.00323994044 -0.003000051221 0.02199999989" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_2_visual_5">
-      <origin xyz="0.00150004803823986 0.00300000999999998 0.0219999946792003" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239978391 0.002999948779 0.02200000153" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_2_visual_6">
-      <origin xyz="0.00150009996297972 -0.00299999000000002 0.0309999946791003" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239938472 -0.003000053679 0.03099999989" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_2_visual_7">
-      <origin xyz="0.00150007996297975 0.00300000999999998 0.0309999946791003" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239976423 0.002999946321 0.03100000153" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2569,28 +2569,28 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_2_3_visual_2">
-      <origin xyz="0.00150003256630983 -0.00299999 0.0119999946792002" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239776931 -0.003000060508 0.01199999989" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_3_visual_3">
-      <origin xyz="0.00150001256630989 0.00300001 0.0119999946793002" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239814882 0.002999939492 0.01200000153" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_3_visual_4">
-      <origin xyz="0.00150005384946977 -0.00299999 0.0179999946791002" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239775619 -0.003000062147 0.01799999989" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_3_visual_5">
-      <origin xyz="0.0015000338494698 0.00300001 0.0179999946792002" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.00323981357 0.002999937853 0.01800000153" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2631,42 +2631,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_2_4_visual_2">
-      <origin xyz="0.00150002919647989 -0.00299998999999998 0.0110499946792" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239664153 -0.003000068456 0.01109999989" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_4_visual_3">
-      <origin xyz="0.00150000919647992 0.00300001000000002 0.0110499946793" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239702105 0.002999931544 0.01110000153" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_4_visual_4">
-      <origin xyz="0.00150005047963979 -0.00299998999999998 0.0170499946792" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239662842 -0.003000070095 0.01709999989" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_4_visual_5">
-      <origin xyz="0.00150003047963982 0.00300001000000002 0.0170499946792" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239700793 0.002999929905 0.01710000153" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_4_visual_6">
-      <origin xyz="0.00150007176278973 -0.00299998999999998 0.0230499946791" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.00323966153 -0.003000071734 0.02309999989" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_2_4_visual_7">
-      <origin xyz="0.00150005176278977 0.00300001000000002 0.0230499946792" rpy="-1.5707963267900698 3.5471947324472593e-06 2.1175823681490734e-22"/>
+      <origin xyz="0.003239699481 0.002999928266 0.02310000153" rpy="-1.570796545 -2.731407549e-07 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2728,42 +2728,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_3_2_visual_2">
-      <origin xyz="0.00150003775160976 -0.00299999000000003 0.0129999944901998" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239946125 -0.002999900268 0.01300001898" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_2_visual_3">
-      <origin xyz="0.00150001775160988 0.00300000999999997 0.0129999944901998" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239984085 0.003000099732 0.01299998102" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_2_visual_4">
-      <origin xyz="0.00150007081042966 -0.00299999000000003 0.0219999944900998" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239946125 -0.002999843326 0.02200001898" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_2_visual_5">
-      <origin xyz="0.00150005081042977 0.00300000999999997 0.0219999944901998" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239984086 0.003000156674 0.02199998102" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_2_visual_6">
-      <origin xyz="0.00150010386923957 -0.00299999000000003 0.0309999944899998" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239946125 -0.002999786384 0.03100001898" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_2_visual_7">
-      <origin xyz="0.00150008386923969 0.00300000999999997 0.0309999944900998" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239984086 0.003000213616 0.03099998102" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2804,28 +2804,28 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_3_3_visual_2">
-      <origin xyz="0.00150003407840986 -0.00299999000000003 0.0119999944901999" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239784505 -0.002999628213 0.01200001898" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_3_visual_3">
-      <origin xyz="0.00150001407840998 0.00300000999999997 0.0119999944901999" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239822466 0.003000371787 0.01199998102" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_3_visual_4">
-      <origin xyz="0.0015000561176198 -0.00299999000000003 0.0179999944900999" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239784506 -0.002999590251 0.01800001898" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_3_visual_5">
-      <origin xyz="0.00150003611761992 0.00300000999999997 0.0179999944901999" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239822466 0.003000409748 0.01799998102" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2866,42 +2866,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_3_4_visual_2">
-      <origin xyz="0.00150003058886983 -0.00299999000000003 0.0110499944901999" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.00323967431 -0.002999444101 0.01110001898" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_4_visual_3">
-      <origin xyz="0.00150001058886995 0.00300000999999997 0.0110499944901999" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239712271 0.003000555899 0.01109998102" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_4_visual_4">
-      <origin xyz="0.00150005262807973 -0.00299999000000003 0.0170499944900999" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239674311 -0.00299940614 0.01710001898" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_4_visual_5">
-      <origin xyz="0.00150003262807985 0.00300000999999997 0.0170499944901999" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239712271 0.00300059386 0.01709998102" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_4_visual_6">
-      <origin xyz="0.00150007466728968 -0.00299999000000003 0.0230499944900999" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239674311 -0.002999368178 0.02310001898" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_3_4_visual_7">
-      <origin xyz="0.0015000546672898 0.00300000999999997 0.0230499944901999" rpy="-1.5707963268000098 3.67320489253815e-06 0.0"/>
+      <origin xyz="0.003239712272 0.003000631821 0.02309998102" rpy="-1.570796327 6.326863949e-06 1.57079"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2963,42 +2963,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_4_2_visual_2">
-      <origin xyz="0.00150003944839991 -0.00299999000000003 0.0129999942943997" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239949909 -0.003000045756 0.01299999214" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_2_visual_3">
-      <origin xyz="0.0015000194484 0.00300000999999997 0.0129999942943997" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.00323998786 0.002999954244 0.01300000642" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_2_visual_4">
-      <origin xyz="0.00150007368191983 -0.00299999000000003 0.0219999942942997" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239951917 -0.003000067179 0.02199999214" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_2_visual_5">
-      <origin xyz="0.00150005368191992 0.00300000999999997 0.0219999942943997" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239989868 0.002999932821 0.02200000642" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_2_visual_6">
-      <origin xyz="0.00150010791543975 -0.00299999000000003 0.0309999942941997" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239953925 -0.003000088602 0.03099999214" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_2_visual_7">
-      <origin xyz="0.00150008791543984 0.00300000999999997 0.0309999942942997" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239991876 0.002999911398 0.03100000642" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -3039,28 +3039,28 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_4_3_visual_2">
-      <origin xyz="0.00150003564467977 -0.00299999000000003 0.0119999942943998" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239792139 -0.003000148109 0.01199999214" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_3_visual_3">
-      <origin xyz="0.00150001564467986 0.00300000999999997 0.0119999942944998" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.00323983009 0.00299985189 0.01200000642" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_3_visual_4">
-      <origin xyz="0.0015000584670297 -0.00299999000000003 0.0179999942942998" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239793477 -0.003000162391 0.01799999214" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_3_visual_5">
-      <origin xyz="0.0015000384670298 0.00300000999999997 0.0179999942943998" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239831428 0.002999837609 0.01800000642" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -3101,42 +3101,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_4_4_visual_2">
-      <origin xyz="0.00150003203113995 -0.00299999000000002 0.0110499942943998" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239684519 -0.003000217377 0.01109999214" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_4_visual_3">
-      <origin xyz="0.00150001203114004 0.00300000999999997 0.0110499942944998" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.00323972247 0.002999782623 0.01110000642" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_4_visual_4">
-      <origin xyz="0.00150005485348989 -0.00299999000000002 0.0170499942942998" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239685858 -0.003000231658 0.01709999214" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_4_visual_5">
-      <origin xyz="0.00150003485348998 0.00300000999999997 0.0170499942943998" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239723809 0.002999768341 0.01710000642" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_4_visual_6">
-      <origin xyz="0.00150007767582983 -0.00299999000000002 0.0230499942942998" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239687196 -0.00300024594 0.02309999214" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_4_4_visual_7">
-      <origin xyz="0.00150005767582992 0.00300000999999997 0.0230499942943998" rpy="-1.5707963267999598 3.8037247927708595e-06 0.0"/>
+      <origin xyz="0.003239725148 0.00299975406 0.02310000642" rpy="-1.570796104 -2.380311891e-06 1.570790002"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -3198,42 +3198,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_5_2_visual_2">
-      <origin xyz="0.00150004120766995 -0.00299999000000001 0.0129999940914" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239953764 -0.00300012224 0.0129999812" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_2_visual_3">
-      <origin xyz="0.00150002120767003 0.00300000999999999 0.0129999940915" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239991686 0.002999877759 0.01300001588" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_2_visual_4">
-      <origin xyz="0.00150007665914983 -0.00299999000000001 0.0219999940913" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239957822 -0.003000174263 0.0219999812" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_2_visual_5">
-      <origin xyz="0.00150005665914995 0.00300000999999999 0.0219999940914" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239995744 0.002999825736 0.02200001588" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_2_visual_6">
-      <origin xyz="0.00150011211061975 -0.00299999000000002 0.0309999940912" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.00323996188 -0.003000226286 0.0309999812" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_2_visual_7">
-      <origin xyz="0.00150009211061984 0.00300000999999998 0.0309999940913" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239999802 0.002999773714 0.03100001588" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -3274,28 +3274,28 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_5_3_visual_2">
-      <origin xyz="0.00150003726861982 -0.00299998999999998 0.0119999940913997" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239799835 -0.003000370794 0.0119999812" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_3_visual_3">
-      <origin xyz="0.00150001726861991 0.00300001000000002 0.0119999940914997" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239837757 0.002999629206 0.01200001588" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_3_visual_4">
-      <origin xyz="0.00150006090293977 -0.00299998999999998 0.0179999940912997" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.00323980254 -0.003000405476 0.0179999812" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_3_visual_5">
-      <origin xyz="0.00150004090293986 0.00300001000000002 0.0179999940913997" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239840462 0.002999594524 0.01800001588" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -3336,42 +3336,42 @@
       <material name="tactile_material"/>
     </visual>
     <visual name="left_hand_5_4_visual_2">
-      <origin xyz="0.00150003352651994 -0.00299999 0.0110499940914" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239694785 -0.003000539002 0.0110999812" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_4_visual_3">
-      <origin xyz="0.00150001352652003 0.00300001 0.0110499940915" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239732707 0.002999460998 0.01110001588" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_4_visual_4">
-      <origin xyz="0.00150005716083989 -0.00299999 0.0170499940913" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.00323969749 -0.003000573683 0.01709998119" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_4_visual_5">
-      <origin xyz="0.00150003716083998 0.00300001 0.0170499940914" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239735412 0.002999426316 0.01710001588" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_4_visual_6">
-      <origin xyz="0.00150008079514983 -0.00299999 0.0230499940913" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239700196 -0.003000608365 0.02309998119" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_hand_5_4_visual_7">
-      <origin xyz="0.00150006079514992 0.00300001 0.0230499940914" rpy="-1.57079632679991 3.939054743144109e-06 0.0"/>
+      <origin xyz="0.003239738118 0.002999391634 0.02310001588" rpy="-1.570795876 -5.780317625e-06 1.570790006"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>

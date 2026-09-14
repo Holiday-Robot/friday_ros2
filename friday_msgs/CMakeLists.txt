@@ -9,12 +9,14 @@ find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 
 set(msg_files
+  "msg/AvoidanceState.msg"
   "msg/BatteryPackState.msg"
   "msg/BatteryState.msg"
   "msg/BoardState.msg"
   "msg/BoardStateArray.msg"
   "msg/BumperState.msg"
   "msg/BumperStateArray.msg"
+  "msg/CollisionPairState.msg"
   "msg/ControlMode.msg"
   "msg/EmergencyStop.msg"
   "msg/JointLockState.msg"
@@ -36,8 +38,12 @@ set(msg_files
 )
 
 set(srv_files
+  "srv/GetBatteryAlarm.srv"
   "srv/GetMotorLimits.srv"
   "srv/ResetBoardFaults.srv"
+  "srv/SetAvoidanceEnabled.srv"
+  "srv/SetBatteryAlarm.srv"
+  "srv/SetCollisionPairEnabled.srv"
   "srv/SetControlMode.srv"
   "srv/SetMotorCurrentLimit.srv"
   "srv/SetMotorVelocityLimit.srv"

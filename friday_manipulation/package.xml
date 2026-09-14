@@ -7,8 +7,6 @@
   <maintainer email="opensource@holiday-robotics.com">Holiday Robotics Open Source</maintainer>
   <license>Apache-2.0</license>
 
-  <buildtool_depend>ament_python</buildtool_depend>
-
   <exec_depend>friday_msgs</exec_depend>
   <exec_depend>rclpy</exec_depend>
   <exec_depend>tf2_ros</exec_depend>

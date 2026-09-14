@@ -1,0 +1,24 @@
+uint8 UNKNOWN=0
+uint8 LIMIT_AVOIDANCE=1
+uint8 COLLISION_AVOIDANCE=2
+uint8 ROLLOVER_AVOIDANCE=3
+
+# Which avoidance to change. UNKNOWN and undefined values return RESULT_INVALID_ARGUMENT.
+# COLLISION_AVOIDANCE enables/disables every collision part pair at once (see
+# SetCollisionPairEnabled for one pair); the per-pair list is the only collision state.
+uint8 avoidance
+# Requested enable state. The resulting state is published on holiday/control/avoidance/enabled.
+bool enabled
+---
+uint16 RESULT_SUCCESS=0
+uint16 RESULT_INVALID_ARGUMENT=1
+uint16 RESULT_NOT_READY=2
+uint16 RESULT_BUSY=3
+uint16 RESULT_TIMEOUT=4
+uint16 RESULT_HARDWARE_ERROR=5
+uint16 RESULT_PERMISSION_DENIED=6
+uint16 RESULT_INTERNAL_ERROR=255
+
+bool success
+uint16 result_code
+string<=128 message
