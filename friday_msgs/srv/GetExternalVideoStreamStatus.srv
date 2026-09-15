@@ -1,0 +1,4 @@
+---
+bool success
+string message
+ExternalVideoStreamStatus[] video_stream_statuses
