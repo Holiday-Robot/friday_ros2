@@ -19,6 +19,7 @@ set(msg_files
   "msg/CollisionPairState.msg"
   "msg/ControlMode.msg"
   "msg/EmergencyStop.msg"
+  "msg/ExternalVideoStreamStatus.msg"
   "msg/JointLockState.msg"
   "msg/JointReaching.msg"
   "msg/LinkReaching.msg"
@@ -39,12 +40,15 @@ set(msg_files
 
 set(srv_files
   "srv/GetBatteryAlarm.srv"
+  "srv/GetCameraList.srv"
+  "srv/GetExternalVideoStreamStatus.srv"
   "srv/GetMotorLimits.srv"
   "srv/ResetBoardFaults.srv"
   "srv/SetAvoidanceEnabled.srv"
   "srv/SetBatteryAlarm.srv"
   "srv/SetCollisionPairEnabled.srv"
   "srv/SetControlMode.srv"
+  "srv/SetExternalVideoStreaming.srv"
   "srv/SetMotorCurrentLimit.srv"
   "srv/SetMotorVelocityLimit.srv"
   "srv/SetRangeSensorEnabled.srv"

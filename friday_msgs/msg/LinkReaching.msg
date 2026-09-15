@@ -27,11 +27,14 @@ geometry_msgs/Point target_pos
 # Target orientation in reference_frame.
 geometry_msgs/Quaternion target_quat
 
-# Goal twist in reference_frame (linear m/s, angular rad/s). Zero disables velocity
-# feedforward. The goal pose is not integrated from this twist; stream target_pos
-# and target_quat together with target_vel.
+# Goal rates in reference_frame: linear = velocity of the target point itself
+# (d/dt target_pos, m/s), angular = rate of the target frame (rad/s). This is NOT
+# a spatial twist about the reference-frame origin; convert such a twist with
+# linear = v_origin + angular x target_pos. Zero disables velocity feedforward.
+# The goal pose is not integrated from this twist; stream target_pos and
+# target_quat together with target_vel.
 geometry_msgs/Twist target_vel
 
-# Goal acceleration in reference_frame (linear m/s^2, angular rad/s^2). Zero disables
-# acceleration feedforward.
+# Goal acceleration with the same point convention (linear = d2/dt2 target_pos,
+# m/s^2; angular rad/s^2). Zero disables acceleration feedforward.
 geometry_msgs/Accel target_acc

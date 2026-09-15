@@ -1,0 +1,8 @@
+# Set external video streaming
+ExternalVideoStreamStatus[] video_stream_statuses
+
+---
+bool success
+string message
+string[] failed_cameras       # failed camera names
+string[] failed_reasons       # reason of failure

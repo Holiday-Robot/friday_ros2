@@ -20,6 +20,7 @@ from collections.abc import Sequence
 import rclpy
 from friday_msgs.msg import LinkReaching, Manipulation
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, ReliabilityPolicy
 from rclpy.time import Time
 from rclpy.utilities import remove_ros_args
 from tf2_ros import Buffer, TransformException, TransformListener
@@ -134,7 +135,7 @@ def main(args: list[str] | None = None) -> int:
     rclpy.init(args=args)
     node = rclpy.create_node("cartesian_space")
     buffer = Buffer()
-    listener = TransformListener(buffer, node)
+    listener = TransformListener(buffer, node, qos=QoSProfile(depth=100, reliability=ReliabilityPolicy.BEST_EFFORT))
 
     try:
         try:

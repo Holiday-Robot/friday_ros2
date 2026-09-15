@@ -1,0 +1,6 @@
+# List all cameras the manager node knows about.
+---
+bool success
+string message
+string[] names               # camera names
+bool[] device_stream_enabled # true iff the camera image is upstream from the device.
