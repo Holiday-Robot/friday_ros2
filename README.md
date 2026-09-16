@@ -98,6 +98,9 @@ Start `robot_state_publisher` and RViz:
 ros2 launch friday_description friday_state_publisher.launch.py
 ```
 
+> **NOTICE:** In RViz, select `friday_description/urdf/FM26B.urdf` for
+> `RobotModel.DescriptionFile` to display the model correctly.
+
 Enable the joint state publisher GUI:
 
 ```bash
