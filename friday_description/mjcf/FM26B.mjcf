@@ -306,7 +306,7 @@
                                     <geom class="right_hand" name="right_hand_1_2_collision_0" type="mesh" mesh="right_hand_1_2"/>
                                     <geom class="right_hand" name="right_hand_1_2_tactile" pos="-0.0412949 0.0553231 -0.0095" quat="0.6123708781189469 -0.35355349104382805 -0.6123731274869127 -0.3535547897207008" type="mesh" mesh="tactile_thumb_mcp"/>
                                     <body name="right_hand_1_3" pos="0.0258606 0.0423811 0.0164563" quat="-0.05938999638186568 -0.3368244393350845 0.16317552460642293 -0.9254165946025534">
-                                      <joint type="hinge" name="right_hand_1_3" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                      <joint type="hinge" name="right_hand_1_3" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                       <inertial pos="-0.0038076 -0.0183229 -0.000889352" mass="0.0197159" fullinertia="3.31216e-06 9.05174e-07 3.04142e-06 3.6275e-08 -7.0224e-08 -2.7512e-08"/>
                                       <geom class="visual" name="right_hand_1_3_visual_0" type="mesh" mesh="right_hand_1_3" material="friday_black_material"/>
                                       <geom class="visual" name="right_hand_1_3_visual_1" pos="0.0347597 0.00940297 -0.0636744" quat="0.3099750598898954 0.8516508901808896 -0.2716535846967066 0.3237445805288225" type="mesh" mesh="tactile_thumb_pip" material="tactile_material"/>
@@ -319,7 +319,7 @@
                                       <geom class="right_hand" name="right_hand_1_3_collision_0" type="mesh" mesh="right_hand_1_3"/>
                                       <geom class="right_hand" name="right_hand_1_3_tactile" pos="0.0347597 0.00940297 -0.0636744" quat="0.3099750598898954 0.8516508901808896 -0.2716535846967066 0.3237445805288225" type="mesh" mesh="tactile_thumb_pip"/>
                                       <body name="right_hand_1_4" pos="0.0 -0.04 -0.0" quat="0.9999999999999979 0.0 0.0 6.467399999999996e-08">
-                                        <joint type="hinge" name="right_hand_1_4" axis="0.0 0.0 1.0" range="-0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                        <joint type="hinge" name="right_hand_1_4" axis="0.0 0.0 1.0" range="-0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                         <inertial pos="-0.00362737 -0.0138155 -0.000936454" mass="0.0140308" fullinertia="1.62492e-06 5.43896e-07 1.46993e-06 4.3995e-08 -4.1325e-08 3.0153e-08"/>
                                         <geom class="visual" name="right_hand_1_4_visual_0" type="mesh" mesh="right_hand_1_4" material="friday_black_material"/>
                                         <geom class="visual" name="right_hand_1_4_visual_1" pos="0.0347597 0.049403 -0.0636744" quat="0.3099750598898954 0.8516508901808896 -0.2716535846967066 0.3237445805288225" type="mesh" mesh="tactile_thumb_dip" material="tactile_material"/>
@@ -341,7 +341,7 @@
                                   <geom class="visual" name="right_hand_2_1_visual_0" type="mesh" mesh="right_hand_2_1" material="friday_black_material"/>
                                   <geom class="right_hand" name="right_hand_2_1_collision_0" type="mesh" mesh="right_hand_2_1"/>
                                   <body name="right_hand_2_2" pos="-0.0 -0.0095 0.0" quat="0.7071054825112363 0.0 0.7071080798594735 0.0">
-                                    <joint type="hinge" name="right_hand_2_2" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                    <joint type="hinge" name="right_hand_2_2" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                     <inertial pos="-0.00374375 -0.0199104 -0.000614941" mass="0.0179165" fullinertia="2.97764e-06 7.54025e-07 2.87953e-06 7.9836e-08 -4.6863e-08 -1.9623e-08"/>
                                     <geom class="visual" name="right_hand_2_2_visual_0" type="mesh" mesh="right_hand_2_2" material="friday_black_material"/>
                                     <geom class="visual" name="right_hand_2_2_visual_1" pos="-0.0055 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 -3.535540399297368e-13 -3.5355274125561814e-13" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
@@ -354,7 +354,7 @@
                                     <geom class="right_hand" name="right_hand_2_2_collision_0" type="mesh" mesh="right_hand_2_2"/>
                                     <geom class="right_hand" name="right_hand_2_2_tactile" pos="-0.0055 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 -3.535540399297368e-13 -3.5355274125561814e-13" type="mesh" mesh="tactile_mcp"/>
                                     <body name="right_hand_2_3" pos="-0.0 -0.044 0.0">
-                                      <joint type="hinge" name="right_hand_2_3" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                      <joint type="hinge" name="right_hand_2_3" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                       <inertial pos="-0.00369959 -0.0126321 -0.000444273" mass="0.0116171" fullinertia="1.17373e-06 4.54002e-07 1.09499e-06 5.1616e-08 -2.8375e-08 -1.3796e-08"/>
                                       <geom class="visual" name="right_hand_2_3_visual_0" type="mesh" mesh="right_hand_2_3" material="friday_black_material"/>
                                       <geom class="visual" name="right_hand_2_3_visual_1" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip" material="tactile_material"/>
@@ -365,7 +365,7 @@
                                       <geom class="right_hand" name="right_hand_2_3_collision_0" type="mesh" mesh="right_hand_2_3"/>
                                       <geom class="right_hand" name="right_hand_2_3_tactile" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip"/>
                                       <body name="right_hand_2_4" pos="0.0 -0.03 -0.0">
-                                        <joint type="hinge" name="right_hand_2_4" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                        <joint type="hinge" name="right_hand_2_4" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                         <inertial pos="-0.00153406 -0.0149176 5.9432e-05" mass="0.00847547" fullinertia="9.92205e-07 2.67276e-07 9.04521e-07 -8.68e-09 3.792e-09 7.11e-09"/>
                                         <geom class="visual" name="right_hand_2_4_visual_0" type="mesh" mesh="right_hand_2_4" material="friday_black_material"/>
                                         <geom class="visual" name="right_hand_2_4_visual_1" pos="-0.0055 0.074 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_dip" material="tactile_material"/>
@@ -387,7 +387,7 @@
                                   <geom class="visual" name="right_hand_3_1_visual_0" type="mesh" mesh="right_hand_3_1" material="friday_black_material"/>
                                   <geom class="right_hand" name="right_hand_3_1_collision_0" type="mesh" mesh="right_hand_3_1"/>
                                   <body name="right_hand_3_2" pos="-0.0 -0.0095 -0.0" quat="0.7071054825112363 0.0 0.7071080798594735 0.0">
-                                    <joint type="hinge" name="right_hand_3_2" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                    <joint type="hinge" name="right_hand_3_2" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                     <inertial pos="-0.00374375 -0.0199104 -0.000614941" mass="0.0179165" fullinertia="2.97764e-06 7.54025e-07 2.87953e-06 7.9836e-08 -4.6863e-08 -1.9623e-08"/>
                                     <geom class="visual" name="right_hand_3_2_visual_0" type="mesh" mesh="right_hand_3_2" material="friday_black_material"/>
                                     <geom class="visual" name="right_hand_3_2_visual_1" pos="-0.0055 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
@@ -400,7 +400,7 @@
                                     <geom class="right_hand" name="right_hand_3_2_collision_0" type="mesh" mesh="right_hand_3_2"/>
                                     <geom class="right_hand" name="right_hand_3_2_tactile" pos="-0.0055 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_mcp"/>
                                     <body name="right_hand_3_3" pos="-0.0 -0.044 -0.0">
-                                      <joint type="hinge" name="right_hand_3_3" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                      <joint type="hinge" name="right_hand_3_3" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                       <inertial pos="-0.00361708 -0.0126321 -0.000444273" mass="0.0116171" fullinertia="1.17373e-06 4.48403e-07 1.08939e-06 5.4671e-08 -2.6883e-08 -1.3796e-08"/>
                                       <geom class="visual" name="right_hand_3_3_visual_0" type="mesh" mesh="right_hand_3_3" material="friday_black_material"/>
                                       <geom class="visual" name="right_hand_3_3_visual_1" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip" material="tactile_material"/>
@@ -411,7 +411,7 @@
                                       <geom class="right_hand" name="right_hand_3_3_collision_0" type="mesh" mesh="right_hand_3_3"/>
                                       <geom class="right_hand" name="right_hand_3_3_tactile" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip"/>
                                       <body name="right_hand_3_4" pos="-0.0 -0.03 0.0">
-                                        <joint type="hinge" name="right_hand_3_4" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                        <joint type="hinge" name="right_hand_3_4" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                         <inertial pos="-0.00153406 -0.0149176 5.9432e-05" mass="0.00847547" fullinertia="9.92205e-07 2.67276e-07 9.04521e-07 -8.68e-09 3.792e-09 7.11e-09"/>
                                         <geom class="visual" name="right_hand_3_4_visual_0" type="mesh" mesh="right_hand_3_4" material="friday_black_material"/>
                                         <geom class="visual" name="right_hand_3_4_visual_1" pos="-0.0055 0.074 -0.0" quat="0.7071054825112363 0.7071080798594735 0.0 -0.0" type="mesh" mesh="tactile_dip" material="tactile_material"/>
@@ -433,7 +433,7 @@
                                   <geom class="visual" name="right_hand_4_1_visual_0" type="mesh" mesh="right_hand_4_1" material="friday_black_material"/>
                                   <geom class="right_hand" name="right_hand_4_1_collision_0" type="mesh" mesh="right_hand_4_1"/>
                                   <body name="right_hand_4_2" pos="-0.0 -0.0095 0.0" quat="0.7071054825112363 0.0 0.7071080798594735 0.0">
-                                    <joint type="hinge" name="right_hand_4_2" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                    <joint type="hinge" name="right_hand_4_2" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                     <inertial pos="-0.00374375 -0.0199104 -0.000614941" mass="0.0179165" fullinertia="2.97764e-06 7.54025e-07 2.87953e-06 7.9836e-08 -4.6863e-08 -1.9623e-08"/>
                                     <geom class="visual" name="right_hand_4_2_visual_0" type="mesh" mesh="right_hand_4_2" material="friday_black_material"/>
                                     <geom class="visual" name="right_hand_4_2_visual_1" pos="-0.0055 -0.0 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 -0.0" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
@@ -446,7 +446,7 @@
                                     <geom class="right_hand" name="right_hand_4_2_collision_0" type="mesh" mesh="right_hand_4_2"/>
                                     <geom class="right_hand" name="right_hand_4_2_tactile" pos="-0.0055 -0.0 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 -0.0" type="mesh" mesh="tactile_mcp"/>
                                     <body name="right_hand_4_3" pos="0.0 -0.044 -0.0">
-                                      <joint type="hinge" name="right_hand_4_3" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                      <joint type="hinge" name="right_hand_4_3" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                       <inertial pos="-0.00359227 -0.0126321 -0.000444273" mass="0.0116171" fullinertia="1.17373e-06 4.46866e-07 1.08785e-06 5.5589e-08 -2.6435e-08 -1.3796e-08"/>
                                       <geom class="visual" name="right_hand_4_3_visual_0" type="mesh" mesh="right_hand_4_3" material="friday_black_material"/>
                                       <geom class="visual" name="right_hand_4_3_visual_1" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip" material="tactile_material"/>
@@ -457,7 +457,7 @@
                                       <geom class="right_hand" name="right_hand_4_3_collision_0" type="mesh" mesh="right_hand_4_3"/>
                                       <geom class="right_hand" name="right_hand_4_3_tactile" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip"/>
                                       <body name="right_hand_4_4" pos="0.0 -0.03 -0.0">
-                                        <joint type="hinge" name="right_hand_4_4" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                        <joint type="hinge" name="right_hand_4_4" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                         <inertial pos="-0.00153406 -0.0149176 5.9432e-05" mass="0.00847547" fullinertia="9.92205e-07 2.67276e-07 9.04521e-07 -8.68e-09 3.792e-09 7.11e-09"/>
                                         <geom class="visual" name="right_hand_4_4_visual_0" type="mesh" mesh="right_hand_4_4" material="friday_black_material"/>
                                         <geom class="visual" name="right_hand_4_4_visual_1" pos="-0.0055 0.074 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 -0.0" type="mesh" mesh="tactile_dip" material="tactile_material"/>
@@ -479,7 +479,7 @@
                                   <geom class="visual" name="right_hand_5_1_visual_0" type="mesh" mesh="right_hand_5_1" material="friday_black_material"/>
                                   <geom class="right_hand" name="right_hand_5_1_collision_0" type="mesh" mesh="right_hand_5_1"/>
                                   <body name="right_hand_5_2" pos="-0.0 -0.0095 -0.0" quat="0.7071054825112363 0.0 0.7071080798594735 0.0">
-                                    <joint type="hinge" name="right_hand_5_2" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                    <joint type="hinge" name="right_hand_5_2" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                     <inertial pos="-0.00374375 -0.0199172 -0.000614941" mass="0.0179165" fullinertia="2.97897e-06 7.54025e-07 2.88087e-06 7.95e-08 -4.6863e-08 -1.9791e-08"/>
                                     <geom class="visual" name="right_hand_5_2_visual_0" type="mesh" mesh="right_hand_5_2" material="friday_black_material"/>
                                     <geom class="visual" name="right_hand_5_2_visual_1" pos="-0.0055 -0.0 -0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
@@ -492,7 +492,7 @@
                                     <geom class="right_hand" name="right_hand_5_2_collision_0" type="mesh" mesh="right_hand_5_2"/>
                                     <geom class="right_hand" name="right_hand_5_2_tactile" pos="-0.0055 -0.0 -0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_mcp"/>
                                     <body name="right_hand_5_3" pos="-0.0 -0.044 0.0">
-                                      <joint type="hinge" name="right_hand_5_3" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                      <joint type="hinge" name="right_hand_5_3" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                       <inertial pos="-0.00361708 -0.0126321 -0.000444273" mass="0.0116171" fullinertia="1.17373e-06 4.48403e-07 1.08939e-06 5.4671e-08 -2.6883e-08 -1.3796e-08"/>
                                       <geom class="visual" name="right_hand_5_3_visual_0" type="mesh" mesh="right_hand_5_3" material="friday_black_material"/>
                                       <geom class="visual" name="right_hand_5_3_visual_1" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip" material="tactile_material"/>
@@ -503,7 +503,7 @@
                                       <geom class="right_hand" name="right_hand_5_3_collision_0" type="mesh" mesh="right_hand_5_3"/>
                                       <geom class="right_hand" name="right_hand_5_3_tactile" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip"/>
                                       <body name="right_hand_5_4" pos="0.0 -0.03 -0.0">
-                                        <joint type="hinge" name="right_hand_5_4" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                        <joint type="hinge" name="right_hand_5_4" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                         <inertial pos="-0.00153406 -0.0149176 5.9432e-05" mass="0.00847547" fullinertia="9.92205e-07 2.67276e-07 9.04521e-07 -8.68e-09 3.792e-09 7.11e-09"/>
                                         <geom class="visual" name="right_hand_5_4_visual_0" type="mesh" mesh="right_hand_5_4" material="friday_black_material"/>
                                         <geom class="visual" name="right_hand_5_4_visual_1" pos="-0.0055 0.074 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_dip" material="tactile_material"/>
@@ -608,7 +608,7 @@
                                     <geom class="left_hand" name="left_hand_1_2_collision_0" type="mesh" mesh="left_hand_1_2"/>
                                     <geom class="left_hand" name="left_hand_1_2_tactile" pos="0.0360833 0.011769 -0.0817823" quat="0.049994970878696254 0.2503929808600457 0.9316236035918929 0.2586142286366215" type="mesh" mesh="tactile_thumb_mcp"/>
                                     <body name="left_hand_1_3" pos="0.0258606 0.0423811 -0.0164563" quat="0.23625477062642614 -0.3619178427172689 0.09535284641265303 0.8967201308993448">
-                                      <joint type="hinge" name="left_hand_1_3" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                      <joint type="hinge" name="left_hand_1_3" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                       <inertial pos="0.00339005 -0.0184046 0.000889411" mass="0.0197158" fullinertia="2.94385e-06 1.27344e-06 3.04139e-06 8.67246e-07 5.4642e-08 5.198e-08"/>
                                       <geom class="visual" name="left_hand_1_3_visual_0" type="mesh" mesh="left_hand_1_3" material="friday_black_material"/>
                                       <geom class="visual" name="left_hand_1_3_visual_1" pos="0.0286393 0.0218276 -0.0636744" quat="0.2419273794173089 0.8879965320109036 -0.10279624487830652 0.37731450311881853" type="mesh" mesh="tactile_thumb_pip" material="tactile_material"/>
@@ -621,7 +621,7 @@
                                       <geom class="left_hand" name="left_hand_1_3_collision_0" type="mesh" mesh="left_hand_1_3"/>
                                       <geom class="left_hand" name="left_hand_1_3_tactile" pos="0.0286393 0.0218276 -0.0636744" quat="0.2419273794173089 0.8879965320109036 -0.10279624487830652 0.37731450311881853" type="mesh" mesh="tactile_thumb_pip"/>
                                       <body name="left_hand_1_4" pos="0.0150981 -0.0370412 -0.0">
-                                        <joint type="hinge" name="left_hand_1_4" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                        <joint type="hinge" name="left_hand_1_4" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                         <inertial pos="0.00185567 -0.0141628 0.000936473" mass="0.0140308" fullinertia="1.44016e-06 7.28668e-07 1.46993e-06 4.09312e-07 4.9644e-08 -1.2319e-08"/>
                                         <geom class="visual" name="left_hand_1_4_visual_0" type="mesh" mesh="left_hand_1_4" material="friday_black_material"/>
                                         <geom class="visual" name="left_hand_1_4_visual_1" pos="0.0135412 0.0588687 -0.0636744" quat="0.2419273794173089 0.8879965320109036 -0.10279624487830652 0.37731450311881853" type="mesh" mesh="tactile_thumb_dip" material="tactile_material"/>
@@ -643,7 +643,7 @@
                                   <geom class="visual" name="left_hand_2_1_visual_0" type="mesh" mesh="left_hand_2_1" material="friday_black_material"/>
                                   <geom class="left_hand" name="left_hand_2_1_collision_0" type="mesh" mesh="left_hand_2_1"/>
                                   <body name="left_hand_2_2" pos="-0.0 0.0095 -0.0" quat="9.381839456086127e-07 0.7071054825106139 -9.381873917569988e-07 0.7071080798588512">
-                                    <joint type="hinge" name="left_hand_2_2" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                    <joint type="hinge" name="left_hand_2_2" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                     <inertial pos="-0.00374375 -0.0199104 -0.000614941" mass="0.0179165" fullinertia="2.97764e-06 7.54025e-07 2.87953e-06 7.9836e-08 -4.6863e-08 -1.9623e-08"/>
                                     <geom class="visual" name="left_hand_2_2_visual_0" type="mesh" mesh="left_hand_2_2" material="friday_black_material"/>
                                     <geom class="visual" name="left_hand_2_2_visual_1" pos="-0.0055 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
@@ -656,7 +656,7 @@
                                     <geom class="left_hand" name="left_hand_2_2_collision_0" type="mesh" mesh="left_hand_2_2"/>
                                     <geom class="left_hand" name="left_hand_2_2_tactile" pos="-0.0055 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_mcp"/>
                                     <body name="left_hand_2_3" pos="0.0 -0.044 -0.0">
-                                      <joint type="hinge" name="left_hand_2_3" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                      <joint type="hinge" name="left_hand_2_3" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                       <inertial pos="-0.00369959 -0.0126321 -0.000444273" mass="0.0116171" fullinertia="1.17373e-06 4.54002e-07 1.09499e-06 5.1616e-08 -2.8375e-08 -1.3796e-08"/>
                                       <geom class="visual" name="left_hand_2_3_visual_0" type="mesh" mesh="left_hand_2_3" material="friday_black_material"/>
                                       <geom class="visual" name="left_hand_2_3_visual_1" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 -0.0" type="mesh" mesh="tactile_pip" material="tactile_material"/>
@@ -667,7 +667,7 @@
                                       <geom class="left_hand" name="left_hand_2_3_collision_0" type="mesh" mesh="left_hand_2_3"/>
                                       <geom class="left_hand" name="left_hand_2_3_tactile" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 -0.0" type="mesh" mesh="tactile_pip"/>
                                       <body name="left_hand_2_4" pos="0.0 -0.03 -0.0">
-                                        <joint type="hinge" name="left_hand_2_4" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                        <joint type="hinge" name="left_hand_2_4" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                         <inertial pos="-0.00153406 -0.0149176 5.9432e-05" mass="0.00847547" fullinertia="9.92205e-07 2.67276e-07 9.04521e-07 -8.68e-09 3.792e-09 7.11e-09"/>
                                         <geom class="visual" name="left_hand_2_4_visual_0" type="mesh" mesh="left_hand_2_4" material="friday_black_material"/>
                                         <geom class="visual" name="left_hand_2_4_visual_1" pos="-0.0055 0.074 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 -0.0" type="mesh" mesh="tactile_dip" material="tactile_material"/>
@@ -689,7 +689,7 @@
                                   <geom class="visual" name="left_hand_3_1_visual_0" type="mesh" mesh="left_hand_3_1" material="friday_black_material"/>
                                   <geom class="left_hand" name="left_hand_3_1_collision_0" type="mesh" mesh="left_hand_3_1"/>
                                   <body name="left_hand_3_2" pos="0.0 0.0095 -0.0" quat="9.381839456086127e-07 0.7071054825106139 -9.381873917569988e-07 0.7071080798588512">
-                                    <joint type="hinge" name="left_hand_3_2" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                    <joint type="hinge" name="left_hand_3_2" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                     <inertial pos="-0.00374375 -0.0199104 -0.000614941" mass="0.0179165" fullinertia="2.97764e-06 7.54025e-07 2.87953e-06 7.9836e-08 -4.6863e-08 -1.9623e-08"/>
                                     <geom class="visual" name="left_hand_3_2_visual_0" type="mesh" mesh="left_hand_3_2" material="friday_black_material"/>
                                     <geom class="visual" name="left_hand_3_2_visual_1" pos="-0.0055 -0.0 0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
@@ -702,7 +702,7 @@
                                     <geom class="left_hand" name="left_hand_3_2_collision_0" type="mesh" mesh="left_hand_3_2"/>
                                     <geom class="left_hand" name="left_hand_3_2_tactile" pos="-0.0055 -0.0 0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_mcp"/>
                                     <body name="left_hand_3_3" pos="0.0 -0.044 0.0">
-                                      <joint type="hinge" name="left_hand_3_3" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                      <joint type="hinge" name="left_hand_3_3" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                       <inertial pos="-0.00361708 -0.0126321 -0.000444273" mass="0.0116171" fullinertia="1.17373e-06 4.48403e-07 1.08939e-06 5.4671e-08 -2.6883e-08 -1.3796e-08"/>
                                       <geom class="visual" name="left_hand_3_3_visual_0" type="mesh" mesh="left_hand_3_3" material="friday_black_material"/>
                                       <geom class="visual" name="left_hand_3_3_visual_1" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip" material="tactile_material"/>
@@ -713,7 +713,7 @@
                                       <geom class="left_hand" name="left_hand_3_3_collision_0" type="mesh" mesh="left_hand_3_3"/>
                                       <geom class="left_hand" name="left_hand_3_3_tactile" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip"/>
                                       <body name="left_hand_3_4" pos="0.0 -0.03 -0.0">
-                                        <joint type="hinge" name="left_hand_3_4" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                        <joint type="hinge" name="left_hand_3_4" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                         <inertial pos="-0.00153406 -0.0149176 5.9432e-05" mass="0.00847547" fullinertia="9.92205e-07 2.67276e-07 9.04521e-07 -8.68e-09 3.792e-09 7.11e-09"/>
                                         <geom class="visual" name="left_hand_3_4_visual_0" type="mesh" mesh="left_hand_3_4" material="friday_black_material"/>
                                         <geom class="visual" name="left_hand_3_4_visual_1" pos="-0.0055 0.074 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_dip" material="tactile_material"/>
@@ -735,7 +735,7 @@
                                   <geom class="visual" name="left_hand_4_1_visual_0" type="mesh" mesh="left_hand_4_1" material="friday_black_material"/>
                                   <geom class="left_hand" name="left_hand_4_1_collision_0" type="mesh" mesh="left_hand_4_1"/>
                                   <body name="left_hand_4_2" pos="-0.0 0.0095 0.0" quat="9.381839456086127e-07 -0.7071054825106139 -9.381873917569988e-07 -0.7071080798588512">
-                                    <joint type="hinge" name="left_hand_4_2" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                    <joint type="hinge" name="left_hand_4_2" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                     <inertial pos="-0.00374375 -0.0199104 -0.000614941" mass="0.0179165" fullinertia="2.97764e-06 7.54025e-07 2.87953e-06 7.9836e-08 -4.6863e-08 -1.9623e-08"/>
                                     <geom class="visual" name="left_hand_4_2_visual_0" type="mesh" mesh="left_hand_4_2" material="friday_black_material"/>
                                     <geom class="visual" name="left_hand_4_2_visual_1" pos="-0.0055 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
@@ -748,7 +748,7 @@
                                     <geom class="left_hand" name="left_hand_4_2_collision_0" type="mesh" mesh="left_hand_4_2"/>
                                     <geom class="left_hand" name="left_hand_4_2_tactile" pos="-0.0055 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_mcp"/>
                                     <body name="left_hand_4_3" pos="-0.0 -0.044 -0.0">
-                                      <joint type="hinge" name="left_hand_4_3" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                      <joint type="hinge" name="left_hand_4_3" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                       <inertial pos="-0.00359227 -0.0126321 -0.000444273" mass="0.0116171" fullinertia="1.17373e-06 4.46866e-07 1.08785e-06 5.5589e-08 -2.6435e-08 -1.3796e-08"/>
                                       <geom class="visual" name="left_hand_4_3_visual_0" type="mesh" mesh="left_hand_4_3" material="friday_black_material"/>
                                       <geom class="visual" name="left_hand_4_3_visual_1" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip" material="tactile_material"/>
@@ -759,7 +759,7 @@
                                       <geom class="left_hand" name="left_hand_4_3_collision_0" type="mesh" mesh="left_hand_4_3"/>
                                       <geom class="left_hand" name="left_hand_4_3_tactile" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_pip"/>
                                       <body name="left_hand_4_4" pos="0.0 -0.03 0.0">
-                                        <joint type="hinge" name="left_hand_4_4" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                        <joint type="hinge" name="left_hand_4_4" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                         <inertial pos="-0.00153406 -0.0149176 5.9432e-05" mass="0.00847547" fullinertia="9.92205e-07 2.67276e-07 9.04521e-07 -8.68e-09 3.792e-09 7.11e-09"/>
                                         <geom class="visual" name="left_hand_4_4_visual_0" type="mesh" mesh="left_hand_4_4" material="friday_black_material"/>
                                         <geom class="visual" name="left_hand_4_4_visual_1" pos="-0.0055 0.074 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_dip" material="tactile_material"/>
@@ -781,7 +781,7 @@
                                   <geom class="visual" name="left_hand_5_1_visual_0" type="mesh" mesh="left_hand_5_1" material="friday_black_material"/>
                                   <geom class="left_hand" name="left_hand_5_1_collision_0" type="mesh" mesh="left_hand_5_1"/>
                                   <body name="left_hand_5_2" pos="-0.0 0.0095 -0.0" quat="9.381839456086127e-07 -0.7071054825106139 -9.381873917569988e-07 -0.7071080798588512">
-                                    <joint type="hinge" name="left_hand_5_2" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                    <joint type="hinge" name="left_hand_5_2" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                     <inertial pos="-0.00374375 -0.0199172 -0.000614941" mass="0.0179165" fullinertia="2.97897e-06 7.54025e-07 2.88087e-06 7.95e-08 -4.6863e-08 -1.9791e-08"/>
                                     <geom class="visual" name="left_hand_5_2_visual_0" type="mesh" mesh="left_hand_5_2" material="friday_black_material"/>
                                     <geom class="visual" name="left_hand_5_2_visual_1" pos="-0.0055 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_mcp" material="tactile_material"/>
@@ -794,7 +794,7 @@
                                     <geom class="left_hand" name="left_hand_5_2_collision_0" type="mesh" mesh="left_hand_5_2"/>
                                     <geom class="left_hand" name="left_hand_5_2_tactile" pos="-0.0055 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_mcp"/>
                                     <body name="left_hand_5_3" pos="0.0 -0.044 -0.0">
-                                      <joint type="hinge" name="left_hand_5_3" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                      <joint type="hinge" name="left_hand_5_3" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                       <inertial pos="-0.00361708 -0.0126321 -0.000444273" mass="0.0116171" fullinertia="1.17373e-06 4.48403e-07 1.08939e-06 5.4671e-08 -2.6883e-08 -1.3796e-08"/>
                                       <geom class="visual" name="left_hand_5_3_visual_0" type="mesh" mesh="left_hand_5_3" material="friday_black_material"/>
                                       <geom class="visual" name="left_hand_5_3_visual_1" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_pip" material="tactile_material"/>
@@ -805,7 +805,7 @@
                                       <geom class="left_hand" name="left_hand_5_3_collision_0" type="mesh" mesh="left_hand_5_3"/>
                                       <geom class="left_hand" name="left_hand_5_3_tactile" pos="-0.0055 0.044 0.0" quat="0.7071054825112363 0.7071080798594735 -0.0 0.0" type="mesh" mesh="tactile_pip"/>
                                       <body name="left_hand_5_4" pos="0.0 -0.03 0.0">
-                                        <joint type="hinge" name="left_hand_5_4" axis="0.0 0.0 1.0" range="0.0 1.5708" actuatorfrcrange="-1.0 1.0"/>
+                                        <joint type="hinge" name="left_hand_5_4" axis="0.0 0.0 1.0" range="0.0 1.5708" damping="0.001" stiffness="0.1" springref="0.0" actuatorfrcrange="-1.0 1.0"/>
                                         <inertial pos="-0.00153406 -0.0149176 5.9432e-05" mass="0.00847547" fullinertia="9.92205e-07 2.67276e-07 9.04521e-07 -8.68e-09 3.792e-09 7.11e-09"/>
                                         <geom class="visual" name="left_hand_5_4_visual_0" type="mesh" mesh="left_hand_5_4" material="friday_black_material"/>
                                         <geom class="visual" name="left_hand_5_4_visual_1" pos="-0.0055 0.074 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0" type="mesh" mesh="tactile_dip" material="tactile_material"/>
@@ -941,6 +941,17 @@
       </body>
     </body>
   </worldbody>
+  <contact>
+    <exclude body1="right_arm_3" body2="right_arm_5"/>
+    <exclude body1="left_arm_3" body2="left_arm_5"/>
+    <exclude body1="right_arm_5" body2="right_arm_7"/>
+    <exclude body1="left_arm_5" body2="left_arm_7"/>
+    <exclude body1="right_arm_2" body2="waist_5"/>
+    <exclude body1="left_arm_2" body2="waist_5"/>
+    <exclude body1="head_3" body2="waist_5"/>
+    <exclude body1="right_arm_7" body2="right_hand_1_2"/>
+    <exclude body1="left_arm_7" body2="left_hand_1_2"/>
+  </contact>
   <actuator>
     <position joint="waist_1" name="waist_1_pos_actuator" kp="5209.907" kv="651.238"/>
     <position joint="waist_2" name="waist_2_pos_actuator" kp="13034.0" kv="1629.25"/>
