@@ -890,6 +890,7 @@
     <parent link="right_hand_1_2"/>
     <child link="right_hand_1_3"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_1_4">
@@ -972,6 +973,7 @@
     <parent link="right_hand_1_3"/>
     <child link="right_hand_1_4"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="-0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_2_1">
@@ -1081,6 +1083,7 @@
     <parent link="right_hand_2_1"/>
     <child link="right_hand_2_2"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_2_3">
@@ -1149,6 +1152,7 @@
     <parent link="right_hand_2_2"/>
     <child link="right_hand_2_3"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_2_4">
@@ -1231,6 +1235,7 @@
     <parent link="right_hand_2_3"/>
     <child link="right_hand_2_4"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_3_1">
@@ -1340,6 +1345,7 @@
     <parent link="right_hand_3_1"/>
     <child link="right_hand_3_2"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_3_3">
@@ -1408,6 +1414,7 @@
     <parent link="right_hand_3_2"/>
     <child link="right_hand_3_3"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_3_4">
@@ -1490,6 +1497,7 @@
     <parent link="right_hand_3_3"/>
     <child link="right_hand_3_4"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_4_1">
@@ -1599,6 +1607,7 @@
     <parent link="right_hand_4_1"/>
     <child link="right_hand_4_2"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_4_3">
@@ -1667,6 +1676,7 @@
     <parent link="right_hand_4_2"/>
     <child link="right_hand_4_3"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_4_4">
@@ -1749,6 +1759,7 @@
     <parent link="right_hand_4_3"/>
     <child link="right_hand_4_4"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_5_1">
@@ -1858,6 +1869,7 @@
     <parent link="right_hand_5_1"/>
     <child link="right_hand_5_2"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_5_3">
@@ -1926,6 +1938,7 @@
     <parent link="right_hand_5_2"/>
     <child link="right_hand_5_3"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_hand_5_4">
@@ -2008,6 +2021,7 @@
     <parent link="right_hand_5_3"/>
     <child link="right_hand_5_4"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="right_wrist_cam">
@@ -2581,6 +2595,7 @@
     <parent link="left_hand_1_2"/>
     <child link="left_hand_1_3"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_1_4">
@@ -2663,6 +2678,7 @@
     <parent link="left_hand_1_3"/>
     <child link="left_hand_1_4"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_2_1">
@@ -2772,6 +2788,7 @@
     <parent link="left_hand_2_1"/>
     <child link="left_hand_2_2"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_2_3">
@@ -2840,6 +2857,7 @@
     <parent link="left_hand_2_2"/>
     <child link="left_hand_2_3"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_2_4">
@@ -2922,6 +2940,7 @@
     <parent link="left_hand_2_3"/>
     <child link="left_hand_2_4"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_3_1">
@@ -3031,6 +3050,7 @@
     <parent link="left_hand_3_1"/>
     <child link="left_hand_3_2"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_3_3">
@@ -3099,6 +3119,7 @@
     <parent link="left_hand_3_2"/>
     <child link="left_hand_3_3"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_3_4">
@@ -3181,6 +3202,7 @@
     <parent link="left_hand_3_3"/>
     <child link="left_hand_3_4"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_4_1">
@@ -3290,6 +3312,7 @@
     <parent link="left_hand_4_1"/>
     <child link="left_hand_4_2"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_4_3">
@@ -3358,6 +3381,7 @@
     <parent link="left_hand_4_2"/>
     <child link="left_hand_4_3"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_4_4">
@@ -3440,6 +3464,7 @@
     <parent link="left_hand_4_3"/>
     <child link="left_hand_4_4"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_5_1">
@@ -3549,6 +3574,7 @@
     <parent link="left_hand_5_1"/>
     <child link="left_hand_5_2"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_5_3">
@@ -3617,6 +3643,7 @@
     <parent link="left_hand_5_2"/>
     <child link="left_hand_5_3"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_hand_5_4">
@@ -3699,6 +3726,7 @@
     <parent link="left_hand_5_3"/>
     <child link="left_hand_5_4"/>
     <axis xyz="0.0 0.0 1.0"/>
+    <dynamics damping="0.001"/>
     <limit effort="1.0" velocity="6.28318531" lower="0.0" upper="1.5708"/>
   </joint>
   <link name="left_wrist_cam">
