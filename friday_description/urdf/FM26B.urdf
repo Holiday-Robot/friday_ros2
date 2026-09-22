@@ -195,7 +195,7 @@
     <parent link="base_link"/>
     <child link="waist_1"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit effort="530.4" velocity="2.93" lower="-5.4978" upper="5.4978"/>
+    <limit effort="530.4" velocity="2.932153" lower="-5.4978" upper="5.4978"/>
   </joint>
   <link name="waist_2">
     <inertial>
@@ -222,7 +222,7 @@
     <parent link="waist_1"/>
     <child link="waist_2"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="837.2" velocity="1.86" lower="-1.5708" upper="0.174533"/>
+    <limit effort="837.2" velocity="1.857637" lower="-1.5708" upper="0.174533"/>
   </joint>
   <link name="waist_3">
     <inertial>
@@ -249,7 +249,7 @@
     <parent link="waist_2"/>
     <child link="waist_3"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="837.2" velocity="1.86" lower="-0.174533" upper="2.618"/>
+    <limit effort="837.2" velocity="1.857637" lower="-0.174533" upper="2.618"/>
   </joint>
   <link name="waist_4">
     <inertial>
@@ -276,7 +276,7 @@
     <parent link="waist_3"/>
     <child link="waist_4"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="837.2" velocity="1.86" lower="-1.8326" upper="1.0472"/>
+    <limit effort="837.2" velocity="1.857637" lower="-1.8326" upper="1.0472"/>
   </joint>
   <link name="waist_5">
     <inertial>
@@ -336,7 +336,7 @@
     <parent link="waist_4"/>
     <child link="waist_5"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit effort="450.8" velocity="3.45" lower="-5.4978" upper="5.4978"/>
+    <limit effort="450.8" velocity="3.449592" lower="-5.4978" upper="5.4978"/>
   </joint>
   <link name="right_arm_1">
     <inertial>
@@ -363,7 +363,7 @@
     <parent link="waist_5"/>
     <child link="right_arm_1"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="130.0" velocity="11.96" lower="-2.268" upper="0.7853"/>
+    <limit effort="130.0" velocity="11.963184" lower="-2.268" upper="0.7853"/>
   </joint>
   <link name="right_arm_2">
     <inertial>
@@ -390,7 +390,7 @@
     <parent link="right_arm_1"/>
     <child link="right_arm_2"/>
     <axis xyz="1.0 0.0 0.0"/>
-    <limit effort="130.0" velocity="11.96" lower="-2.97" upper="0.1"/>
+    <limit effort="130.0" velocity="11.963184" lower="-2.97" upper="0.1"/>
   </joint>
   <link name="right_arm_3">
     <inertial>
@@ -424,7 +424,7 @@
     <parent link="right_arm_2"/>
     <child link="right_arm_3"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit effort="68.3" velocity="11.47" lower="-1.38" upper="1.38"/>
+    <limit effort="68.3" velocity="11.470584" lower="-1.38" upper="1.38"/>
   </joint>
   <link name="right_arm_4">
     <inertial>
@@ -451,7 +451,7 @@
     <parent link="right_arm_3"/>
     <child link="right_arm_4"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="71.7" velocity="3.95" lower="-2.02" upper="0.0"/>
+    <limit effort="71.7" velocity="8.701034" lower="-2.02" upper="0.0"/>
   </joint>
   <link name="right_arm_5">
     <inertial>
@@ -478,7 +478,7 @@
     <parent link="right_arm_4"/>
     <child link="right_arm_5"/>
     <axis xyz="-0.0 -0.0 1.0"/>
-    <limit effort="12.5" velocity="30.93" lower="-1.5708" upper="1.5708"/>
+    <limit effort="12.5" velocity="35.185837" lower="-1.5708" upper="1.5708"/>
   </joint>
   <link name="right_arm_6">
     <inertial>
@@ -505,13 +505,13 @@
     <parent link="right_arm_5"/>
     <child link="right_arm_6"/>
     <axis xyz="1.0 0.0 0.0"/>
-    <limit effort="12.5" velocity="35.19" lower="-0.785398" upper="0.785398"/>
+    <limit effort="12.5" velocity="35.185837" lower="-0.785398" upper="0.785398"/>
   </joint>
   <link name="right_arm_7">
     <inertial>
-      <origin xyz="0.00376313633081 0.0368524786573 -0.0863429406532" rpy="0.0 0.0 0.0"/>
-      <mass value="0.300897291735"/>
-      <inertia ixx="0.000667848904995" ixy="-7.83541319612e-06" ixz="5.06877336341e-05" iyy="0.000644857637451" iyz="0.00014517485285" izz="0.000213478794166"/>
+      <origin xyz="0.003567 0.04126 -0.116199" rpy="0.0 0.0 0.0"/>
+      <mass value="0.362874"/>
+      <inertia ixx="0.000954308" ixy="-5.38051e-06" ixz="5.93417e-05" iyy="0.000921014" iyz="0.00017949" izz="0.000273958"/>
     </inertial>
     <visual name="right_arm_7_visual_0">
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -521,161 +521,161 @@
       <material name="friday_black_material"/>
     </visual>
     <visual name="right_arm_7_visual_1">
-      <origin xyz="-0.0115464 0.05875 -0.145422" rpy="-1.5707999999999998 1e-12 -9.999999999999998e-13"/>
+      <origin xyz="-0.0115464 0.05875 -0.175422" rpy="-1.5707999999999998 1e-12 -9.999999999999998e-13"/>
       <geometry>
         <mesh filename="package://friday_description/meshes/FM26B/visual/right_wrist_tactile.stl"/>
       </geometry>
       <material name="tactile_material"/>
     </visual>
     <visual name="right_arm_7_visual_2">
-      <origin xyz="-0.020930456 0.06282987771 -0.08998798501" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.020930456 0.06282987771 -0.11998798501" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_3">
-      <origin xyz="-0.009972456 0.06282988123 -0.09094698501" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.009972456 0.06282988123 -0.12094698501" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_4">
-      <origin xyz="-0.021889456 0.06282991796 -0.100945985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.021889456 0.06282991796 -0.130945985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_5">
-      <origin xyz="-0.010931456 0.06282992149 -0.101904985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.010931456 0.06282992149 -0.131904985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_6">
-      <origin xyz="-0.022848456 0.06282995821 -0.111903985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.022848456 0.06282995821 -0.141903985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_7">
-      <origin xyz="-0.011889456 0.06282996174 -0.112862985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.011889456 0.06282996174 -0.142862985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_8">
-      <origin xyz="-0.000931456 0.06282996526 -0.113821985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.000931456 0.06282996526 -0.143821985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_9">
-      <origin xyz="0.010026544 0.06282996878 -0.114780985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="0.010026544 0.06282996878 -0.144780985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_10">
-      <origin xyz="-0.023806456 0.06282999847 -0.122862985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.023806456 0.06282999847 -0.152862985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_11">
-      <origin xyz="-0.012832456 0.06283000196 -0.123813985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.012832456 0.06283000196 -0.153813985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_12">
-      <origin xyz="-0.001890456 0.06283000551 -0.124779985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.001890456 0.06283000551 -0.154779985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_13">
-      <origin xyz="0.009067544 0.06283000903 -0.125738985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="0.009067544 0.06283000903 -0.155738985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_14">
-      <origin xyz="0.020025544 0.06283001255 -0.126696985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="0.020025544 0.06283001255 -0.156696985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_15">
-      <origin xyz="0.031009544 0.06283001616 -0.127679985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="0.031009544 0.06283001616 -0.157679985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_16">
-      <origin xyz="0.041942544 0.0628300196 -0.128614985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="0.041942544 0.0628300196 -0.158614985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_17">
-      <origin xyz="-0.024765456 0.06283003872 -0.133820985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.024765456 0.06283003872 -0.163820985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_18">
-      <origin xyz="-0.013807456 0.06283004224 -0.134778985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.013807456 0.06283004224 -0.164778985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_19">
-      <origin xyz="-0.002849456 0.06283004576 -0.135737985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="-0.002849456 0.06283004576 -0.165737985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_20">
-      <origin xyz="0.008108544 0.06283004928 -0.136696985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="0.008108544 0.06283004928 -0.166696985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_21">
-      <origin xyz="0.019067544 0.06283005281 -0.137655985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="0.019067544 0.06283005281 -0.167655985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_22">
-      <origin xyz="0.030026544 0.06283005632 -0.138613985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="0.030026544 0.06283005632 -0.168613985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="right_arm_7_visual_23">
-      <origin xyz="0.040983544 0.06283005985 -0.139572985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
+      <origin xyz="0.040983544 0.06283005985 -0.169572985" rpy="1.5708000001146263 1.000000000078024e-12 -1.0000000000048213e-12"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -688,7 +688,7 @@
       </geometry>
     </collision>
     <collision name="right_arm_7_tactile">
-      <origin xyz="-0.0115464 0.05875 -0.145422" rpy="-1.5707999999999998 1e-12 -9.999999999999998e-13"/>
+      <origin xyz="-0.0115464 0.05875 -0.175422" rpy="-1.5707999999999998 1e-12 -9.999999999999998e-13"/>
       <geometry>
         <mesh filename="package://friday_description/meshes/FM26B/visual/right_wrist_tactile.stl"/>
       </geometry>
@@ -699,7 +699,7 @@
     <parent link="right_arm_6"/>
     <child link="right_arm_7"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="12.5" velocity="35.19" lower="-0.7155" upper="0.7155"/>
+    <limit effort="12.5" velocity="35.185837" lower="-0.7155" upper="0.7155"/>
   </joint>
   <link name="right_hand_1_1">
     <inertial>
@@ -722,7 +722,7 @@
     </collision>
   </link>
   <joint name="right_hand_1_1" type="revolute">
-    <origin xyz="0.0263009 0.05775 -0.0944413" rpy="-0.523599 4.0000225354219765e-12 1.5708"/>
+    <origin xyz="0.0263009 0.05775 -0.1244413" rpy="-0.523599 4.0000225354219765e-12 1.5708"/>
     <parent link="right_arm_7"/>
     <child link="right_hand_1_1"/>
     <axis xyz="-0.0 -0.0 -1.0"/>
@@ -997,7 +997,7 @@
     </collision>
   </link>
   <joint name="right_hand_2_1" type="revolute">
-    <origin xyz="0.0392 0.05375 -0.151" rpy="1.5707999999999998 -0.0349066 -1.000000715683979e-12"/>
+    <origin xyz="0.0392 0.05375 -0.181" rpy="1.5707999999999998 -0.0349066 -1.000000715683979e-12"/>
     <parent link="right_arm_7"/>
     <child link="right_hand_2_1"/>
     <axis xyz="-0.0 -0.0 -1.0"/>
@@ -1259,7 +1259,7 @@
     </collision>
   </link>
   <joint name="right_hand_3_1" type="revolute">
-    <origin xyz="0.0182 0.05375 -0.1535" rpy="1.5707999999999998 9.999999999999998e-13 -1e-12"/>
+    <origin xyz="0.0182 0.05375 -0.1835" rpy="1.5707999999999998 9.999999999999998e-13 -1e-12"/>
     <parent link="right_arm_7"/>
     <child link="right_hand_3_1"/>
     <axis xyz="-0.0 -0.0 -1.0"/>
@@ -1521,7 +1521,7 @@
     </collision>
   </link>
   <joint name="right_hand_4_1" type="revolute">
-    <origin xyz="-0.0028 0.05375 -0.1495" rpy="1.5708 0.0349066 -9.99993772560508e-13"/>
+    <origin xyz="-0.0028 0.05375 -0.1795" rpy="1.5708 0.0349066 -9.99993772560508e-13"/>
     <parent link="right_arm_7"/>
     <child link="right_hand_4_1"/>
     <axis xyz="-0.0 -0.0 -1.0"/>
@@ -1783,7 +1783,7 @@
     </collision>
   </link>
   <joint name="right_hand_5_1" type="revolute">
-    <origin xyz="-0.0238 0.05375 -0.1455" rpy="1.5707999999999998 0.0698132 -1.000006048656765e-12"/>
+    <origin xyz="-0.0238 0.05375 -0.1755" rpy="1.5707999999999998 0.0698132 -1.000006048656765e-12"/>
     <parent link="right_arm_7"/>
     <child link="right_hand_5_1"/>
     <axis xyz="-0.0 -0.0 -1.0"/>
@@ -2039,7 +2039,7 @@
     </visual>
   </link>
   <joint name="right_wrist_cam" type="fixed">
-    <origin xyz="-0.00975 0.063081 -0.071184" rpy="2.3561945 3.308722450212111e-24 3.1415926071795868"/>
+    <origin xyz="-0.00975 0.063081 -0.101184" rpy="2.3561945 3.308722450212111e-24 3.1415926071795868"/>
     <parent link="right_arm_7"/>
     <child link="right_wrist_cam"/>
   </joint>
@@ -2068,7 +2068,7 @@
     <parent link="waist_5"/>
     <child link="left_arm_1"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="130.0" velocity="11.96" lower="-2.268" upper="0.7853"/>
+    <limit effort="130.0" velocity="11.963184" lower="-2.268" upper="0.7853"/>
   </joint>
   <link name="left_arm_2">
     <inertial>
@@ -2095,7 +2095,7 @@
     <parent link="left_arm_1"/>
     <child link="left_arm_2"/>
     <axis xyz="1.0 -0.0 -0.0"/>
-    <limit effort="130.0" velocity="11.96" lower="-0.1" upper="2.97"/>
+    <limit effort="130.0" velocity="11.963184" lower="-0.1" upper="2.97"/>
   </joint>
   <link name="left_arm_3">
     <inertial>
@@ -2129,7 +2129,7 @@
     <parent link="left_arm_2"/>
     <child link="left_arm_3"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit effort="68.3" velocity="11.47" lower="-1.38" upper="1.38"/>
+    <limit effort="68.3" velocity="11.470584" lower="-1.38" upper="1.38"/>
   </joint>
   <link name="left_arm_4">
     <inertial>
@@ -2156,7 +2156,7 @@
     <parent link="left_arm_3"/>
     <child link="left_arm_4"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="71.7" velocity="3.95" lower="-2.02" upper="0.0"/>
+    <limit effort="71.7" velocity="8.701034" lower="-2.02" upper="0.0"/>
   </joint>
   <link name="left_arm_5">
     <inertial>
@@ -2183,7 +2183,7 @@
     <parent link="left_arm_4"/>
     <child link="left_arm_5"/>
     <axis xyz="-0.0 -0.0 1.0"/>
-    <limit effort="12.5" velocity="30.93" lower="-1.5708" upper="1.5708"/>
+    <limit effort="12.5" velocity="35.185837" lower="-1.5708" upper="1.5708"/>
   </joint>
   <link name="left_arm_6">
     <inertial>
@@ -2210,13 +2210,13 @@
     <parent link="left_arm_5"/>
     <child link="left_arm_6"/>
     <axis xyz="1.0 0.0 0.0"/>
-    <limit effort="12.5" velocity="35.19" lower="-0.785398" upper="0.785398"/>
+    <limit effort="12.5" velocity="35.185837" lower="-0.785398" upper="0.785398"/>
   </joint>
   <link name="left_arm_7">
     <inertial>
-      <origin xyz="0.0039474667413 -0.0364810346967 -0.0865984168781" rpy="0.0 0.0 0.0"/>
-      <mass value="0.297000291735"/>
-      <inertia ixx="0.000663066260111" ixy="9.29396907433e-06" ixz="4.96871303791e-05" iyy="0.000642575329753" iyz="-0.000147369152882" izz="0.000209510383413"/>
+      <origin xyz="0.003568 -0.041265 -0.116205" rpy="0.0 0.0 0.0"/>
+      <mass value="0.362874"/>
+      <inertia ixx="0.000954481" ixy="5.27573e-06" ixz="5.93267e-05" iyy="0.000921187" iyz="-0.000179569" izz="0.000274085"/>
     </inertial>
     <visual name="left_arm_7_visual_0">
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -2226,161 +2226,161 @@
       <material name="friday_black_material"/>
     </visual>
     <visual name="left_arm_7_visual_1">
-      <origin xyz="0.148454 -0.05875 -0.145422" rpy="-1.5707999999999998 0.0 -3.14159"/>
+      <origin xyz="0.148454 -0.05875 -0.175422" rpy="-1.5707999999999998 0.0 -3.14159"/>
       <geometry>
         <mesh filename="package://friday_description/meshes/FM26B/visual/left_wrist_tactile.stl"/>
       </geometry>
       <material name="tactile_material"/>
     </visual>
     <visual name="left_arm_7_visual_2">
-      <origin xyz="-0.009972445174 -0.06282990666 -0.09094698501" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.009972445174 -0.06282990666 -0.12094698501" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_3">
-      <origin xyz="-0.02093044517 -0.06282993222 -0.08998798501" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.02093044517 -0.06282993222 -0.11998798501" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_4">
-      <origin xyz="-0.01093144517 -0.06282994946 -0.101904985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.01093144517 -0.06282994946 -0.131904985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_5">
-      <origin xyz="-0.02188944517 -0.06282997501 -0.100945985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.02188944517 -0.06282997501 -0.130945985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_6">
-      <origin xyz="0.01002655483 -0.06282994114 -0.114780985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="0.01002655483 -0.06282994114 -0.144780985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_7">
-      <origin xyz="-0.0009314451734 -0.06282996669 -0.113821985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.0009314451734 -0.06282996669 -0.143821985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_8">
-      <origin xyz="-0.01188944517 -0.06282999225 -0.112862985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.01188944517 -0.06282999225 -0.142862985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_9">
-      <origin xyz="-0.02284844517 -0.06283001781 -0.111903985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.02284844517 -0.06283001781 -0.141903985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_10">
-      <origin xyz="0.04194255483 -0.06282990726 -0.128614985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="0.04194255483 -0.06282990726 -0.158614985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_11">
-      <origin xyz="0.03100955483 -0.06282993284 -0.127679985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="0.03100955483 -0.06282993284 -0.157679985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_12">
-      <origin xyz="0.02002555483 -0.06282995838 -0.126696985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="0.02002555483 -0.06282995838 -0.156696985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_13">
-      <origin xyz="0.009067554827 -0.06282998393 -0.125738985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="0.009067554827 -0.06282998393 -0.155738985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_14">
-      <origin xyz="-0.001890445173 -0.06283000949 -0.124779985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.001890445173 -0.06283000949 -0.154779985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_15">
-      <origin xyz="-0.01283244517 -0.06283003498 -0.123813985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.01283244517 -0.06283003498 -0.153813985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_16">
-      <origin xyz="-0.02380644517 -0.0628300606 -0.122862985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.02380644517 -0.0628300606 -0.152862985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_17">
-      <origin xyz="0.04098355483 -0.06282995006 -0.139572985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="0.04098355483 -0.06282995006 -0.169572985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_18">
-      <origin xyz="0.03002655483 -0.06282997561 -0.138613985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="0.03002655483 -0.06282997561 -0.168613985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_19">
-      <origin xyz="0.01906755483 -0.06283000117 -0.137655985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="0.01906755483 -0.06283000117 -0.167655985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_20">
-      <origin xyz="0.008108554827 -0.06283002673 -0.136696985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="0.008108554827 -0.06283002673 -0.166696985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_21">
-      <origin xyz="-0.002849445173 -0.06283005229 -0.135737985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.002849445173 -0.06283005229 -0.165737985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_22">
-      <origin xyz="-0.01380744517 -0.06283007784 -0.134778985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.01380744517 -0.06283007784 -0.164778985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
       <material name="magnet_material"/>
     </visual>
     <visual name="left_arm_7_visual_23">
-      <origin xyz="-0.02476544517 -0.0628301034 -0.133820985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
+      <origin xyz="-0.02476544517 -0.0628301034 -0.163820985" rpy="1.5708000001163867 -2.413281570022227e-17 -3.14159"/>
       <geometry>
         <sphere radius="0.0015"/>
       </geometry>
@@ -2393,7 +2393,7 @@
       </geometry>
     </collision>
     <collision name="left_arm_7_tactile">
-      <origin xyz="0.148454 -0.05875 -0.145422" rpy="-1.5707999999999998 0.0 -3.14159"/>
+      <origin xyz="0.148454 -0.05875 -0.175422" rpy="-1.5707999999999998 0.0 -3.14159"/>
       <geometry>
         <mesh filename="package://friday_description/meshes/FM26B/visual/left_wrist_tactile.stl"/>
       </geometry>
@@ -2404,7 +2404,7 @@
     <parent link="left_arm_6"/>
     <child link="left_arm_7"/>
     <axis xyz="-0.0 1.0 -0.0"/>
-    <limit effort="12.5" velocity="35.19" lower="-0.7155" upper="0.7155"/>
+    <limit effort="12.5" velocity="35.185837" lower="-0.7155" upper="0.7155"/>
   </joint>
   <link name="left_hand_1_1">
     <inertial>
@@ -2427,7 +2427,7 @@
     </collision>
   </link>
   <joint name="left_hand_1_1" type="revolute">
-    <origin xyz="0.0263009 -0.05775 -0.0944413" rpy="-2.61799 0.0 -1.5707999999999998"/>
+    <origin xyz="0.0263009 -0.05775 -0.1244413" rpy="-2.61799 0.0 -1.5707999999999998"/>
     <parent link="left_arm_7"/>
     <child link="left_hand_1_1"/>
     <axis xyz="0.0 0.0 1.0"/>
@@ -2702,7 +2702,7 @@
     </collision>
   </link>
   <joint name="left_hand_2_1" type="revolute">
-    <origin xyz="0.0392 -0.05375 -0.151" rpy="-1.5707999999999998 0.0349066 -3.14159"/>
+    <origin xyz="0.0392 -0.05375 -0.181" rpy="-1.5707999999999998 0.0349066 -3.14159"/>
     <parent link="left_arm_7"/>
     <child link="left_hand_2_1"/>
     <axis xyz="0.0 0.0 1.0"/>
@@ -2964,7 +2964,7 @@
     </collision>
   </link>
   <joint name="left_hand_3_1" type="revolute">
-    <origin xyz="0.0182 -0.05375 -0.1535" rpy="-1.5707999999999998 0.0 -3.14159"/>
+    <origin xyz="0.0182 -0.05375 -0.1835" rpy="-1.5707999999999998 0.0 -3.14159"/>
     <parent link="left_arm_7"/>
     <child link="left_hand_3_1"/>
     <axis xyz="0.0 0.0 1.0"/>
@@ -3226,7 +3226,7 @@
     </collision>
   </link>
   <joint name="left_hand_4_1" type="revolute">
-    <origin xyz="-0.0028 -0.05375 -0.1495" rpy="-1.5708 -0.0349066 -3.14159"/>
+    <origin xyz="-0.0028 -0.05375 -0.1795" rpy="-1.5708 -0.0349066 -3.14159"/>
     <parent link="left_arm_7"/>
     <child link="left_hand_4_1"/>
     <axis xyz="0.0 0.0 1.0"/>
@@ -3488,7 +3488,7 @@
     </collision>
   </link>
   <joint name="left_hand_5_1" type="revolute">
-    <origin xyz="-0.0238 -0.05375 -0.1455" rpy="-1.5707999999999998 -0.06981319999999998 -3.14159"/>
+    <origin xyz="-0.0238 -0.05375 -0.1755" rpy="-1.5707999999999998 -0.06981319999999998 -3.14159"/>
     <parent link="left_arm_7"/>
     <child link="left_hand_5_1"/>
     <axis xyz="0.0 0.0 1.0"/>
@@ -3744,7 +3744,7 @@
     </visual>
   </link>
   <joint name="left_wrist_cam" type="fixed">
-    <origin xyz="-0.00975 -0.063081 -0.071184" rpy="2.3561945 0.0 0.0"/>
+    <origin xyz="-0.00975 -0.063081 -0.101184" rpy="2.3561945 0.0 0.0"/>
     <parent link="left_arm_7"/>
     <child link="left_wrist_cam"/>
   </joint>
@@ -3773,7 +3773,7 @@
     <parent link="waist_5"/>
     <child link="head_1"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="10.0" velocity="35.19" lower="-0.5235" upper="0.698"/>
+    <limit effort="10.0" velocity="35.185837" lower="-0.5235" upper="0.698"/>
   </joint>
   <link name="head_2">
     <inertial>
@@ -3800,7 +3800,7 @@
     <parent link="head_1"/>
     <child link="head_2"/>
     <axis xyz="1.0 0.0 0.0"/>
-    <limit effort="10.0" velocity="35.19" lower="-0.2792" upper="0.2792"/>
+    <limit effort="10.0" velocity="35.185837" lower="-0.2792" upper="0.2792"/>
   </joint>
   <link name="head_3">
     <inertial>
@@ -3841,7 +3841,7 @@
     <parent link="head_2"/>
     <child link="head_3"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit effort="10.0" velocity="35.19" lower="-0.965" upper="0.965"/>
+    <limit effort="10.0" velocity="35.185837" lower="-0.965" upper="0.965"/>
   </joint>
   <link name="head_stereo">
     <inertial>
