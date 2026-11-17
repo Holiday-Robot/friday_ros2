@@ -28,10 +28,10 @@ Public ROS 2 packages for the Friday.
 - Cameras: `CameraControl`, one runtime control and its value, and
   `ExternalVideoStreamStatus`, one camera's external video stream.
 - Services: `GetBatteryAlarm`, `GetCameraList`, `GetExternalVideoStreamStatus`,
-  `GetMotorLimits`, `ResetBoardFaults`, `SetAvoidanceEnabled`, `SetBatteryAlarm`,
-  `SetCollisionPairEnabled`, `SetControlMode`, `SetExternalCameraControls`,
-  `SetExternalVideoStreaming`, `SetMotorCurrentLimit`, `SetMotorVelocityLimit`,
-  and `SetRangeSensorEnabled`.
+  `GetMotorLimits`, `GetMotorTorqueRatings`, `ResetBoardFaults`, `ResetTactile`,
+  `SetAvoidanceEnabled`, `SetBatteryAlarm`, `SetCollisionPairEnabled`,
+  `SetControlMode`, `SetExternalCameraControls`, `SetExternalVideoStreaming`,
+  `SetMotorCurrentLimit`, `SetMotorVelocityLimit`, and `SetRangeSensorEnabled`.
 
 ## Build
 

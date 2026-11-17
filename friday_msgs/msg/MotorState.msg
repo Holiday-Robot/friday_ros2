@@ -17,7 +17,7 @@ uint8 EXTERNAL_ENCODER_NOT_PRESENT=0
 uint8 EXTERNAL_ENCODER_VALID=1
 uint8 EXTERNAL_ENCODER_ERROR=2
 
-uint8 LIMIT_PERCENTAGE_UNKNOWN=255
+uint16 LIMIT_PERCENTAGE_UNKNOWN=65535
 
 string<=64 name
 bool connected
@@ -27,8 +27,8 @@ uint8 present_mode
 float64 position
 float64 velocity
 float64 torque
-uint8 velocity_limit_percentage
-uint8 current_limit_percentage
+uint16 velocity_limit_percentage
+uint16 current_limit_percentage
 int8 temperature
 uint8 external_encoder_status
 float64 external_encoder_position

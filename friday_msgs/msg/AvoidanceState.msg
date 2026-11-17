@@ -12,3 +12,12 @@ bool rollover_avoidance_enabled
 # defines (sorted by part_a, part_b). Part pairs missing here have no collision
 # avoidance tasks.
 CollisionPairState[<=64] collision_pairs
+uint8 ROLLOVER_MODE_UNKNOWN=0
+uint8 ROLLOVER_MODE_STATIC=1
+uint8 ROLLOVER_MODE_DYNAMIC=2
+uint8 ROLLOVER_MODE_DYNAMIC_WITH_BASE=3
+# The rollover mode the controller is configured for: STATIC (phase-space envelope),
+# DYNAMIC (CoP acceleration bound through the arm) or DYNAMIC_WITH_BASE (through the
+# arm and the base). While rollover_avoidance_enabled is false it is the mode enabling
+# resumes. UNKNOWN: the configuration matches none of the three modes.
+uint8 rollover_avoidance_mode

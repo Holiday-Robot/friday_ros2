@@ -8,6 +8,17 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 
+# Generate C/C++/Python interfaces for Cyclone DDS without Fast DDS or Rust.
+list(FILTER AMENT_EXTENSIONS_rosidl_generate_idl_interfaces EXCLUDE
+  REGEX "^(rosidl_typesupport_fastrtps_(c|cpp)|rosidl_generator_rs):")
+set(STATIC_ROSIDL_TYPESUPPORT_C rosidl_typesupport_introspection_c)
+set(STATIC_ROSIDL_TYPESUPPORT_CPP rosidl_typesupport_introspection_cpp)
+
+# Python enumerates installed backends separately from the generator extensions.
+macro(rosidl_generator_py_get_typesupports typesupport_impls)
+  set(${typesupport_impls} ${STATIC_ROSIDL_TYPESUPPORT_C} rosidl_typesupport_c)
+endmacro()
+
 set(msg_files
   "msg/AvoidanceState.msg"
   "msg/BatteryPackState.msg"
@@ -30,6 +41,7 @@ set(msg_files
   "msg/MotorLimit.msg"
   "msg/MotorState.msg"
   "msg/MotorStateArray.msg"
+  "msg/MotorTorqueRating.msg"
   "msg/RangeState.msg"
   "msg/RangeStateArray.msg"
   "msg/TactileLayout.msg"
@@ -44,7 +56,9 @@ set(srv_files
   "srv/GetCameraList.srv"
   "srv/GetExternalVideoStreamStatus.srv"
   "srv/GetMotorLimits.srv"
+  "srv/GetMotorTorqueRatings.srv"
   "srv/ResetBoardFaults.srv"
+  "srv/ResetTactile.srv"
   "srv/SetAvoidanceEnabled.srv"
   "srv/SetBatteryAlarm.srv"
   "srv/SetCollisionPairEnabled.srv"
