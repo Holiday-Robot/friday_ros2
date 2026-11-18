@@ -2,10 +2,19 @@ uint8 UNKNOWN=0
 uint8 LIMIT_AVOIDANCE=1
 uint8 COLLISION_AVOIDANCE=2
 uint8 ROLLOVER_AVOIDANCE=3
+uint8 STATIC_ROLLOVER_AVOIDANCE=4
+uint8 DYNAMIC_ROLLOVER_AVOIDANCE=5
+uint8 DYNAMIC_WITH_BASE_ROLLOVER_AVOIDANCE=6
 
 # Which avoidance to change. UNKNOWN and undefined values return RESULT_INVALID_ARGUMENT.
 # COLLISION_AVOIDANCE enables/disables every collision part pair at once (see
 # SetCollisionPairEnabled for one pair); the per-pair list is the only collision state.
+# STATIC, DYNAMIC and DYNAMIC_WITH_BASE select one rollover mode (see AvoidanceState
+# rollover_avoidance_mode). enabled=true switches to that mode and turns rollover
+# avoidance on; enabled=false turns rollover avoidance off when that mode is the
+# current one and changes nothing otherwise. A mode the loaded controller cannot
+# enforce returns RESULT_NOT_READY. ROLLOVER_AVOIDANCE switches rollover avoidance on
+# or off in the current mode.
 uint8 avoidance
 # Requested enable state. The resulting state is published on holiday/control/avoidance/enabled.
 bool enabled

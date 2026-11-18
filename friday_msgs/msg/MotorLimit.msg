@@ -1,3 +1,3 @@
 string<=64 name
-uint8 velocity_limit_percentage
-uint8 current_limit_percentage
+uint16 velocity_limit_percentage
+uint16 current_limit_percentage

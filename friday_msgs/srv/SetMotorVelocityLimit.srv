@@ -1,5 +1,5 @@
 string<=64 name
-uint8 percentage
+uint16 percentage
 ---
 uint16 RESULT_SUCCESS=0
 uint16 RESULT_INVALID_ARGUMENT=1
